@@ -164,12 +164,12 @@ export default function AboutPage() {
                 </div>
                 <div className="flex items-center justify-center mb-3">
                   <Star className="w-6 h-6 text-pink-600 mr-2" />
-                  <h3 className="text-2xl font-bold text-gray-900">Prophetess Madhuri Abiel Glory</h3>
+                  <h3 className="text-2xl font-bold text-gray-900">Madhuri Abiel Glory</h3>
                 </div>
-                <p className="text-pink-600 font-semibold mb-4 text-lg">Prophetess & Woman of God</p>
+                <p className="text-pink-600 font-semibold mb-4 text-lg">Woman of God</p>
                 <div className="text-gray-600 space-y-3 text-left">
                   <p>
-                    Prophetess Madhuri Abiel Glory operates in a powerful prophetic anointing, bringing divine
+                    Madhuri Abiel Glory operates in a powerful prophetic anointing, bringing divine
                     revelations and prophetic words that transform lives and situations.
                   </p>
                   <p>
