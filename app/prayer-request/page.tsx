@@ -294,12 +294,12 @@ export default function PrayerRequestPage() {
                   <div className="relative w-20 h-20 mx-auto mb-3 rounded-full overflow-hidden">
                     <Image
                       src="/images/pastor-prophetess.jpg"
-                      alt="Prophetess Madhuri Abiel Glory"
+                      alt="Madhuri Abiel Glory"
                       fill
                       className="object-cover"
                     />
                   </div>
-                  <h4 className="font-semibold">Prophetess Madhuri</h4>
+                  <h4 className="font-semibold">Madhuri</h4>
                   <p className="text-sm text-gray-600">Abiel Glory</p>
                 </div>
 
