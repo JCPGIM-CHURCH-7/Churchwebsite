@@ -63,7 +63,7 @@ export default function AboutPage() {
                 a simple yet profound truth: "Impossible is Possible" through Christ.
               </p>
               <p className="text-lg leading-relaxed">
-                Under the anointed leadership of Pastor K. Ravi Kumar and Prophetess Madhuri Abiel Glory, our ministry
+                Under the anointed leadership of Pastor K. Ravi Kumar and Madhuri Abiel Glory, our ministry
                 has grown from a small fellowship to an international ministry touching lives across different nations.
                 We believe in the supernatural power of God and His ability to transform lives, heal the sick, and set
                 the captives free.

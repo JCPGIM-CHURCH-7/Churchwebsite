@@ -288,13 +288,13 @@ export default function HomePage() {
                 <div className="relative w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden">
                   <Image
                     src="/images/pastor-prophetess.jpg"
-                    alt="Prophetess Madhuri Abiel Glory"
+                    alt="Madhuri Abiel Glory"
                     fill
                     className="object-cover"
                   />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Prophetess Madhuri Abiel Glory</h3>
-                <p className="text-yellow-600 font-medium mb-3">Prophetess</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Madhuri Abiel Glory</h3>
+                <p className="text-yellow-600 font-medium mb-3">Spritual Guider</p>
                 <p className="text-sm text-gray-600">
                   A woman of prayer and prophecy, ministering with divine revelation and wisdom
                 </p>
