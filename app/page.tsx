@@ -73,14 +73,14 @@ export default function HomePage() {
       description: "Mature women of God leading with wisdom and grace",
       icon: <Heart className="w-8 h-8 text-purple-600" />,
       image: "/images/jcpgim-women-worship.jpg",
-      ageGroup: "Adult Women",
+      ageGroup: "Women",
     },
     {
       title: "Men's Ministry",
       description: "Raising godly men who lead with integrity and strength",
       icon: <UserCheck className="w-8 h-8 text-green-600" />,
       image: "/images/jcpgim-mens.jpg",
-      ageGroup: "Adult Men",
+      ageGroup: "Men",
     },
     {
       title: "Children's Ministry",
