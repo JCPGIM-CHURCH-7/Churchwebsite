@@ -1,6 +1,5 @@
 "use client"
-
-import { useState } from "react"
+import { useState, useMemo } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -9,11 +8,8 @@ import { Heart, Search, Star, Crown } from "lucide-react"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 
-export default function PraisesPage() {
-  const [searchTerm, setSearchTerm] = useState("")
-  const [selectedCategory, setSelectedCategory] = useState("all")
-
-  export const praises = [
+// Move praises data outside the component
+export const praises = [
   "Give thanks to God for He is the only one God for His grace continues forever and ever",
   "Give thanks to God for He is the only True God for His grace continues forever and ever",
   "Give thanks to God for He is the Most High God for His grace continues forever and ever",
@@ -597,37 +593,126 @@ export default function PraisesPage() {
   "Give thanks to God for He is the God who gives the witness on my behalf for His grace continues forever and ever"
 ];
 
-    for (let i = 0; i < 900; i++) {
-      const template = baseTemplates[i % baseTemplates.length]
-      additionalPraises.push(`${template} - ${i + 101}`)
-    }
+// Category mapping for better filtering
+const praiseCategories = {
+  worship: [
+    "True God", "Most High", "King of Kings", "Lord of Lords", "Alpha and Omega", 
+    "First and the Last", "Jehovah", "El-Shaddai", "Ha-Elyon", "Creator", "Living God",
+    "Holy Spirit", "Son of God", "Word", "Light", "Way, truth and the life"
+  ],
+  thanksgiving: [
+    "thank", "thanks", "grace", "mercy", "merciful", "faithfulness", "goodness", 
+    "loving kindness", "compassion", "new mercies"
+  ],
+  victory: [
+    "victory", "breakthrough", "overcome", "conqueror", "defeat", "enemies", 
+    "battles", "war", "plunder", "weapons formed against me"
+  ],
+  love: [
+    "love", "beloved", "adore", "everlasting love", "compassion", "mercy", 
+    "kindness", "patient", "longsuffering", "gentle"
+  ],
+  power: [
+    "power", "strength", "almighty", "mighty", "miracles", "wonders", "great things",
+    "authority", "dominion", "more than conquerors"
+  ],
+  peace: [
+    "peace", "comfort", "refuge", "strength", "helper", "shadow", "still waters",
+    "comforter", "calm", "rest", "solace"
+  ],
+  healing: [
+    "heal", "healing", "restore", "restoration", "wounds", "broken heart", 
+    "diseases", "sickness", "Jehovah Rapha", "make whole"
+  ],
+  provision: [
+    "provide", "provision", "bless", "blessing", "wealth", "rich", "abundance", 
+    "Jehovah Jireh", "needs", "supplies", "increase", "prosper"
+  ],
+  guidance: [
+    "guide", "guidance", "wisdom", "understanding", "knowledge", "direct", 
+    "path", "way maker", "instruct", "teach", "revelation"
+  ],
+  protection: [
+    "protect", "protection", "shield", "safety", "guard", "defend", "fortress", 
+    "stronghold", "refuge", "preserve", "keep", "safeguard"
+  ]
+};
 
-    return additionalPraises
+// Generate additional praises if needed (optional)
+const generateMorePraises = () => {
+  const additionalPraises = [];
+  // Only generate if we need more than base (currently we have ~400+ base praises)
+  // For now, we'll just return empty array since base is sufficient
+  return additionalPraises;
+};
+
+const allBasePraises = [...basePraises, ...generateMorePraises()];
+
+export default function PraisesPage() {
+  const [searchTerm, setSearchTerm] = useState("")
+  const [selectedCategory, setSelectedCategory] = useState("all")
+  const [visibleCount, setVisibleCount] = useState(50)
+
+  // Categorize praises
+  const categorizePraise = (praise) => {
+    if (selectedCategory === "all") return true;
+    
+    const lowerPraise = praise.toLowerCase();
+    const keywords = praiseCategories[selectedCategory] || [];
+    
+    return keywords.some(keyword => 
+      lowerPraise.includes(keyword.toLowerCase())
+    );
+  };
+
+  // Filter praises based on search and category
+  const filteredPraises = useMemo(() => {
+    let result = allBasePraises;
+    
+    // Apply category filter
+    if (selectedCategory !== "all") {
+      result = result.filter(categorizePraise);
+    }
+    
+    // Apply search filter
+    if (searchTerm) {
+      result = result.filter(praise => 
+        praise.toLowerCase().includes(searchTerm.toLowerCase())
+      );
+    }
+    
+    return result;
+  }, [searchTerm, selectedCategory]);
+
+  // Categories with dynamic counts
+  const categories = [
+    { value: "all", label: "All Praises", count: allBasePraises.length },
+    { value: "worship", label: "Worship & Adoration", count: allBasePraises.filter(p => categorizePraiseWithCategory(p, "worship")).length },
+    { value: "thanksgiving", label: "Thanksgiving", count: allBasePraises.filter(p => categorizePraiseWithCategory(p, "thanksgiving")).length },
+    { value: "victory", label: "Victory & Breakthrough", count: allBasePraises.filter(p => categorizePraiseWithCategory(p, "victory")).length },
+    { value: "love", label: "Love & Mercy", count: allBasePraises.filter(p => categorizePraiseWithCategory(p, "love")).length },
+    { value: "power", label: "Power & Strength", count: allBasePraises.filter(p => categorizePraiseWithCategory(p, "power")).length },
+    { value: "peace", label: "Peace & Comfort", count: allBasePraises.filter(p => categorizePraiseWithCategory(p, "peace")).length },
+    { value: "healing", label: "Healing & Restoration", count: allBasePraises.filter(p => categorizePraiseWithCategory(p, "healing")).length },
+    { value: "provision", label: "Provision & Blessing", count: allBasePraises.filter(p => categorizePraiseWithCategory(p, "provision")).length },
+    { value: "guidance", label: "Guidance & Wisdom", count: allBasePraises.filter(p => categorizePraiseWithCategory(p, "guidance")).length },
+    { value: "protection", label: "Protection & Safety", count: allBasePraises.filter(p => categorizePraiseWithCategory(p, "protection")).length },
+  ];
+
+  function categorizePraiseWithCategory(praise, category) {
+    const lowerPraise = praise.toLowerCase();
+    const keywords = praiseCategories[category] || [];
+    return keywords.some(keyword => lowerPraise.includes(keyword.toLowerCase()));
   }
 
-  const allPraises = [...praises, ...generateMorePraises()]
-
-  const categories = [
-  { value: "all", label: "All Praises", count: allPraises.length }, // ~1200+
-  { value: "worship", label: "Worship & Adoration", count: 180 },
-  { value: "thanksgiving", label: "Thanksgiving", count: 160 },
-  { value: "victory", label: "Victory & Breakthrough", count: 140 },
-  { value: "love", label: "Love & Mercy", count: 150 },
-  { value: "power", label: "Power & Strength", count: 130 },
-  { value: "peace", label: "Peace & Comfort", count: 110 },
-  { value: "healing", label: "Healing & Restoration", count: 100 },
-  { value: "provision", label: "Provision & Blessing", count: 90 },
-  { value: "guidance", label: "Guidance & Wisdom", count: 85 },
-  { value: "protection", label: "Protection & Safety", count: 85 },
-];
-
-  const filteredPraises = allPraises.filter((praise) => praise.toLowerCase().includes(searchTerm.toLowerCase()))
+  const loadMore = () => {
+    setVisibleCount(prev => Math.min(prev + 50, filteredPraises.length));
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Navigation */}
       <Navigation />
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-yellow-600 to-orange-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -642,7 +727,7 @@ export default function PraisesPage() {
           </div>
         </div>
       </section>
-
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Search and Filter */}
         <Card className="mb-8">
@@ -664,14 +749,17 @@ export default function PraisesPage() {
                   className="pl-10"
                 />
               </div>
-              <Button className="bg-yellow-600 hover:bg-yellow-700">
+              <Button 
+                className="bg-yellow-600 hover:bg-yellow-700"
+                onClick={() => {}} // Search is live, so this can be empty
+              >
                 <Search className="w-4 h-4 mr-2" />
                 Search
               </Button>
             </div>
           </CardContent>
         </Card>
-
+        
         {/* Categories */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Praise Categories</h2>
@@ -682,7 +770,10 @@ export default function PraisesPage() {
                 className={`cursor-pointer transition-all hover:shadow-lg ${
                   selectedCategory === category.value ? "ring-2 ring-yellow-500 bg-yellow-50" : ""
                 }`}
-                onClick={() => setSelectedCategory(category.value)}
+                onClick={() => {
+                  setSelectedCategory(category.value);
+                  setVisibleCount(50); // Reset visible count when changing category
+                }}
               >
                 <CardContent className="pt-4 pb-4 text-center">
                   <h3 className="font-semibold text-sm mb-2">{category.label}</h3>
@@ -694,52 +785,61 @@ export default function PraisesPage() {
             ))}
           </div>
         </div>
-
+        
         {/* Praises Grid */}
         <div className="mb-8">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-2xl font-bold text-gray-900">
-              {searchTerm ? `Search Results (${filteredPraises.length})` : `All Praises (${allPraises.length})`}
+              {selectedCategory !== "all" ? categories.find(c => c.value === selectedCategory)?.label : "All Praises"} 
+              {searchTerm && ` - Search Results`}
+              <span className="text-base font-normal ml-2">({filteredPraises.length})</span>
             </h2>
             <Badge variant="outline" className="text-lg px-4 py-2">
               {filteredPraises.length} praises found
             </Badge>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {filteredPraises.slice(0, 50).map((praise, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow cursor-pointer group">
-                <CardContent className="pt-4 pb-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="flex-shrink-0">
-                      <div className="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center">
-                        <Heart className="w-4 h-4 text-yellow-600" />
+          
+          {filteredPraises.length === 0 ? (
+            <div className="text-center py-12">
+              <p className="text-gray-500 text-lg">No praises found matching your criteria.</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {filteredPraises.slice(0, visibleCount).map((praise, index) => (
+                <Card key={index} className="hover:shadow-lg transition-shadow cursor-pointer group">
+                  <CardContent className="pt-4 pb-4">
+                    <div className="flex items-start space-x-3">
+                      <div className="flex-shrink-0">
+                        <div className="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center">
+                          <Heart className="w-4 h-4 text-yellow-600" />
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <p className="text-gray-800 font-medium group-hover:text-yellow-600 transition-colors">
+                          {praise}
+                        </p>
+                        <p className="text-xs text-gray-500 mt-1">Praise #{index + 1}</p>
                       </div>
                     </div>
-                    <div className="flex-1">
-                      <p className="text-gray-800 font-medium group-hover:text-yellow-600 transition-colors">
-                        {praise}
-                      </p>
-                      <p className="text-xs text-gray-500 mt-1">Praise #{index + 1}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-
-          {filteredPraises.length > 50 && (
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          )}
+          
+          {visibleCount < filteredPraises.length && (
             <div className="text-center mt-8">
               <Button
                 variant="outline"
                 className="border-yellow-600 text-yellow-600 hover:bg-yellow-600 hover:text-white bg-transparent"
+                onClick={loadMore}
               >
-                Load More Praises
+                Load More Praises ({filteredPraises.length - visibleCount} remaining)
               </Button>
             </div>
           )}
         </div>
-
+        
         {/* Featured Praises */}
         <Card className="bg-gradient-to-r from-yellow-50 to-orange-50 border-yellow-200">
           <CardHeader>
@@ -772,7 +872,7 @@ export default function PraisesPage() {
             </div>
           </CardContent>
         </Card>
-
+        
         {/* Call to Action */}
         <div className="text-center mt-12">
           <Card className="bg-gradient-to-r from-yellow-600 to-orange-600 text-white border-0">
