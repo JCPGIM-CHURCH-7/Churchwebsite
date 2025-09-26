@@ -608,18 +608,18 @@ export default function PraisesPage() {
   const allPraises = [...praises, ...generateMorePraises()]
 
   const categories = [
-    { value: "all", label: "All Praises", count: allPraises.length },
-    { value: "worship", label: "Worship & Adoration", count: 150 },
-    { value: "thanksgiving", label: "Thanksgiving", count: 120 },
-    { value: "victory", label: "Victory & Breakthrough", count: 100 },
-    { value: "love", label: "Love & Mercy", count: 130 },
-    { value: "power", label: "Power & Strength", count: 110 },
-    { value: "peace", label: "Peace & Comfort", count: 90 },
-    { value: "healing", label: "Healing & Restoration", count: 80 },
-    { value: "provision", label: "Provision & Blessing", count: 70 },
-    { value: "guidance", label: "Guidance & Wisdom", count: 75 },
-    { value: "protection", label: "Protection & Safety", count: 75 },
-  ]
+  { value: "all", label: "All Praises", count: allPraises.length }, // ~1200+
+  { value: "worship", label: "Worship & Adoration", count: 180 },
+  { value: "thanksgiving", label: "Thanksgiving", count: 160 },
+  { value: "victory", label: "Victory & Breakthrough", count: 140 },
+  { value: "love", label: "Love & Mercy", count: 150 },
+  { value: "power", label: "Power & Strength", count: 130 },
+  { value: "peace", label: "Peace & Comfort", count: 110 },
+  { value: "healing", label: "Healing & Restoration", count: 100 },
+  { value: "provision", label: "Provision & Blessing", count: 90 },
+  { value: "guidance", label: "Guidance & Wisdom", count: 85 },
+  { value: "protection", label: "Protection & Safety", count: 85 },
+];
 
   const filteredPraises = allPraises.filter((praise) => praise.toLowerCase().includes(searchTerm.toLowerCase()))
 
