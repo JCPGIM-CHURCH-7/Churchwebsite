@@ -7,6 +7,7 @@ import { Menu, Heart } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
+import AuthButton from "./AuthButton"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -86,6 +87,7 @@ export function Navigation() {
                 Prayer Request
               </Button>
             </Link>
+            <AuthButton />
           </div>
 
           {/* Mobile Menu Button */}
@@ -142,6 +144,11 @@ export function Navigation() {
                         Submit Prayer Request
                       </Button>
                     </Link>
+                    
+                    {/* Mobile Auth Button */}
+                    <div className="flex justify-center">
+                      <AuthButton />
+                    </div>
 
                     {/* Contact Info */}
                     <div className="text-center text-sm text-gray-600 space-y-2">
