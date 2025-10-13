@@ -597,15 +597,7 @@ export default function PraisesPage() {
   "Give thanks to God for He is the God who gives the witness on my behalf for His grace continues forever and ever"
 ];
 
-    for (let i = 0; i < 900; i++) {
-      const template = baseTemplates[i % baseTemplates.length]
-      additionalPraises.push(`${template} - ${i + 101}`)
-    }
-
-    return additionalPraises
-  }
-
-  const allPraises = [...praises, ...generateMorePraises()]
+  const allPraises = praises
 
   const categories = [
   { value: "all", label: "All Praises", count: allPraises.length }, // ~1200+
