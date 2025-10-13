@@ -13,7 +13,7 @@ export default function PraisesPage() {
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("all")
 
-  export const praises = [
+  const praises = [
   "Give thanks to God for He is the only one God for His grace continues forever and ever",
   "Give thanks to God for He is the only True God for His grace continues forever and ever",
   "Give thanks to God for He is the Most High God for His grace continues forever and ever",
