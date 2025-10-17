@@ -520,7 +520,7 @@ export default function HomePage() {
             <div className="grid md:grid-cols-4 gap-8">
               <div>
                 <div className="flex items-center space-x-2 mb-4">
-                  <Image src="/favicon.png" alt="JCPGIM Logo" width={40} height={30} className="object-contain" />
+                  <Image src="/logo.png" alt="JCPGIM Logo" width={40} height={30} className="object-contain" />
                   <span className="font-bold">JCPGIM</span>
                 </div>
                 <p className="text-gray-400 text-sm">Impossible is Possible</p>
