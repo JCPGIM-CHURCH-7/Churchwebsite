@@ -1,4 +1,4 @@
-import type React from "react"
+import type { ReactNode } from "react"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     siteName: "JCPGIM",
     images: [
       {
-        url: "/images/logo.png",
+        url: "/favicon.png", // Updated to match footer logo
         width: 1200,
         height: 630,
         alt: "JCPGIM Logo",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Jesus Christ Power of Glory International Ministries",
     description: "Where Impossible becomes Possible through the Power of Jesus Christ",
-    images: ["/images/logo.png"],
+    images: ["/favicon.png"], // Updated to match footer logo
     creator: "@jcpgimchurch",
   },
   robots: {
@@ -63,41 +63,32 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon.png", sizes: "any" }, // Updated to favicon.png
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
     ],
-    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
-    shortcut: "/favicon.ico",
+    apple: [{ url: "/favicon.png", sizes: "180x180", type: "image/png" }], // Updated to favicon.png
+    shortcut: "/favicon.png", // Updated to favicon.png
   },
   manifest: "/site.webmanifest",
-  // themeColor removed from metadata to satisfy Next.js recommendations
-  // move it to generateViewport export below
   other: {
     "msapplication-TileColor": "#ca8a04",
     "msapplication-config": "/browserconfig.xml",
   },
-    generator: 'v0.app'
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export function generateViewport() {
+  return {
+    themeColor: "#ca8a04",
+    viewport: "width=device-width, initial-scale=1",
+  }
+}
+
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <AuthProvider>
-          {children}
-        </AuthProvider>
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   )
-}
-
-// Provide viewport-specific metadata like themeColor per Next.js recommendations
-export function generateViewport() {
-  return {
-    themeColor: '#ca8a04'
-  }
 }
