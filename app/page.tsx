@@ -20,6 +20,7 @@ import {
 import Link from "next/link"
 import Image from "next/image"
 import { Navigation } from "@/components/navigation"
+import ProtectedRoute from '@/components/ProtectedRoute'
 
 export default function HomePage() {
   const upcomingEvents = [
@@ -96,8 +97,9 @@ export default function HomePage() {
   ]
 
   return (
-    <div className="min-h-screen bg-white">
-      <Navigation />
+    <ProtectedRoute>
+      <div className="min-h-screen bg-white">
+        <Navigation />
 
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-yellow-400 via-yellow-500 to-orange-500 text-white py-16 md:py-24">
@@ -135,7 +137,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Online Service Banner */}
+  {/* Online Service Banner */}
       <section className="bg-red-600 text-white py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between text-center md:text-left">
@@ -143,14 +145,24 @@ export default function HomePage() {
               <h3 className="text-2xl font-bold mb-2">Daily Online Service</h3>
               <p className="text-lg">Prayers and Bible Reading - Every Morning 5:00 AM - 6:00 AM</p>
             </div>
-            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-4">
               <Badge variant="secondary" className="bg-white text-red-600 px-4 py-2 text-lg">
                 Google Meet: pbpqvtmare
               </Badge>
-              <Button className="bg-white text-red-600 hover:bg-gray-100">
-                <Play className="w-4 h-4 mr-2" />
-                Join Now
-              </Button>
+                <Button className="bg-white text-red-600 hover:bg-gray-100">
+                  <Play className="w-4 h-4 mr-2" />
+                  Join Now
+                </Button>
+                <a
+                  href="https://www.youtube.com/live/gT-Cpnw1AZ0?si=fo6FVPZbUa0hlnv0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="bg-white text-red-600 hover:bg-gray-100">
+                    <Play className="w-4 h-4 mr-2" />
+                    Watch Live
+                  </Button>
+                </a>
             </div>
           </div>
         </div>
@@ -350,6 +362,35 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* YouTube Live Embed Section */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl font-bold text-gray-900">Live Stream</h2>
+            <p className="text-sm text-gray-600">Join our live broadcast below or open it on YouTube</p>
+          </div>
+          <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.youtube.com/embed/gT-Cpnw1AZ0?autoplay=0"
+              title="JCPGIM Live Stream"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
+          </div>
+          <div className="text-center mt-4">
+            <a
+              href="https://www.youtube.com/live/gT-Cpnw1AZ0?si=fo6FVPZbUa0hlnv0"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="mt-2">Open on YouTube</Button>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action */}
       <section className="py-16 bg-gradient-to-r from-yellow-600 to-orange-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -503,5 +544,6 @@ export default function HomePage() {
         </div>
       </footer>
     </div>
+    </ProtectedRoute>
   )
 }
