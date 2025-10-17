@@ -42,7 +42,7 @@ export default function ChosenBandPage() {
       event: "Daily Online Worship",
       date: "Every Day",
       time: "5:00 AM - 6:00 AM",
-      location: "Google Meet: pbpqvtmare",
+  location: "Google Meet: https://meet.google.com/mdw-fezs-aho",
       type: "Online Service",
     },
     {

@@ -174,7 +174,7 @@ export default function ProfilePage() {
                   <div className="text-sm">
                     <p className="font-medium text-gray-900">Daily Online Service</p>
                     <p className="text-gray-600">5:00 AM - 6:00 AM</p>
-                    <p className="text-amber-600 font-medium">Google Meet: pbpqvtmare</p>
+                    <p className="text-amber-600 font-medium">Google Meet: https://meet.google.com/mdw-fezs-aho</p>
                   </div>
                   <Separator />
                   <div className="text-sm">

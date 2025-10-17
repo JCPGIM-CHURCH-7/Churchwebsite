@@ -310,7 +310,7 @@ export default function ContactPage() {
                   <p className="text-red-700 text-sm">Connect with us every morning for prayer and Bible reading:</p>
                   <div className="space-y-2 text-sm">
                     <p className="font-semibold text-red-800">Time: 5:00 AM - 6:00 AM (Daily)</p>
-                    <p className="font-semibold text-red-800">Google Meet: pbpqvtmare</p>
+                    <p className="font-semibold text-red-800">Google Meet: https://meet.google.com/mdw-fezs-aho</p>
                   </div>
                   <Button className="w-full bg-red-600 hover:bg-red-700 text-white">Join Online Service</Button>
                 </div>

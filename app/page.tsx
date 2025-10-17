@@ -28,7 +28,7 @@ export default function HomePage() {
       title: "Daily Online Service",
       date: "Every Day",
       time: "5:00 AM - 6:00 AM",
-      location: "Google Meet: pbpqvtmare",
+  location: "Google Meet: https://meet.google.com/mdw-fezs-aho",
       type: "Online",
     },
     {

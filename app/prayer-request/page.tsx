@@ -362,7 +362,7 @@ export default function PrayerRequestPage() {
                 <p className="text-yellow-700 mb-3 text-sm">Join us every morning for prayer and Bible reading:</p>
                 <div className="space-y-2 text-sm">
                   <p className="font-semibold text-yellow-800">Time: 5:00 AM - 6:00 AM</p>
-                  <p className="font-semibold text-yellow-800">Google Meet: pbpqvtmare</p>
+                  <p className="font-semibold text-yellow-800">Google Meet: https://meet.google.com/mdw-fezs-aho</p>
                 </div>
                 <Button className="w-full mt-3 bg-yellow-600 hover:bg-yellow-700 text-white text-sm">
                   Join Online Service

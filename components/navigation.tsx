@@ -172,7 +172,7 @@ export function Navigation() {
                     <div className="text-center text-sm text-gray-600 space-y-2">
                       <p className="font-medium text-gray-900">Daily Online Service</p>
                       <p>5:00 AM - 6:00 AM</p>
-                      <p className="text-yellow-600 font-medium">Google Meet: pbpqvtmare</p>
+                      <p className="text-yellow-600 font-medium">Google Meet: https://meet.google.com/mdw-fezs-aho</p>
                     </div>
                   </div>
                 </div>

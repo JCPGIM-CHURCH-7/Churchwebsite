@@ -20,7 +20,7 @@ export default function EventsPage() {
         "Join us every morning for prayers, Bible reading, and worship with Pastor K. Ravi Kumar and Prophetess Madhuri Abiel Glory. Experience the power of corporate prayer and receive divine guidance for your day.",
       date: "Every Day",
       time: "5:00 AM - 6:00 AM",
-      location: "Google Meet: pbpqvtmare",
+  location: "Google Meet: https://meet.google.com/mdw-fezs-aho",
       type: "online",
       category: "Regular Service",
       image: "/images/front-page.jpg",
