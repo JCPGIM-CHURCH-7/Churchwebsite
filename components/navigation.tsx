@@ -3,15 +3,17 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, Heart } from "lucide-react"
+import { Menu, Heart, Shield } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
 import AuthButton from "./AuthButton"
+import { useAdminCheck } from "@/hooks/useAdminCheck"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
+  const { isAdmin } = useAdminCheck()
 
   const navigationItems = [
     { href: "/", label: "Home" },
@@ -81,6 +83,14 @@ export function Navigation() {
 
           {/* Desktop CTA Button */}
           <div className="hidden md:flex items-center space-x-3">
+            {isAdmin && (
+              <Link href="/admin">
+                <Button variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-50">
+                  <Shield className="w-4 h-4 mr-2" />
+                  Admin
+                </Button>
+              </Link>
+            )}
             <Link href="/prayer-request">
               <Button className="bg-yellow-600 hover:bg-yellow-700 text-white font-medium">
                 <Heart className="w-4 h-4 mr-2" />
@@ -138,13 +148,21 @@ export function Navigation() {
 
                   {/* Mobile CTA Section */}
                   <div className="border-t border-gray-200 pt-6 space-y-4">
+                    {isAdmin && (
+                      <Link href="/admin" onClick={handleLinkClick}>
+                        <Button variant="outline" className="w-full border-amber-600 text-amber-600 hover:bg-amber-50">
+                          <Shield className="w-4 h-4 mr-2" />
+                          Admin Dashboard
+                        </Button>
+                      </Link>
+                    )}
                     <Link href="/prayer-request" onClick={handleLinkClick}>
                       <Button className="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-medium">
                         <Heart className="w-4 h-4 mr-2" />
                         Submit Prayer Request
                       </Button>
                     </Link>
-                    
+
                     {/* Mobile Auth Button */}
                     <div className="flex justify-center">
                       <AuthButton />
