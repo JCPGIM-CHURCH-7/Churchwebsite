@@ -248,13 +248,14 @@ export default function HomePage() {
               </div>
               <div className={isMobile ? "flex flex-col items-center space-y-4" : "flex items-center space-x-4"}>
                 <Badge variant="secondary" className="bg-white text-red-600 px-4 py-2 text-lg">
-                  Google Meet: pbpqvtmare
+                  Google Meet: mdw-fezs-aho
                 </Badge>
-                <Button className="bg-white text-red-600 hover:bg-gray-100">
-                  <Play className="w-4 h-4 mr-2" />
-                  Join Now
-                </Button>
-                <WatchLiveButton />
+                <a href="https://meet.google.com/mdw-fezs-aho" target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-white text-red-600 hover:bg-gray-100">
+                    <Play className="w-4 h-4 mr-2" />
+                    Join Now
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
