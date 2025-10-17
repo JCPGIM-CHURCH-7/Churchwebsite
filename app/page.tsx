@@ -22,6 +22,25 @@ import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 import ProtectedRoute from "@/components/ProtectedRoute"
 import { useEffect, useState } from "react"
+import * as React from 'react'
+
+const MOBILE_BREAKPOINT = 768
+
+export function useIsMobile() {
+  const [isMobile, setIsMobile] = React.useState<boolean | undefined>(undefined)
+
+  React.useEffect(() => {
+    const mql = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`)
+    const onChange = () => {
+      setIsMobile(window.innerWidth < MOBILE_BREAKPOINT)
+    }
+    mql.addEventListener('change', onChange)
+    setIsMobile(window.innerWidth < MOBILE_BREAKPOINT)
+    return () => mql.removeEventListener('change', onChange)
+  }, [])
+
+  return !!isMobile
+}
 
 function WatchLiveButton() {
   const [liveVideoId, setLiveVideoId] = useState("")
@@ -69,6 +88,8 @@ function WatchLiveButton() {
 }
 
 export default function HomePage() {
+  const isMobile = useIsMobile()
+
   const upcomingEvents = [
     {
       title: "Daily Online Service",
@@ -225,7 +246,7 @@ export default function HomePage() {
                 <h3 className="text-2xl font-bold mb-2">Daily Online Service</h3>
                 <p className="text-lg">Prayers and Bible Reading - Every Morning 5:00 AM - 6:00 AM</p>
               </div>
-              <div className="flex items-center space-x-4">
+              <div className={isMobile ? "flex flex-col items-center space-y-4" : "flex items-center space-x-4"}>
                 <Badge variant="secondary" className="bg-white text-red-600 px-4 py-2 text-lg">
                   Google Meet: pbpqvtmare
                 </Badge>
