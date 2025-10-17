@@ -20,11 +20,12 @@ import {
 import Link from "next/link"
 import Image from "next/image"
 import { Navigation } from "@/components/navigation"
-import ProtectedRoute from '@/components/ProtectedRoute'
+import ProtectedRoute from "@/components/ProtectedRoute"
 import { useEffect, useState } from "react"
 
 function WatchLiveButton() {
   const [liveVideoId, setLiveVideoId] = useState("")
+  const [error, setError] = useState(null)
 
   useEffect(() => {
     const fetchLiveVideo = async () => {
@@ -32,6 +33,9 @@ function WatchLiveButton() {
         const response = await fetch(
           `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=UC8AdEOWX6g2bHcudG0vthbg&eventType=live&type=video&key=YOUR_YOUTUBE_API_KEY`
         )
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`)
+        }
         const data = await response.json()
         if (data.items && data.items.length > 0) {
           setLiveVideoId(data.items[0].id.videoId)
@@ -40,24 +44,27 @@ function WatchLiveButton() {
         }
       } catch (error) {
         console.error("Error fetching live stream:", error)
+        setError("Failed to fetch live stream. Please try again later.")
       }
     }
 
     fetchLiveVideo()
   }, [])
 
-  // If no live video, use default link
   const liveUrl = liveVideoId
     ? `https://www.youtube.com/live/${liveVideoId}?autoplay=1`
-    : "https://www.youtube.com/@jcpgiministries/live"
+    : "https://www.youtube.com/@jcpgimofficial27/live"
 
   return (
-    <a href={liveUrl} target="_blank" rel="noopener noreferrer">
-      <Button className="bg-white text-red-600 hover:bg-gray-100">
-        <Play className="w-4 h-4 mr-2" />
-        {liveVideoId ? "Watch Live 🔴" : "Visit Channel"}
-      </Button>
-    </a>
+    <div>
+      {error && <p className="text-red-500 text-sm">{error}</p>}
+      <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+        <Button className="bg-white text-red-600 hover:bg-gray-100">
+          <Play className="w-4 h-4 mr-2" />
+          {liveVideoId ? "Watch Live 🔴" : "Visit Channel"}
+        </Button>
+      </a>
+    </div>
   )
 }
 
@@ -177,6 +184,35 @@ export default function HomePage() {
                   className="rounded-lg shadow-2xl object-cover w-full h-auto"
                 />
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* YouTube Live Embed Section */}
+        <section className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold text-gray-900">Live Stream</h2>
+              <p className="text-sm text-gray-600">Join our live broadcast below or open it on YouTube</p>
+            </div>
+            <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.youtube.com/embed/gT-Cpnw1AZ0?autoplay=0"
+                title="JCPGIM Live Stream"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+            <div className="text-center mt-4">
+              <a
+                href="https://www.youtube.com/live/gT-Cpnw1AZ0?si=fo6FVPZbUa0hlnv0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="mt-2">Open on YouTube</Button>
+              </a>
             </div>
           </div>
         </section>
@@ -336,7 +372,7 @@ export default function HomePage() {
                     />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Madhuri Abiel Glory</h3>
-                  <p className="text-yellow-600 font-medium mb-3">Spritual Guider</p>
+                  <p className="text-yellow-600 font-medium mb-3">Spiritual Guider</p>
                   <p className="text-sm text-gray-600">
                     A woman of prayer and prophecy, ministering with divine revelation and wisdom
                   </p>
@@ -397,35 +433,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* YouTube Live Embed Section */}
-        <section className="py-12 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-gray-900">Live Stream</h2>
-              <p className="text-sm text-gray-600">Join our live broadcast below or open it on YouTube</p>
-            </div>
-            <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg">
-              <iframe
-                src="https://www.youtube.com/embed/gT-Cpnw1AZ0?autoplay=0"
-                title="JCPGIM Live Stream"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
-            <div className="text-center mt-4">
-              <a
-                href="https://www.youtube.com/live/gT-Cpnw1AZ0?si=fo6FVPZbUa0hlnv0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button className="mt-2">Open on YouTube</Button>
-              </a>
-            </div>
-          </div>
-        </section>
-
         {/* Call to Action */}
         <section className="py-16 bg-gradient-to-r from-yellow-600 to-orange-600 text-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -467,7 +474,7 @@ export default function HomePage() {
                 <MapPin className="w-8 h-8 mx-auto mb-4 text-yellow-400" />
                 <h3 className="font-semibold mb-2">Visit Us</h3>
                 <p className="text-gray-300 text-sm">
-                  Beside Ibrahiptnam Bus Pass Counter
+                  Beside Ibrahimpatnam Bus Pass Counter
                   <br />
                   Hyderabad, Rangareddy - 501510
                 </p>
@@ -526,7 +533,7 @@ export default function HomePage() {
                 <h3 className="font-semibold mb-4">Services</h3>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li>
-                    <a href="#" className="hover:text-white">
+                    <a href={socialLinks.find((link) => link.name === "YouTube")?.url} className="hover:text-white">
                       Online Service
                     </a>
                   </li>
