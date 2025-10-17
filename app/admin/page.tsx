@@ -19,7 +19,8 @@ import {
   Eye,
   Plus
 } from 'lucide-react';
-import { supabase } from '@/lib/supabase';
+// supabase is lazy imported inside client-only lifecycle hooks to avoid server-side
+// initialization during static export/build
 import type { PrayerRequest, ContactMessage, Event, Member } from '@/lib/supabase';
 
 export default function AdminPage() {
@@ -42,6 +43,7 @@ export default function AdminPage() {
 
   const loadDashboardData = async () => {
     try {
+      const { supabase } = await import('@/lib/supabase');
       const [prayersRes, messagesRes, eventsRes, membersRes] = await Promise.all([
         supabase.from('prayer_requests').select('*').order('created_at', { ascending: false }),
         supabase.from('contact_messages').select('*').order('created_at', { ascending: false }),
@@ -71,6 +73,7 @@ export default function AdminPage() {
   };
 
   const updatePrayerStatus = async (id: string, status: 'new' | 'in_progress' | 'completed') => {
+    const { supabase } = await import('@/lib/supabase');
     const { error } = await supabase
       .from('prayer_requests')
       .update({ status, updated_at: new Date().toISOString() })
@@ -82,6 +85,7 @@ export default function AdminPage() {
   };
 
   const updateMessageStatus = async (id: string, status: 'new' | 'read' | 'replied') => {
+    const { supabase } = await import('@/lib/supabase');
     const { error } = await supabase
       .from('contact_messages')
       .update({ status, updated_at: new Date().toISOString() })
@@ -94,6 +98,7 @@ export default function AdminPage() {
 
   const deletePrayerRequest = async (id: string) => {
     if (confirm('Are you sure you want to delete this prayer request?')) {
+      const { supabase } = await import('@/lib/supabase');
       const { error } = await supabase
         .from('prayer_requests')
         .delete()
@@ -107,6 +112,7 @@ export default function AdminPage() {
 
   const deleteContactMessage = async (id: string) => {
     if (confirm('Are you sure you want to delete this message?')) {
+      const { supabase } = await import('@/lib/supabase');
       const { error } = await supabase
         .from('contact_messages')
         .delete()

@@ -70,7 +70,8 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
   },
   manifest: "/site.webmanifest",
-  themeColor: "#ca8a04",
+  // themeColor removed from metadata to satisfy Next.js recommendations
+  // move it to generateViewport export below
   other: {
     "msapplication-TileColor": "#ca8a04",
     "msapplication-config": "/browserconfig.xml",
@@ -92,4 +93,11 @@ export default function RootLayout({
       </body>
     </html>
   )
+}
+
+// Provide viewport-specific metadata like themeColor per Next.js recommendations
+export function generateViewport() {
+  return {
+    themeColor: '#ca8a04'
+  }
 }
