@@ -72,7 +72,7 @@ function WatchLiveButton() {
 
   const liveUrl = liveVideoId
     ? `https://www.youtube.com/live/${liveVideoId}?autoplay=1`
-    : "https://www.youtube.com/@jcpgimofficial27/live"
+    : "https://www.youtube.com/@jcpgmchurch"
 
   return (
     <div>
@@ -163,7 +163,7 @@ export default function HomePage() {
     { name: "Facebook", url: "https://www.facebook.com/share/1AMrgQCnq3/", icon: "facebook" },
     { name: "Twitter", url: "https://x.com/jcpgimchurch?t=xjBU4cdUkHy46K3KXtmt6A&s=09", icon: "twitter" },
     { name: "Instagram", url: "https://www.instagram.com/jcpgim_church?igsh=MWYxc21tdHhoZmRweQ==", icon: "instagram" },
-    { name: "YouTube", url: "https://youtube.com/@jcpgimofficial27?si=x6Tn1ve85xXeGGZH", icon: "youtube" },
+    { name: "YouTube", url: "https://www.youtube.com/@jcpgmchurch", icon: "youtube" },
     { name: "WhatsApp", url: "https://whatsapp.com/channel/0029VaJ4FCT3AzNJ64QPYe2S", icon: "whatsapp" },
     { name: "Threads", url: "https://www.threads.net/@jcpgim_church", icon: "threads" },
   ]
