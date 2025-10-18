@@ -16,6 +16,7 @@ import {
   Baby,
   UserCheck,
   User,
+  ChevronLeft,
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
@@ -89,6 +90,7 @@ function WatchLiveButton() {
 
 export default function HomePage() {
   const isMobile = useIsMobile()
+  const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
 
   const upcomingEvents = [
     {
@@ -170,16 +172,24 @@ export default function HomePage() {
 
   const recentVideos = [
     {
-      id: '6BmmIXrkNYY',
-      title: 'SUNDAY SERVICE | 05-10-2025 | Pastor K. Ravi Kumar | #live #church',
-      thumbnail: 'https://img.youtube.com/vi/6BmmIXrkNYY/hqdefault.jpg',
-    },
-    {
       id: 'gT-Cpnw1AZ0',
       title: 'SUNDAY SERVICE | 12-10-2025 | Pastor K. Ravi Kumar | #live #church',
       thumbnail: 'https://img.youtube.com/vi/gT-Cpnw1AZ0/hqdefault.jpg',
     },
+    {
+      id: '6BmmIXrkNYY',
+      title: 'SUNDAY SERVICE | 05-10-2025 | Pastor K. Ravi Kumar | #live #church',
+      thumbnail: 'https://img.youtube.com/vi/6BmmIXrkNYY/hqdefault.jpg',
+    },
   ]
+
+  const handlePrevVideo = () => {
+    setCurrentVideoIndex((prev) => (prev === 0 ? recentVideos.length - 1 : prev - 1))
+  }
+
+  const handleNextVideo = () => {
+    setCurrentVideoIndex((prev) => (prev === recentVideos.length - 1 ? 0 : prev + 1))
+  }
 
   return (
     <ProtectedRoute>
@@ -227,36 +237,64 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
               <h2 className="text-2xl font-bold text-gray-900">Recent Services</h2>
-              <p className="text-sm text-gray-600">Watch our recent broadcasts below or join live on YouTube</p>
+              <p className="text-sm text-gray-600">Watch our recent broadcasts or join live on YouTube</p>
             </div>
-            <div className="flex overflow-x-auto space-x-4 pb-4 snap-x snap-mandatory">
-              {recentVideos.map((video) => (
+            <div className="relative max-w-2xl mx-auto">
+              <div className="relative rounded-lg overflow-hidden shadow-lg">
                 <a
-                  key={video.id}
-                  href={`https://www.youtube.com/watch?v=${video.id}`}
+                  href={`https://www.youtube.com/watch?v=${recentVideos[currentVideoIndex].id}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-shrink-0 w-80 snap-center"
                 >
-                  <div className="rounded-lg overflow-hidden shadow-lg">
-                    <div className="relative">
-                      <Image
-                        src={video.thumbnail}
-                        alt={video.title}
-                        width={320}
-                        height={180}
-                        className="w-full h-auto"
-                      />
-                      <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
-                        <Play className="w-12 h-12 text-white" />
-                      </div>
-                    </div>
-                    <div className="p-4 bg-white">
-                      <h3 className="text-sm font-semibold text-gray-900 line-clamp-2">{video.title}</h3>
+                  <div className="relative">
+                    <Image
+                      src={recentVideos[currentVideoIndex].thumbnail}
+                      alt={recentVideos[currentVideoIndex].title}
+                      width={640}
+                      height={360}
+                      className="w-full h-auto"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+                      <Play className="w-12 h-12 text-white" />
                     </div>
                   </div>
+                  <div className="p-4 bg-white">
+                    <h3 className="text-sm font-semibold text-gray-900 line-clamp-2">
+                      {recentVideos[currentVideoIndex].title}
+                    </h3>
+                  </div>
                 </a>
-              ))}
+              </div>
+              {recentVideos.length > 1 && (
+                <>
+                  <button
+                    onClick={handlePrevVideo}
+                    className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-2 rounded-r-lg hover:bg-opacity-75"
+                    aria-label="Previous video"
+                  >
+                    <ChevronLeft className="w-6 h-6" />
+                  </button>
+                  <button
+                    onClick={handleNextVideo}
+                    className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-2 rounded-l-lg hover:bg-opacity-75"
+                    aria-label="Next video"
+                  >
+                    <ChevronRight className="w-6 h-6" />
+                  </button>
+                </>
+              )}
+              <div className="flex justify-center mt-4 space-x-2">
+                {recentVideos.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`w-3 h-3 rounded-full ${
+                      index === currentVideoIndex ? 'bg-yellow-600' : 'bg-gray-300'
+                    }`}
+                    onClick={() => setCurrentVideoIndex(index)}
+                    aria-label={`Go to video ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
             <div className="text-center mt-4">
               <WatchLiveButton />
