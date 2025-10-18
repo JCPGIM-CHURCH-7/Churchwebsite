@@ -17,7 +17,6 @@ import {
   UserCheck,
   User,
   ChevronLeft,
-  ChevronRight as ChevronRightIcon,
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
@@ -65,7 +64,7 @@ function WatchLiveButton() {
         }
       } catch (error) {
         console.error("Error fetching live stream:", error)
-        setError("Failed to load live stream")
+        setError("")
       }
     }
 
@@ -92,7 +91,6 @@ function WatchLiveButton() {
 export default function HomePage() {
   const isMobile = useIsMobile()
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
-  const [isTransitioning, setIsTransitioning] = useState(false)
 
   const upcomingEvents = [
     {
@@ -186,25 +184,12 @@ export default function HomePage() {
   ]
 
   const handlePrevVideo = () => {
-    if (!isTransitioning) {
-      setIsTransitioning(true)
-      setCurrentVideoIndex((prev) => (prev === 0 ? recentVideos.length - 1 : prev - 1))
-    }
+    setCurrentVideoIndex((prev) => (prev === 0 ? recentVideos.length - 1 : prev - 1))
   }
 
   const handleNextVideo = () => {
-    if (!isTransitioning) {
-      setIsTransitioning(true)
-      setCurrentVideoIndex((prev) => (prev === recentVideos.length - 1 ? 0 : prev + 1))
-    }
+    setCurrentVideoIndex((prev) => (prev === recentVideos.length - 1 ? 0 : prev + 1))
   }
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsTransitioning(false)
-    }, 500)
-    return () => clearTimeout(timer)
-  }, [currentVideoIndex])
 
   return (
     <ProtectedRoute>
@@ -247,7 +232,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* YouTube Live Slider Section */}
+        {/* YouTube Live Embed Section */}
         <section className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
@@ -256,56 +241,45 @@ export default function HomePage() {
             </div>
             <div className="relative max-w-2xl mx-auto">
               <div className="relative rounded-lg overflow-hidden shadow-lg">
-                {recentVideos.map((video, index) => (
-                  <div
-                    key={video.id}
-                    className={`absolute inset-0 transition-opacity duration-500 ease-in-out ${
-                      index === currentVideoIndex ? 'opacity-100' : 'opacity-0 pointer-events-none'
-                    }`}
-                  >
-                    <a
-                      href={`https://www.youtube.com/watch?v=${video.id}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <div className="relative">
-                        <Image
-                          src={video.thumbnail}
-                          alt={video.title}
-                          width={640}
-                          height={360}
-                          className="w-full h-auto"
-                        />
-                        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
-                          <Play className="w-12 h-12 text-white" />
-                        </div>
-                      </div>
-                      <div className="p-4 bg-white">
-                        <h3 className="text-sm font-semibold text-gray-900 line-clamp-2">
-                          {video.title}
-                        </h3>
-                      </div>
-                    </a>
+                <a
+                  href={`https://www.youtube.com/watch?v=${recentVideos[currentVideoIndex].id}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="relative">
+                    <Image
+                      src={recentVideos[currentVideoIndex].thumbnail}
+                      alt={recentVideos[currentVideoIndex].title}
+                      width={640}
+                      height={360}
+                      className="w-full h-auto"
+                    />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
+                      <Play className="w-12 h-12 text-white" />
+                    </div>
                   </div>
-                ))}
+                  <div className="p-4 bg-white">
+                    <h3 className="text-sm font-semibold text-gray-900 line-clamp-2">
+                      {recentVideos[currentVideoIndex].title}
+                    </h3>
+                  </div>
+                </a>
               </div>
               {recentVideos.length > 1 && (
                 <>
                   <button
                     onClick={handlePrevVideo}
-                    className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-3 rounded-r-lg hover:bg-opacity-75 transition-all"
+                    className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-2 rounded-r-lg hover:bg-opacity-75"
                     aria-label="Previous video"
-                    disabled={isTransitioning}
                   >
                     <ChevronLeft className="w-6 h-6" />
                   </button>
                   <button
                     onClick={handleNextVideo}
-                    className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-3 rounded-l-lg hover:bg-opacity-75 transition-all"
+                    className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-2 rounded-l-lg hover:bg-opacity-75"
                     aria-label="Next video"
-                    disabled={isTransitioning}
                   >
-                    <ChevronRightIcon className="w-6 h-6" />
+                    <ChevronRight className="w-6 h-6" />
                   </button>
                 </>
               )}
@@ -315,14 +289,14 @@ export default function HomePage() {
                     key={index}
                     className={`w-3 h-3 rounded-full ${
                       index === currentVideoIndex ? 'bg-yellow-600' : 'bg-gray-300'
-                    } hover:bg-yellow-500 transition-colors`}
-                    onClick={() => !isTransitioning && setCurrentVideoIndex(index)}
+                    }`}
+                    onClick={() => setCurrentVideoIndex(index)}
                     aria-label={`Go to video ${index + 1}`}
                   />
                 ))}
               </div>
             </div>
-            <div className="text-center mt-6">
+            <div className="text-center mt-4">
               <WatchLiveButton />
             </div>
           </div>
