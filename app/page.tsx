@@ -63,7 +63,7 @@ function WatchLiveButton() {
         }
       } catch (error) {
         console.error("Error fetching live stream:", error)
-        setError("Failed to fetch live stream. Please try again later.")
+        setError("")
       }
     }
 
