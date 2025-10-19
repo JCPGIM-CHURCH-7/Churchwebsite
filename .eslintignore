@@ -1,0 +1,5 @@
+/app/admin/page.tsx
+/app/login/page.tsx
+/app/page.tsx
+/components/ui/chart.tsx
+/components/ui/use-toast.ts
