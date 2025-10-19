@@ -168,6 +168,21 @@ export default function HomePage() {
     { name: "Threads", url: "https://www.threads.net/@jcpgim_church", icon: "threads" },
   ]
 
+  const testimonials = [
+    {
+      name: "Sarah John",
+      role: "Youth Ministry Member",
+      quote: "Joining JCPGIM has transformed my life. The youth ministry helped me find purpose and grow closer to God.",
+      image: "/images/testimonial-sarah.jpg",
+    },
+    {
+      name: "Michael Rao",
+      role: "Men's Ministry Leader",
+      quote: "The fellowship and guidance at JCPGIM have strengthened my faith and leadership in my family and community.",
+      image: "/images/testimonial-michael.jpg",
+    },
+  ]
+
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-white">
@@ -209,31 +224,39 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* YouTube Live Embed Section */}
-        <section className="py-12 bg-white">
+        {/* Testimonies Section */}
+        <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-gray-900">Live Stream</h2>
-              <p className="text-sm text-gray-600">Join our live broadcast below or open it on YouTube</p>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Testimonies</h2>
+              <p className="text-lg text-gray-600">Hear the stories of lives changed through JCPGIM</p>
             </div>
-            <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg">
-              <iframe
-                src="https://www.youtube.com/embed/yVhKuyAdi_Q?autoplay=0"
-                title="JCPGIM Live Stream"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
+            <div className="grid md:grid-cols-2 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <Card key={index} className="hover:shadow-lg transition-shadow">
+                  <CardContent className="pt-6">
+                    <div className="relative w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+                      <Image
+                        src={testimonial.image || "/placeholder.svg"}
+                        alt={testimonial.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{testimonial.name}</h3>
+                    <p className="text-yellow-600 font-medium mb-3">{testimonial.role}</p>
+                    <p className="text-sm text-gray-600 text-center">"{testimonial.quote}"</p>
+                  </CardContent>
+                </Card>
+              ))}
             </div>
-            <div className="text-center mt-4">
-              <a
-                href="https://www.youtube.com/live/yVhKuyAdi_Q?si=Hz155mHKol2Ft_ey"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button className="mt-2">Open on YouTube</Button>
-              </a>
+            <div className="text-center mt-8">
+              <Link href="/testimonies">
+                <Button className="bg-yellow-600 hover:bg-yellow-700">
+                  Read More Testimonies
+                  <ChevronRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
             </div>
           </div>
         </section>
