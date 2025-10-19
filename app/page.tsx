@@ -218,7 +218,7 @@ export default function HomePage() {
             </div>
             <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg">
               <iframe
-                src="https://www.youtube.com/embed/6BmmIXrkNYY?autoplay=0"
+                src="https://www.youtube.com/embed/yVhKuyAdi_Q?autoplay=0"
                 title="JCPGIM Live Stream"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -228,7 +228,7 @@ export default function HomePage() {
             </div>
             <div className="text-center mt-4">
               <a
-                href="https://www.youtube.com/live/6BmmIXrkNYY?si=zoVU69Bk7Vj_MRAP"
+                href="https://www.youtube.com/live/yVhKuyAdi_Q?si=Hz155mHKol2Ft_ey"
                 target="_blank"
                 rel="noopener noreferrer"
               >
