@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -16,7 +16,6 @@ import {
   Baby,
   UserCheck,
   User,
-  ChevronLeft,
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
@@ -64,7 +63,7 @@ function WatchLiveButton() {
         }
       } catch (error) {
         console.error("Error fetching live stream:", error)
-        setError("")
+        setError("Failed to fetch live stream. Please try again later.")
       }
     }
 
@@ -73,7 +72,7 @@ function WatchLiveButton() {
 
   const liveUrl = liveVideoId
     ? `https://www.youtube.com/live/${liveVideoId}?autoplay=1`
-    : "https://www.youtube.com/@jcpgmchurch"
+    : "https://www.youtube.com/@jcpgimofficial27/live"
 
   return (
     <div>
@@ -90,7 +89,6 @@ function WatchLiveButton() {
 
 export default function HomePage() {
   const isMobile = useIsMobile()
-  const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
 
   const upcomingEvents = [
     {
@@ -165,31 +163,10 @@ export default function HomePage() {
     { name: "Facebook", url: "https://www.facebook.com/share/1AMrgQCnq3/", icon: "facebook" },
     { name: "Twitter", url: "https://x.com/jcpgimchurch?t=xjBU4cdUkHy46K3KXtmt6A&s=09", icon: "twitter" },
     { name: "Instagram", url: "https://www.instagram.com/jcpgim_church?igsh=MWYxc21tdHhoZmRweQ==", icon: "instagram" },
-    { name: "YouTube", url: "https://www.youtube.com/@jcpgmchurch", icon: "youtube" },
+    { name: "YouTube", url: "https://youtube.com/@jcpgimofficial27?si=x6Tn1ve85xXeGGZH", icon: "youtube" },
     { name: "WhatsApp", url: "https://whatsapp.com/channel/0029VaJ4FCT3AzNJ64QPYe2S", icon: "whatsapp" },
     { name: "Threads", url: "https://www.threads.net/@jcpgim_church", icon: "threads" },
   ]
-
-  const recentVideos = [
-    {
-      id: 'gT-Cpnw1AZ0',
-      title: 'SUNDAY SERVICE | 12-10-2025 | Pastor K. Ravi Kumar | #live #church',
-      thumbnail: 'https://img.youtube.com/vi/gT-Cpnw1AZ0/hqdefault.jpg',
-    },
-    {
-      id: '6BmmIXrkNYY',
-      title: 'SUNDAY SERVICE | 05-10-2025 | Pastor K. Ravi Kumar | #live #church',
-      thumbnail: 'https://img.youtube.com/vi/6BmmIXrkNYY/hqdefault.jpg',
-    },
-  ]
-
-  const handlePrevVideo = () => {
-    setCurrentVideoIndex((prev) => (prev === 0 ? recentVideos.length - 1 : prev - 1))
-  }
-
-  const handleNextVideo = () => {
-    setCurrentVideoIndex((prev) => (prev === recentVideos.length - 1 ? 0 : prev + 1))
-  }
 
   return (
     <ProtectedRoute>
@@ -236,68 +213,27 @@ export default function HomePage() {
         <section className="py-12 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-gray-900">Recent Services</h2>
-              <p className="text-sm text-gray-600">Watch our recent broadcasts or join live on YouTube</p>
+              <h2 className="text-2xl font-bold text-gray-900">Live Stream</h2>
+              <p className="text-sm text-gray-600">Join our live broadcast below or open it on YouTube</p>
             </div>
-            <div className="relative max-w-2xl mx-auto">
-              <div className="relative rounded-lg overflow-hidden shadow-lg">
-                <a
-                  href={`https://www.youtube.com/watch?v=${recentVideos[currentVideoIndex].id}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div className="relative">
-                    <Image
-                      src={recentVideos[currentVideoIndex].thumbnail}
-                      alt={recentVideos[currentVideoIndex].title}
-                      width={640}
-                      height={360}
-                      className="w-full h-auto"
-                    />
-                    <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-40">
-                      <Play className="w-12 h-12 text-white" />
-                    </div>
-                  </div>
-                  <div className="p-4 bg-white">
-                    <h3 className="text-sm font-semibold text-gray-900 line-clamp-2">
-                      {recentVideos[currentVideoIndex].title}
-                    </h3>
-                  </div>
-                </a>
-              </div>
-              {recentVideos.length > 1 && (
-                <>
-                  <button
-                    onClick={handlePrevVideo}
-                    className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-2 rounded-r-lg hover:bg-opacity-75"
-                    aria-label="Previous video"
-                  >
-                    <ChevronLeft className="w-6 h-6" />
-                  </button>
-                  <button
-                    onClick={handleNextVideo}
-                    className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-2 rounded-l-lg hover:bg-opacity-75"
-                    aria-label="Next video"
-                  >
-                    <ChevronRight className="w-6 h-6" />
-                  </button>
-                </>
-              )}
-              <div className="flex justify-center mt-4 space-x-2">
-                {recentVideos.map((_, index) => (
-                  <button
-                    key={index}
-                    className={`w-3 h-3 rounded-full ${
-                      index === currentVideoIndex ? 'bg-yellow-600' : 'bg-gray-300'
-                    }`}
-                    onClick={() => setCurrentVideoIndex(index)}
-                    aria-label={`Go to video ${index + 1}`}
-                  />
-                ))}
-              </div>
+            <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.youtube.com/embed/gT-Cpnw1AZ0?autoplay=0"
+                title="JCPGIM Live Stream"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
             </div>
             <div className="text-center mt-4">
-              <WatchLiveButton />
+              <a
+                href="https://www.youtube.com/live/gT-Cpnw1AZ0?si=fo6FVPZbUa0hlnv0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="mt-2">Open on YouTube</Button>
+              </a>
             </div>
           </div>
         </section>
