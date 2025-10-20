@@ -19,7 +19,7 @@ export function Navigation() {
     { href: "/", label: "Home" },
     { href: "/about", label: "About" },
     { href: "/events", label: "Events" },
-    { href: "/videos", label: "Videos" },
+    { href: "/daily-grace", label: "Daily Grace" },
     { href: "/chosen-band", label: "Chosen Band" },
     { href: "/praises", label: "Praises" },
     { href: "/prayer-request", label: "Prayer Request" },

@@ -1,14 +1,17 @@
 {
-  "generalVideos": [
+  "teluguVideos": [
     {
-      "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
-      "title": "Rick Astley - Never Gonna Give You Up (Official Music Video)"
+      "day": 1,
+      "url": "https://www.youtube.com/live/gT-Cpnw1AZ0?si=NHH4XWKS7pApZCDh",
+      "thumbnail": "https://i.ytimg.com/vi/gT-Cpnw1AZ0/hqdefault.jpg",
+      "title": "SUNDAY SERVICE | 12-10-2025 | Pastor K. Ravi Kumar | #live #church"
     },
     {
-      "url": "https://www.youtube.com/watch?v=3JZ_D3ELwOQ",
-      "thumbnail": "https://i.ytimg.com/vi/3JZ_D3ELwOQ/hqdefault.jpg",
-      "title": "CHAI - N.E.O. (Official Music Video)"
+      "day": 2,
+      "url": "https://www.youtube.com/live/yVhKuyAdi_Q?si=S1cez9BWK7d4FAZZ",
+      "thumbnail": "https://i.ytimg.com/vi/yVhKuyAdi_Q/hqdefault.jpg",
+      "title": "SUNDAY SERVICE | 19-10-2025 | Pastor K. Ravi Kumar | #live #church"
     }
-  ]
+  ],
+  "englishVideos": []
 }
