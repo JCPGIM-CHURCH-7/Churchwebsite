@@ -11,6 +11,12 @@ import { Navigation } from "@/components/navigation"
 export default function ChosenBandPage() {
   const bandMembers = [
     {
+      name: "Lead Vocalist",
+      role: "Worship Leader",
+      description: "Leading the congregation into the presence of God through powerful worship",
+      image: "/images/worship.jpg",
+    },
+    {
       name: "Soumya Sharon",
       role: "Worship Leader, Vocalist, Guitarist",
       description: "Leading the congregation into the presence of God through powerful worship",
@@ -41,7 +47,7 @@ export default function ChosenBandPage() {
       image: "/images/Junia Suzzana.jpg",
     },
     {
-      name: "Shawn",
+      name: "Shawn Joshua William",
       role: "Leader, Vocalist, Percussionist",
       description: "Guiding the team with anointed leadership and rhythmic energy",
       image: "/images/Shawn.jpg",
