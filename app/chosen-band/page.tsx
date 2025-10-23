@@ -11,9 +11,9 @@ import { Navigation } from "@/components/navigation"
 export default function ChosenBandPage() {
   const bandMembers = [
     {
-      name: "Lead Vocalist",
-      role: "Worship Leader",
-      description: "Leading the congregation into the presence of God through powerful worship",
+      name: "",
+      role: "",
+      description: "The Chosen Band, leading the congregation into God's presence through anointed worship",
       image: "/images/worship.jpg",
     },
     {
@@ -177,15 +177,15 @@ export default function ChosenBandPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {bandMembers.map((member, index) => (
               <Card key={index} className="hover:shadow-xl transition-shadow">
-                <div className="relative h-48 overflow-hidden rounded-t-lg">
-                  <Image src={member.image || "/placeholder.svg"} alt={member.name} fill className="object-cover" />
+                <div className={`relative ${index === 0 ? 'h-96' : 'h-48'} overflow-hidden rounded-t-lg`}>
+                  <Image src={member.image || "/placeholder.svg"} alt={member.name || "The Chosen Band"} fill className="object-cover" />
                   <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                     <Music className="w-12 h-12 text-white" />
                   </div>
                 </div>
                 <CardHeader className="text-center">
-                  <CardTitle className="text-xl">{member.name}</CardTitle>
-                  <Badge className="bg-yellow-600 text-white">{member.role}</Badge>
+                  {member.name && <CardTitle className="text-xl">{member.name}</CardTitle>}
+                  {member.role && <Badge className="bg-yellow-600 text-white">{member.role}</Badge>}
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 text-center">{member.description}</p>
