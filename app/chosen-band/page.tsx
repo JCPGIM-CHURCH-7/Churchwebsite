@@ -11,22 +11,40 @@ import { Navigation } from "@/components/navigation"
 export default function ChosenBandPage() {
   const bandMembers = [
     {
-      name: "Lead Vocalist",
-      role: "Worship Leader",
+      name: "Soumya Sharon",
+      role: "Worship Leader, Vocalist, Guitarist",
       description: "Leading the congregation into the presence of God through powerful worship",
-      image: "/images/worship.jpg",
+      image: "/images/Soumya Sharon.jpg",
     },
     {
-      name: "Instrumentalists",
-      role: "Musicians",
+      name: "Shwetha Shalom",
+      role: "Vocalist, Keyboardist",
       description: "Creating beautiful melodies that lift hearts to heaven",
-      image: "/images/jcpgim-boys.jpg",
+      image: "/images/Shwetha Shalom.jpg",
     },
     {
-      name: "Backup Vocals",
-      role: "Harmony Team",
+      name: "Zarah Grace",
+      role: "Vocalist",
       description: "Supporting the worship with angelic harmonies",
-      image: "/images/jcpgim-girls.jpg",
+      image: "/images/Zarah Grace.jpg",
+    },
+    {
+      name: "Abiel David Asher",
+      role: "Male Vocalist",
+      description: "Bringing powerful vocals to uplift the congregation",
+      image: "/images/David Asher.jpg",
+    },
+    {
+      name: "Suzanna Junia William",
+      role: "Vocalist",
+      description: "Adding heartfelt harmonies to the worship experience",
+      image: "/images/Junia Suzzana.jpg",
+    },
+    {
+      name: "Shawn",
+      role: "Leader, Vocalist, Percussionist",
+      description: "Guiding the team with anointed leadership and rhythmic energy",
+      image: "/images/Shawn.jpg",
     },
   ]
 
@@ -42,7 +60,7 @@ export default function ChosenBandPage() {
       event: "Daily Online Worship",
       date: "Every Day",
       time: "5:00 AM - 6:00 AM",
-  location: "Google Meet: https://meet.google.com/mdw-fezs-aho",
+      location: "Google Meet: https://meet.google.com/mdw-fezs-aho",
       type: "Online Service",
     },
     {
