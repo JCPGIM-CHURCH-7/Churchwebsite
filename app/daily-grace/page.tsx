@@ -1,6 +1,11 @@
 "use client";
-import React, { useMemo, useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { Navigation } from "@/components/navigation";
+import ProtectedRoute from "@/components/ProtectedRoute";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import {
   Carousel,
   CarouselContent,
@@ -8,53 +13,39 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import Footer from "@/components/Footer";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
-import { Card, CardContent } from "@/components/ui/card";
-import Image from "next/image";
-import youtubeData from "@/lib/youtube-links.json";
 
 const DAILY_MESSAGES_BASE = "/images/Daily messages";
 
-function toTwo(n: number) {
-  return n.toString().padStart(2, "0");
+type VideoItem = { title: string; src: string };
+
+function buildDays(prefix: string, count: number): VideoItem[] {
+  return Array.from({ length: count }, (_, i) => i + 1).map((day) => ({
+    title: `${prefix} Day ${day}`,
+    src: `${DAILY_MESSAGES_BASE}/${prefix} Day ${day}.mp4`,
+  }));
 }
 
-function buildSequence(prefix: string, start: number, end: number) {
-  // Build filenames like: "English Day 1.mp4"... "English Day 54.mp4"
-  const items: { title: string; src: string }[] = [];
-  for (let day = start; day <= end; day++) {
-    const name = `${prefix} Day ${day}.mp4`;
-    items.push({ title: `${prefix} Day ${day}`, src: `${DAILY_MESSAGES_BASE}/${name}` });
-  }
-  return items;
-}
-
-interface LocalVideoItem { title: string; src: string; }
-
-function VideoCarousel({ title, items, onPlay }: { title: string; items: LocalVideoItem[]; onPlay: (item: LocalVideoItem) => void }) {
+function SectionCarousel({ title, items, onOpen }: { title: string; items: VideoItem[]; onOpen: (item: VideoItem) => void }) {
   return (
-    <section className="mb-12">
-      <h2 className="text-3xl font-bold mb-6 text-center">{title}</h2>
-      {items.length === 0 ? (
-        <p className="text-center text-muted-foreground">No videos available.</p>
-      ) : (
-        <Carousel className="w-full max-w-6xl mx-auto">
+    <section className="py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{title}</h2>
+          <p className="text-gray-600">Day 1 to Day 54</p>
+        </div>
+        <Carousel className="w-full max-w-7xl mx-auto">
           <CarouselContent>
             {items.map((item) => (
               <CarouselItem key={item.src} className="basis-full sm:basis-1/2 lg:basis-1/3">
-                <Card className="overflow-hidden">
-                  <button type="button" onClick={() => onPlay(item)} className="text-left w-full">
+                <Card className="hover:shadow-lg transition-shadow overflow-hidden">
+                  <button type="button" onClick={() => onOpen(item)} className="w-full text-left">
                     <CardContent className="p-0">
-                      <div className="relative w-full aspect-video bg-muted">
-                        <Image src={"/placeholder.jpg"} alt={item.title} fill className="object-cover" />
+                      <div className="relative w-full aspect-video">
+                        <Image src="/placeholder.jpg" alt={item.title} fill className="object-cover" />
                         <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                          <span className="text-white text-sm md:text-base font-medium">{item.title}</span>
+                          <span className="text-white font-semibold text-sm md:text-base">{item.title}</span>
                         </div>
                       </div>
                     </CardContent>
@@ -66,59 +57,61 @@ function VideoCarousel({ title, items, onPlay }: { title: string; items: LocalVi
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
-      )}
+      </div>
     </section>
   );
 }
 
 export default function DailyGracePage() {
   const [open, setOpen] = useState(false);
-  const [current, setCurrent] = useState<LocalVideoItem | null>(null);
+  const [current, setCurrent] = useState<VideoItem | null>(null);
 
-  const englishItems = useMemo(() => buildSequence("English", 1, 54), []);
-  const teluguItems = useMemo(() => buildSequence("Telugu", 1, 54), []);
+  const telugu = buildDays("Telugu", 54);
+  const english = buildDays("English", 54);
 
-  const weeklyLives = youtubeData?.weeklyLives ?? [];
-
-  function handlePlay(item: LocalVideoItem) {
+  function openPlayer(item: VideoItem) {
     setCurrent(item);
     setOpen(true);
   }
 
   return (
-    <>
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex items-center justify-between mb-8">
-          <h1 className="text-4xl font-bold">Daily Grace</h1>
-          <nav className="hidden md:block">
-            <ul className="flex items-center gap-4 text-sm">
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/about">About</Link></li>
-              <li><Link href="/events">Events</Link></li>
-              <li><Link href="/chosen-band">Chosen Band</Link></li>
-              <li><Link href="/prayer-request">Prayer Request</Link></li>
-              <li><Link href="/contact">Contact</Link></li>
-            </ul>
-          </nav>
-        </div>
+    <ProtectedRoute>
+      <div className="min-h-screen bg-white">
+        <Navigation />
 
-        <VideoCarousel title="Telugu Daily Manna" items={teluguItems} onPlay={handlePlay} />
-        <VideoCarousel title="English Daily Manna" items={englishItems} onPlay={handlePlay} />
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-br from-yellow-400 via-yellow-500 to-orange-500 text-white py-16 md:py-20">
+          <div className="absolute inset-0 bg-black opacity-20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">Daily Grace</h1>
+            <p className="text-lg md:text-xl opacity-90">Daily Manna videos in Telugu and English</p>
+          </div>
+        </section>
 
-        <section className="mb-16">
-          <h2 className="text-3xl font-bold mb-6 text-center">Weekly YouTube Live</h2>
-          {weeklyLives && weeklyLives.length > 0 ? (
-            <Carousel className="w-full max-w-6xl mx-auto">
+        {/* Telugu Carousel */}
+        <SectionCarousel title="Telugu Daily Manna" items={telugu} onOpen={openPlayer} />
+
+        {/* English Carousel */}
+        <SectionCarousel title="English Daily Manna" items={english} onOpen={openPlayer} />
+
+        {/* Weekly YouTube Lives */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Weekly YouTube Live</h2>
+              <p className="text-gray-600">Latest live streams</p>
+            </div>
+            <Carousel className="w-full max-w-7xl mx-auto">
               <CarouselContent>
-                {weeklyLives.map((live: any, idx: number) => (
-                  <CarouselItem key={idx} className="basis-full sm:basis-1/2 lg:basis-1/3">
-                    <Card>
-                      <a href={live.url} target="_blank" rel="noopener noreferrer">
+                {[1, 2, 3, 4, 5, 6].map((i) => (
+                  <CarouselItem key={i} className="basis-full sm:basis-1/2 lg:basis-1/3">
+                    <Card className="hover:shadow-lg transition-shadow overflow-hidden">
+                      <a href="#" target="_blank" rel="noopener noreferrer">
                         <CardContent className="p-0">
                           <div className="relative w-full aspect-video">
-                            <Image src={live.thumbnail || "/placeholder.jpg"} alt={live.title || "YouTube Live"} fill className="object-cover" />
+                            <Image src="/placeholder.jpg" alt={`YouTube Live ${i}`} fill className="object-cover" />
                           </div>
-                          <div className="p-3 text-sm">{live.title || "YouTube Live"}</div>
+                          <div className="p-3 text-sm">YouTube Live {i}</div>
                         </CardContent>
                       </a>
                     </Card>
@@ -128,36 +121,50 @@ export default function DailyGracePage() {
               <CarouselPrevious />
               <CarouselNext />
             </Carousel>
-          ) : (
-            <p className="text-center text-muted-foreground">No live sessions available.</p>
-          )}
-        </section>
-      </div>
-
-      <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="max-w-3xl">
-          <DialogHeader>
-            <DialogTitle>{current?.title || ""}</DialogTitle>
-          </DialogHeader>
-          <div className="w-full">
-            {current?.src?.toLowerCase().endsWith(".mp4") ? (
-              <video src={current.src} controls className="w-full h-auto" preload="metadata" />
-            ) : (
-              <div className="relative w-full aspect-video">
-                <iframe
-                  src={current?.src || ""}
-                  title={current?.title || "Video"}
-                  className="absolute inset-0 w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                />
-              </div>
-            )}
           </div>
-        </DialogContent>
-      </Dialog>
+        </section>
 
-      <Footer />
-    </>
+        {/* CTA Section */}
+        <section className="py-16 bg-gradient-to-r from-yellow-600 to-orange-600 text-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Be Blessed Daily</h2>
+            <p className="text-xl mb-8">Stay connected with the Word every day</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/prayer-request">
+                <Button size="lg" className="bg-white text-yellow-600 hover:bg-gray-100 font-semibold">
+                  Request Prayer
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-white hover:text-yellow-600 font-semibold bg-transparent"
+                >
+                  Contact Us
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <Footer />
+
+        {/* Player Dialog UI */}
+        <Dialog open={open} onOpenChange={setOpen}>
+          <DialogContent className="max-w-3xl">
+            <DialogHeader>
+              <DialogTitle>{current?.title}</DialogTitle>
+            </DialogHeader>
+            <div className="w-full">
+              <div className="relative w-full aspect-video bg-black">
+                {/* UI shell only; video element present for consistency */}
+                <video src={current?.src} controls className="w-full h-full" preload="metadata" />
+              </div>
+            </div>
+          </DialogContent>
+        </Dialog>
+      </div>
+    </ProtectedRoute>
   );
 }
