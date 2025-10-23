@@ -3,19 +3,13 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Music, Users, Calendar, Play, Heart, Star } from "lucide-react"
+import { Music, Users, Calendar, Play, Heart, Star, Instagram } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { Navigation } from "@/components/navigation"
 
 export default function ChosenBandPage() {
   const bandMembers = [
-    {
-      name: "",
-      role: "",
-      description: "The Chosen Band, leading the congregation into God's presence through anointed worship",
-      image: "/images/worship.jpg",
-    },
     {
       name: "Soumya Sharon",
       role: "Worship Leader, Vocalist, Guitarist",
@@ -174,24 +168,65 @@ export default function ChosenBandPage() {
             <p className="text-lg text-gray-600">Meet the anointed musicians who lead us in worship</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          {/* Main Band Image */}
+          <div className="mb-12">
+            <Card className="hover:shadow-xl transition-shadow">
+              <div className="relative h-[500px] overflow-hidden rounded-t-lg">
+                <Image
+                  src="/images/worship.jpg"
+                  alt="The Chosen Band"
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                  <Music className="w-16 h-16 text-white" />
+                </div>
+              </div>
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl">The Chosen Band</CardTitle>
+                <CardDescription className="text-lg">
+                  Leading the congregation into God's presence through anointed worship
+                </CardDescription>
+              </CardHeader>
+            </Card>
+          </div>
+
+          {/* Individual Band Members */}
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             {bandMembers.map((member, index) => (
               <Card key={index} className="hover:shadow-xl transition-shadow">
-                <div className={`relative ${index === 0 ? 'h-96' : 'h-48'} overflow-hidden rounded-t-lg`}>
-                  <Image src={member.image || "/placeholder.svg"} alt={member.name || "The Chosen Band"} fill className="object-cover" />
+                <div className="relative h-48 overflow-hidden rounded-t-lg">
+                  <Image
+                    src={member.image || "/placeholder.svg"}
+                    alt={member.name}
+                    fill
+                    className="object-cover"
+                  />
                   <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
                     <Music className="w-12 h-12 text-white" />
                   </div>
                 </div>
                 <CardHeader className="text-center">
-                  {member.name && <CardTitle className="text-xl">{member.name}</CardTitle>}
-                  {member.role && <Badge className="bg-yellow-600 text-white">{member.role}</Badge>}
+                  <CardTitle className="text-xl">{member.name}</CardTitle>
+                  <Badge className="bg-yellow-600 text-white">{member.role}</Badge>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-600 text-center">{member.description}</p>
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          {/* Instagram Section */}
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Follow Us on Instagram</h3>
+            <p className="text-lg text-gray-600 mb-6">Stay updated with our latest worship moments and inspirations</p>
+            <Link href="https://www.instagram.com/thechosenhyd/" target="_blank" rel="noopener noreferrer">
+              <Button size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700 font-semibold">
+                <Instagram className="w-5 h-5 mr-2" />
+                Visit @thechosenhyd
+              </Button>
+            </Link>
           </div>
         </section>
 
