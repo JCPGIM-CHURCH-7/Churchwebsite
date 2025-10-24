@@ -19,7 +19,6 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import { Navigation } from "@/components/navigation"
 import ProtectedRoute from "@/components/ProtectedRoute"
 import { useEffect, useState } from "react"
 import * as React from 'react'
@@ -171,7 +170,7 @@ export default function HomePage() {
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-white">
-        <Navigation />
+        {/* Navigation provided by global layout (app/layout.tsx) */}
 
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-yellow-400 via-yellow-500 to-orange-500 text-white py-16 md:py-24">
