@@ -131,7 +131,7 @@ export default function HomePage() {
     {
       title: "Youth Girls Ministry",
       description: "Building strong young women of faith and spiritual leadership",
-      image: "/images/jcpgim-women.jpg",
+      image: "/images/jcpgim-girls.jpg",
       ageGroup: "Ages 13-25",
       icon: <Heart className="w-12 h-12 text-white opacity-80" />,
     },

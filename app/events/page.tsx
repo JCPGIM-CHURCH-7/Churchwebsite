@@ -58,7 +58,7 @@ export default function EventsPage() {
       location: "Prayer Hall",
       type: "youth-girls",
       category: "Youth Girls Ministry",
-      image: "/images/jcpgim-women.jpg",
+      image: "/images/jcpgim-girls.jpg",
       featured: true,
       details: {
         activities: ["Worship", "Prayer", "Bible Study", "Testimonies", "Fellowship"],
