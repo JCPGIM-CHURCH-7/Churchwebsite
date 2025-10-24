@@ -18,7 +18,7 @@ import Footer from "@/components/Footer";
 
 const DAILY_MESSAGES_BASE = "/images/Daily messages";
 
-type VideoItem = { title: string; src: string; isYouTube?: boolean };
+type VideoItem = { title: string; src: string; isYouTube?: boolean; thumbnail?: string };
 
 function buildDays(prefix: string, count: number): VideoItem[] {
   const days = Array.from({ length: count }, (_, i) => i + 1).map((day) => ({
@@ -76,8 +76,18 @@ export default function DailyGracePage() {
   const telugu = buildDays("Telugu", 54);
   const english = buildDays("English", 54);
   const youtubeLives: VideoItem[] = [
-    { title: "Sunday Service 12-10-2025", src: "https://www.youtube.com/embed/yVhKuyAdi_Q", isYouTube: true },
-    { title: "Sunday Service (Additional)", src: "https://www.youtube.com/embed/gT-Cpnw1AZ0", isYouTube: true },
+    { 
+      title: "Sunday Service 12-10-2025 | Pastor K. Ravi Kumar", 
+      src: "https://www.youtube.com/embed/yVhKuyAdi_Q", 
+      isYouTube: true,
+      thumbnail: "https://img.youtube.com/vi/yVhKuyAdi_Q/maxresdefault.jpg"
+    },
+    { 
+      title: "Sunday Service (Additional)", 
+      src: "https://www.youtube.com/embed/gT-Cpnw1AZ0", 
+      isYouTube: true,
+      thumbnail: "https://img.youtube.com/vi/gT-Cpnw1AZ0/maxresdefault.jpg"
+    },
   ];
 
   function openPlayer(item: VideoItem) {
@@ -120,12 +130,17 @@ export default function DailyGracePage() {
                       <a href={item.src.replace("/embed/", "/watch?v=")} target="_blank" rel="noopener noreferrer">
                         <CardContent className="p-0">
                           <div className="relative w-full aspect-video">
-                            <Image src="/placeholder.jpg" alt={item.title} fill className="object-cover" />
+                            <Image 
+                              src={item.thumbnail || "/placeholder.jpg"} 
+                              alt={item.title} 
+                              fill 
+                              className="object-cover" 
+                            />
                             <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
                               <span className="text-white font-semibold text-sm md:text-base">{item.title}</span>
                             </div>
                           </div>
-                          <div className="p-3 text-sm">{item.title}</div>
+                          <div className="p-3 text-sm text-gray-600">YouTube Live</div>
                         </CardContent>
                       </a>
                     </Card>
