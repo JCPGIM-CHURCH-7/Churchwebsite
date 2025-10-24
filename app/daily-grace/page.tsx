@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Navigation } from "@/components/navigation";
 import ProtectedRoute from "@/components/ProtectedRoute";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -98,8 +97,6 @@ export default function DailyGracePage() {
   return (
     <ProtectedRoute>
       <div className="min-h-screen bg-white">
-        <Navigation />
-
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-yellow-400 via-yellow-500 to-orange-500 text-white py-16 md:py-20">
           <div className="absolute inset-0 bg-black opacity-20"></div>

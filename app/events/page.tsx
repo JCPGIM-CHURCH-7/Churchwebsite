@@ -7,7 +7,6 @@ import { Badge } from "@/components/ui/badge"
 import { Calendar, Clock, MapPin, Users, Filter, Heart, BookOpen, Music, Baby, UserCheck, User } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import { Navigation } from "@/components/navigation"
 
 export default function EventsPage() {
   const [selectedFilter, setSelectedFilter] = useState("all")
@@ -267,7 +266,6 @@ export default function EventsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Navigation />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-yellow-600 to-orange-600 text-white py-16">

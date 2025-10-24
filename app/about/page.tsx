@@ -5,7 +5,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Heart, Globe, Crown, Star } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import { Navigation } from "@/components/navigation"
 
 export default function AboutPage() {
   const beliefs = [
@@ -38,9 +37,6 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <Navigation />
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-yellow-600 to-orange-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

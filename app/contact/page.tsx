@@ -11,7 +11,6 @@ import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { MapPin, Phone, Mail, Clock, Send, Loader2, CheckCircle } from "lucide-react"
 import Image from "next/image"
-import { Navigation } from "@/components/navigation"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -111,9 +110,6 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation Component */}
-      <Navigation />
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-yellow-600 to-orange-600 text-white py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
