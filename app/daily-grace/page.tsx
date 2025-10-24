@@ -18,13 +18,20 @@ import Footer from "@/components/Footer";
 
 const DAILY_MESSAGES_BASE = "/images/Daily messages";
 
-type VideoItem = { title: string; src: string };
+type VideoItem = { title: string; src: string; isYouTube?: boolean };
 
 function buildDays(prefix: string, count: number): VideoItem[] {
-  return Array.from({ length: count }, (_, i) => i + 1).map((day) => ({
+  const days = Array.from({ length: count }, (_, i) => i + 1).map((day) => ({
     title: `${prefix} Day ${day}`,
     src: `${DAILY_MESSAGES_BASE}/${prefix} Day ${day}.mp4`,
   }));
+  // Override Day 1 for Telugu and English with specific paths
+  if (prefix === "Telugu") {
+    days[0] = { title: "Telugu Day 1", src: "/images/Daily messages/Telugu Day1.mp4" };
+  } else if (prefix === "English") {
+    days[0] = { title: "English Day 1", src: "/images/Daily messages/English Day1.mp4" };
+  }
+  return days;
 }
 
 function SectionCarousel({ title, items, onOpen }: { title: string; items: VideoItem[]; onOpen: (item: VideoItem) => void }) {
@@ -68,6 +75,10 @@ export default function DailyGracePage() {
 
   const telugu = buildDays("Telugu", 54);
   const english = buildDays("English", 54);
+  const youtubeLives: VideoItem[] = [
+    { title: "Sunday Service 12-10-2025", src: "https://www.youtube.com/embed/yVhKuyAdi_Q", isYouTube: true },
+    { title: "Sunday Service (Additional)", src: "https://www.youtube.com/embed/gT-Cpnw1AZ0", isYouTube: true },
+  ];
 
   function openPlayer(item: VideoItem) {
     setCurrent(item);
@@ -103,15 +114,18 @@ export default function DailyGracePage() {
             </div>
             <Carousel className="w-full max-w-7xl mx-auto">
               <CarouselContent>
-                {[1, 2, 3, 4, 5, 6].map((i) => (
-                  <CarouselItem key={i} className="basis-full sm:basis-1/2 lg:basis-1/3">
+                {youtubeLives.map((item) => (
+                  <CarouselItem key={item.src} className="basis-full sm:basis-1/2 lg:basis-1/3">
                     <Card className="hover:shadow-lg transition-shadow overflow-hidden">
-                      <a href="#" target="_blank" rel="noopener noreferrer">
+                      <a href={item.src.replace("/embed/", "/watch?v=")} target="_blank" rel="noopener noreferrer">
                         <CardContent className="p-0">
                           <div className="relative w-full aspect-video">
-                            <Image src="/placeholder.jpg" alt={`YouTube Live ${i}`} fill className="object-cover" />
+                            <Image src="/placeholder.jpg" alt={item.title} fill className="object-cover" />
+                            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+                              <span className="text-white font-semibold text-sm md:text-base">{item.title}</span>
+                            </div>
                           </div>
-                          <div className="p-3 text-sm">YouTube Live {i}</div>
+                          <div className="p-3 text-sm">{item.title}</div>
                         </CardContent>
                       </a>
                     </Card>
@@ -158,8 +172,17 @@ export default function DailyGracePage() {
             </DialogHeader>
             <div className="w-full">
               <div className="relative w-full aspect-video bg-black">
-                {/* UI shell only; video element present for consistency */}
-                <video src={current?.src} controls className="w-full h-full" preload="metadata" />
+                {current?.isYouTube ? (
+                  <iframe
+                    src={current.src}
+                    title={current.title}
+                    className="w-full h-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                ) : (
+                  <video src={current?.src} controls className="w-full h-full" preload="metadata" />
+                )}
               </div>
             </div>
           </DialogContent>
