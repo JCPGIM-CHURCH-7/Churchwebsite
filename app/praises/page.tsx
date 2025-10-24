@@ -616,8 +616,7 @@ export default function PraisesPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation */}
-      <Navigation />
+      {/* Navigation provided by global layout */}
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-yellow-600 to-orange-600 text-white py-16">
