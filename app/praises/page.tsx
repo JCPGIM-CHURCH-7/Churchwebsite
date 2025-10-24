@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Heart, Search, Star, Crown } from "lucide-react"
 import Link from "next/link"
-import { Navigation } from "@/components/navigation"
+
 
 export default function PraisesPage() {
   const [searchTerm, setSearchTerm] = useState("")

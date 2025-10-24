@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge"
 import { Music, Heart, Instagram } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
-import { Navigation } from "@/components/navigation"
+
 
 export default function ChosenBandPage() {
   const bandMembers = [
