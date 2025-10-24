@@ -23,7 +23,7 @@ export default function PrayerRequestPage() {
     anonymous: false,
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitted, setIsSubmitted] = state(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -104,9 +104,6 @@ export default function PrayerRequestPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation */}
-      <Navigation />
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-yellow-600 to-orange-600 text-white py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

@@ -8,7 +8,6 @@ import { Badge } from "@/components/ui/badge"
 import { Heart, Search, Star, Crown } from "lucide-react"
 import Link from "next/link"
 
-
 export default function PraisesPage() {
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("all")
