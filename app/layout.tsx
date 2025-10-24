@@ -3,6 +3,8 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { AuthProvider } from "@/contexts/AuthContext"
+import { Navigation } from "@/components/navigation"
+import Footer from "@/components/Footer"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -86,8 +88,12 @@ export function generateViewport() {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <AuthProvider>{children}</AuthProvider>
+      <body className={inter.className + " min-h-screen flex flex-col bg-white"}>
+        <AuthProvider>
+          <Navigation />
+          <main className="flex-1 pt-0">{children}</main>
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   )
