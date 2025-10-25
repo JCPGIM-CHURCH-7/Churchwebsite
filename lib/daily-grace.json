@@ -1,0 +1,28 @@
+{
+  "mannas": [
+    {
+      "id": "2025-10-25-1",
+      "date": "2025-10-25",
+      "english": "Trust in the Lord with all your heart and lean not on your own understanding.",
+      "telugu": "మీ హ్రదయమందించును యెహోవాపై నమ్మకుండావేము; మీ స్వంత విజ్ఞానంపై ఆధారపడకండి.",
+      "verse": "Proverbs 3:5",
+      "image": "/images/front-page.jpg"
+    },
+    {
+      "id": "2025-10-25-2",
+      "date": "2025-10-25",
+      "english": "A new mercies every morning — receive grace for the day.",
+      "telugu": "ప్రతి ఉదయం కొత్త ఆశీస్సులు — రోజు కోసం శరణు స్వీకరించండి.",
+      "verse": "Lamentations 3:22-23",
+      "image": "/images/jcpgim-women-worship.jpg"
+    },
+    {
+      "id": "2025-10-25-3",
+      "date": "2025-10-25",
+      "english": "Let your light shine before others, that they may see your good deeds.",
+      "telugu": "మీ उज्ज్వలమైన ప్రకాశం ఇతరులకు దర్శనమయ్యేలా చేయండి, వారు మీ మంచి పనులను చూశాక.",
+      "verse": "Matthew 5:16",
+      "image": "/images/worship.jpg"
+    }
+  ]
+}

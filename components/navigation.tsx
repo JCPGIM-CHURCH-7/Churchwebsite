@@ -40,9 +40,11 @@ export function Navigation() {
   return (
     <header className="bg-white shadow-lg border-b-2 border-yellow-400 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-3">
+        <div className="flex items-center justify-between py-3">
+          {/* Layout: logo | centered nav (desktop) | actions */}
+          <div className="flex items-center flex-1">
           {/* Logo Section - Enhanced for Mobile */}
-          <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
+            <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <Image src="/images/logo.png" alt="JCPGIM Logo" width={50} height={38} className="object-contain" />
             <div>
               {/* Mobile - Show full name */}
@@ -63,10 +65,11 @@ export function Navigation() {
                 <p className="text-xs lg:text-sm text-yellow-600 font-medium">International Ministries</p>
               </div>
             </div>
-          </Link>
+            </Link>
+          </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden lg:flex space-x-6">
+          {/* Desktop Navigation - centered */}
+          <nav className="hidden lg:flex space-x-6 flex-1 justify-center">
             {navigationItems.map((item) => (
               <Link
                 key={item.href}
@@ -82,8 +85,30 @@ export function Navigation() {
             ))}
           </nav>
 
-          {/* Desktop CTA Button */}
-          <div className="hidden md:flex items-center space-x-3">
+          {/* Actions (right) */}
+          <div className="hidden md:flex items-center space-x-3 flex-1 justify-end">
+            {/* Language selector */}
+            <div className="flex items-center space-x-2">
+              <button
+                aria-label="Select English"
+                onClick={() => localStorage.setItem('dg_lang', 'en')}
+                className="text-sm px-2 py-1 rounded hover:bg-gray-100"
+                title="English"
+              >
+                EN
+              </button>
+              <button
+                aria-label="Select Telugu"
+                onClick={() => localStorage.setItem('dg_lang', 'te')}
+                className="text-sm px-2 py-1 rounded hover:bg-gray-100"
+                title="Telugu"
+              >
+                TE
+              </button>
+            </div>
+
+            {/* Desktop CTA Button */}
+            <div className="hidden md:flex items-center space-x-3">
             {isAdmin && (
               <Link href="/admin">
                 <Button variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-50">
@@ -99,6 +124,7 @@ export function Navigation() {
               </Button>
             </Link>
             <AuthButton />
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
