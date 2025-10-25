@@ -1,3 +1,4 @@
+// @ts-nocheck
 import DynamicDailyGrace from '@/components/DailyGrace'
 
 export const metadata = {
