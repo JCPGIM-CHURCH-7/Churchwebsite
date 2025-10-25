@@ -601,6 +601,9 @@ export default function HomePage() {
                 <p className="text-xs text-gray-400 mt-3">Follow us for updates and inspiration</p>
               </div>
             </div>
+            <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
+              <p>&copy; 2025 Jesus Christ Power of Glory International Ministries. All rights reserved.</p>
+            </div>
           </div>
         </footer>
       </div>
