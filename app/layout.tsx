@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: "JCPGIM",
     images: [
       {
-        url: "/images/logo.png",
+        url: "/favicon.png", // Updated to match footer logo
         width: 1200,
         height: 630,
         alt: "JCPGIM Logo",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Jesus Christ Power of Glory International Ministries",
     description: "Where Impossible becomes Possible through the Power of Jesus Christ",
-    images: ["/images/logo.png"],
+    images: ["/favicon.png"], // Updated to match footer logo
     creator: "@jcpgimchurch",
   },
   robots: {
@@ -65,11 +65,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/images/logo.png", sizes: "any" },
-      { url: "/images/logo.png", type: "image/png", sizes: "32x32" },
+      { url: "/favicon.png", sizes: "any" }, // Updated to favicon.png
+      { url: "/favicon.png", type: "image/png", sizes: "32x32" },
     ],
-    apple: [{ url: "/images/logo.png", sizes: "180x180", type: "image/png" }],
-    shortcut: "/images/logo.png",
+    apple: [{ url: "/favicon.png", sizes: "180x180", type: "image/png" }], // Updated to favicon.png
+    shortcut: "/favicon.png", // Updated to favicon.png
   },
   manifest: "/site.webmanifest",
   other: {
@@ -88,13 +88,6 @@ export function generateViewport() {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        {/* Explicit favicon links to ensure broad browser support */}
-        <link rel="icon" href="/images/logo.png" />
-        <link rel="shortcut icon" href="/images/logo.png" />
-        <link rel="apple-touch-icon" href="/images/logo.png" />
-        <link rel="manifest" href="/site.webmanifest" />
-      </head>
       <body className={inter.className + " min-h-screen flex flex-col bg-white"}>
         <AuthProvider>
           <Navigation />
