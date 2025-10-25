@@ -40,13 +40,13 @@ export function Navigation() {
   return (
     <header className="bg-white shadow-lg border-b-2 border-yellow-400 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between py-3">
-          {/* Layout: logo | centered nav (desktop) | actions */}
-          <div className="flex items-center flex-1">
-          {/* Logo Section - Enhanced for Mobile */}
+        <div className="grid grid-cols-3 items-center py-3">
+          {/* Left: logo */}
+          <div className="col-span-1 flex items-center">
+            {/* Logo Section - Enhanced for Mobile */}
             <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-            <Image src="/images/logo.png" alt="JCPGIM Logo" width={50} height={38} className="object-contain" />
-            <div>
+              <Image src="/images/logo.png" alt="JCPGIM Logo" width={50} height={38} className="object-contain" />
+              <div>
               {/* Mobile - Show full name */}
               <div className="block sm:hidden">
                 <h1 className="text-xs font-bold text-gray-900 leading-tight">Jesus Christ Power of Glory</h1>
@@ -68,8 +68,8 @@ export function Navigation() {
             </Link>
           </div>
 
-          {/* Desktop Navigation - centered */}
-          <nav className="hidden lg:flex space-x-6 flex-1 justify-center">
+          {/* Center: desktop navigation */}
+          <nav className="hidden lg:flex space-x-6 col-span-1 justify-center">
             {navigationItems.map((item) => (
               <Link
                 key={item.href}
@@ -84,31 +84,8 @@ export function Navigation() {
               </Link>
             ))}
           </nav>
-
-          {/* Actions (right) */}
-          <div className="hidden md:flex items-center space-x-3 flex-1 justify-end">
-            {/* Language selector */}
-            <div className="flex items-center space-x-2">
-              <button
-                aria-label="Select English"
-                onClick={() => localStorage.setItem('dg_lang', 'en')}
-                className="text-sm px-2 py-1 rounded hover:bg-gray-100"
-                title="English"
-              >
-                EN
-              </button>
-              <button
-                aria-label="Select Telugu"
-                onClick={() => localStorage.setItem('dg_lang', 'te')}
-                className="text-sm px-2 py-1 rounded hover:bg-gray-100"
-                title="Telugu"
-              >
-                TE
-              </button>
-            </div>
-
-            {/* Desktop CTA Button */}
-            <div className="hidden md:flex items-center space-x-3">
+          {/* Right: actions */}
+          <div className="col-span-1 flex items-center justify-end space-x-3">
             {isAdmin && (
               <Link href="/admin">
                 <Button variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-50">
@@ -123,7 +100,8 @@ export function Navigation() {
                 Prayer Request
               </Button>
             </Link>
-            <AuthButton />
+            <div className="hidden md:flex">
+              <AuthButton />
             </div>
           </div>
 
