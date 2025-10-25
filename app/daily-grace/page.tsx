@@ -13,7 +13,6 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import Footer from "@/components/Footer";
 
 const DAILY_MESSAGES_BASE = "/images/Daily messages";
 
@@ -174,7 +173,7 @@ export default function DailyGracePage() {
           </div>
         </section>
 
-        <Footer />
+  {/* Footer removed — global Footer is rendered in app/layout.tsx */}
 
         {/* Player Dialog UI */}
         <Dialog open={open} onOpenChange={setOpen}>
