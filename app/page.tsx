@@ -514,7 +514,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Footer removed — global Footer is rendered in app/layout.tsx to avoid duplicates */}
+  {/* Footer removed — global Footer is rendered in app/layout.tsx to avoid duplicates */}
       </div>
     </ProtectedRoute>
   )
