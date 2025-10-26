@@ -208,34 +208,34 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* YouTube Live Embed Section */}
-        <section className="py-12 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-gray-900">Live Stream</h2>
-              <p className="text-sm text-gray-600">Join our live broadcast below or open it on YouTube</p>
-            </div>
-            <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg">
-              <iframe
-                src="https://www.youtube.com/embed/yVhKuyAdi_Q?autoplay=0"
-                title="JCPGIM Live Stream"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
-            <div className="text-center mt-4">
-              <a
-                href="https://www.youtube.com/live/yVhKuyAdi_Q?si=Hz155mHKol2Ft_ey"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Button className="mt-2">Open on YouTube</Button>
-              </a>
-            </div>
-          </div>
-        </section>
+       {/* YouTube Live Embed Section */}
+<section className="py-12 bg-white">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-6">
+      <h2 className="text-2xl font-bold text-gray-900">Live Stream</h2>
+      <p className="text-sm text-gray-600">Join our live broadcast below or open it on YouTube</p>
+    </div>
+    <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg">
+      <iframe
+        src="https://www.youtube.com/embed/rYce42cNPro?autoplay=0"
+        title="DIVINE WORSHIP SERVICE | 26-10-2025 | MAN OF GOD K.RAVI KUMAR | #live"
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+        className="w-full h-full"
+      />
+    </div>
+    <div className="text-center mt-4">
+      <a
+        href="https://www.youtube.com/live/rYce42cNPro?si=FTMLdNP3GXNan4Xb"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Button className="mt-2">Open on YouTube</Button>
+      </a>
+    </div>
+  </div>
+</section>
 
         {/* Online Service Banner */}
         <section className="bg-red-600 text-white py-6">
