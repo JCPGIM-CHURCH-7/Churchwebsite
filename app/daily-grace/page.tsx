@@ -82,13 +82,13 @@ export default function DailyGracePage() {
     thumbnail: "https://img.youtube.com/vi/yVhKuyAdi_Q/maxresdefault.jpg"
   },
   { 
-    title: "Sunday Service (Additional)", 
+    title: "Sunday Service 19-10-2025 | Pastor K. Ravi Kumar", 
     src: "https://www.youtube.com/embed/gT-Cpnw1AZ0", 
     isYouTube: true,
     thumbnail: "https://img.youtube.com/vi/gT-Cpnw1AZ0/maxresdefault.jpg"
   },
   { 
-    title: "Sunday Service Live | Pastor K. Ravi Kumar", 
+    title: "Sunday Service 26-10-2025 | Pastor K. Ravi Kumar", 
     src: "https://www.youtube.com/embed/rYce42cNPro", 
     isYouTube: true,
     thumbnail: "https://img.youtube.com/vi/rYce42cNPro/maxresdefault.jpg"
