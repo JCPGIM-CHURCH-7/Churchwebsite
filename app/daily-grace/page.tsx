@@ -75,19 +75,26 @@ export default function DailyGracePage() {
   const telugu = buildDays("Telugu", 54);
   const english = buildDays("English", 54);
   const youtubeLives: VideoItem[] = [
-    { 
-      title: "Sunday Service 12-10-2025 | Pastor K. Ravi Kumar", 
-      src: "https://www.youtube.com/embed/yVhKuyAdi_Q", 
-      isYouTube: true,
-      thumbnail: "https://img.youtube.com/vi/yVhKuyAdi_Q/maxresdefault.jpg"
-    },
-    { 
-      title: "Sunday Service (Additional)", 
-      src: "https://www.youtube.com/embed/gT-Cpnw1AZ0", 
-      isYouTube: true,
-      thumbnail: "https://img.youtube.com/vi/gT-Cpnw1AZ0/maxresdefault.jpg"
-    },
-  ];
+  { 
+    title: "Sunday Service 12-10-2025 | Pastor K. Ravi Kumar", 
+    src: "https://www.youtube.com/embed/yVhKuyAdi_Q", 
+    isYouTube: true,
+    thumbnail: "https://img.youtube.com/vi/yVhKuyAdi_Q/maxresdefault.jpg"
+  },
+  { 
+    title: "Sunday Service (Additional)", 
+    src: "https://www.youtube.com/embed/gT-Cpnw1AZ0", 
+    isYouTube: true,
+    thumbnail: "https://img.youtube.com/vi/gT-Cpnw1AZ0/maxresdefault.jpg"
+  },
+  { 
+    title: "Sunday Service Live | Pastor K. Ravi Kumar", 
+    src: "https://www.youtube.com/embed/rYce42cNPro", 
+    isYouTube: true,
+    thumbnail: "https://img.youtube.com/vi/rYce42cNPro/maxresdefault.jpg"
+  }
+];
+
 
   function openPlayer(item: VideoItem) {
     setCurrent(item);
