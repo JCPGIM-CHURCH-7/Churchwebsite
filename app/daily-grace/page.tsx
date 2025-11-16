@@ -93,6 +93,13 @@ export default function DailyGracePage() {
     isYouTube: true,
     thumbnail: "https://img.youtube.com/vi/rYce42cNPro/maxresdefault.jpg"
   }
+  { 
+    title: "Sunday Service 09-11-2025 | Live | Pastor K. Ravi Kumar", 
+    src: "https://www.youtube.com/embed/ap8Ux72GkDk", 
+    isYouTube: true,
+    thumbnail: "https://img.youtube.com/vi/ap8Ux72GkDk/maxresdefault.jpg"
+  }
+   
 ];
 
 
