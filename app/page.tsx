@@ -217,8 +217,8 @@ export default function HomePage() {
     </div>
     <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg">
       <iframe
-        src="https://www.youtube.com/embed/nxFtI27k0DE?autoplay=0"
-        title="SUNDAY SERVICE | 02-11-2025 | MAN OF GOD K.RAVI KUMAR | #live"
+        src="https://www.youtube.com/embed/PXtXYOgWyWM?autoplay=0"
+        title="Sunday Service Live | 16-11-2025 | Pastor K. Ravi Kumar"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
@@ -227,7 +227,7 @@ export default function HomePage() {
     </div>
     <div className="text-center mt-4">
       <a
-        href="https://www.youtube.com/live/nxFtI27k0DE?si=_tlogGp_2UdYLki6"
+        href="https://www.youtube.com/live/PXtXYOgWyWM?si=8SbXVxSzontrr_sd"
         target="_blank"
         rel="noopener noreferrer"
       >
