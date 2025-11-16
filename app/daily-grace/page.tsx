@@ -79,29 +79,27 @@ export default function DailyGracePage() {
     title: "Sunday Service 12-10-2025 | Pastor K. Ravi Kumar", 
     src: "https://www.youtube.com/embed/yVhKuyAdi_Q", 
     isYouTube: true,
-    thumbnail: "https://img.youtube.com/vi/gT-Cpnw1AZ0/maxresdefault.jpg"
+    thumbnail: "https://img.youtube.com/vi/yVhKuyAdi_Q/maxresdefault.jpg"
   },
   { 
     title: "Sunday Service 19-10-2025 | Pastor K. Ravi Kumar", 
     src: "https://www.youtube.com/embed/gT-Cpnw1AZ0", 
     isYouTube: true,
-    thumbnail: "https://img.youtube.com/vi/yVhKuyAdi_Q/maxresdefault.jpg"
+    thumbnail: "https://img.youtube.com/vi/gT-Cpnw1AZ0/maxresdefault.jpg"
   },
   { 
     title: "Sunday Service 26-10-2025 | Pastor K. Ravi Kumar", 
     src: "https://www.youtube.com/embed/rYce42cNPro", 
     isYouTube: true,
     thumbnail: "https://img.youtube.com/vi/rYce42cNPro/maxresdefault.jpg"
-  }
+  },
   { 
     title: "Sunday Service 09-11-2025 | Live | Pastor K. Ravi Kumar", 
     src: "https://www.youtube.com/embed/ap8Ux72GkDk", 
     isYouTube: true,
     thumbnail: "https://img.youtube.com/vi/ap8Ux72GkDk/maxresdefault.jpg"
   }
-   
 ];
-
 
   function openPlayer(item: VideoItem) {
     setCurrent(item);
