@@ -3,8 +3,8 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Menu, Heart, Shield } from "lucide-react"
+import { Sheet, SheetContent, SheetTrigger, SheetHeader, SheetTitle } from "@/components/ui/sheet"
+import { Menu, Heart, Shield, X } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
@@ -39,147 +39,113 @@ export function Navigation() {
   }
 
   return (
-    <header className="bg-white shadow-lg border-b-2 border-yellow-400 sticky top-0 z-50">
+    <header className="bg-white shadow-md border-b border-yellow-400 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-3 items-center py-3">
+        <div className="flex justify-between items-center h-16 md:h-20">
           {/* Left: logo */}
-          <div className="col-span-1 flex items-center">
-            {/* Logo Section - Enhanced for Mobile */}
-            <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-              <Image src="/images/logo.png" alt="JCPGIM Logo" width={50} height={38} className="object-contain" />
-              <div>
-              {/* Mobile - Show full name */}
-              <div className="block sm:hidden">
-                <h1 className="text-xs font-bold text-gray-900 leading-tight">Jesus Christ Power of Glory</h1>
-                <p className="text-xs text-yellow-600 font-medium">International Ministries</p>
+          <div className="flex-shrink-0 flex items-center">
+            <Link href="/" className="flex items-center gap-2 hover:opacity-90 transition-opacity">
+              <div className="relative w-10 h-10 md:w-12 md:h-12">
+                <Image src="/images/logo.png" alt="JCPGIM Logo" fill className="object-contain" />
               </div>
-              {/* Tablet - Show medium name */}
-              <div className="hidden sm:block md:hidden">
-                <h1 className="text-sm font-bold text-gray-900 leading-tight">Jesus Christ Power of Glory</h1>
-                <p className="text-xs text-yellow-600 font-medium">International Ministries</p>
-              </div>
-              {/* Desktop - Show full name */}
-              <div className="hidden md:block">
-                <h1 className="text-base lg:text-lg font-bold text-gray-900 leading-tight">
-                  Jesus Christ Power of Glory
+              <div className="flex flex-col">
+                <h1 className="text-sm md:text-lg font-bold text-gray-900 leading-tight">
+                  <span className="hidden sm:inline">Jesus Christ Power of Glory</span>
+                  <span className="sm:hidden">JCPGIM</span>
                 </h1>
-                <p className="text-xs lg:text-sm text-yellow-600 font-medium">International Ministries</p>
+                <p className="text-[10px] md:text-xs text-yellow-600 font-medium">International Ministries</p>
               </div>
-            </div>
             </Link>
           </div>
 
           {/* Center: desktop navigation */}
-          <nav className="hidden lg:flex space-x-6 col-span-1 justify-center">
+          <nav className="hidden lg:flex space-x-8">
             {navigationItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`font-medium transition-colors relative py-2 ${
-                  isActive(item.href)
-                    ? "text-yellow-600 border-b-2 border-yellow-600"
-                    : "text-gray-700 hover:text-yellow-600"
-                }`}
+                className={`text-sm font-medium transition-colors hover:text-yellow-600 ${isActive(item.href) ? "text-yellow-600" : "text-gray-700"
+                  }`}
               >
                 {item.label}
               </Link>
             ))}
           </nav>
+
           {/* Right: actions */}
-          <div className="col-span-1 flex items-center justify-end space-x-3">
+          <div className="hidden lg:flex items-center space-x-4">
             {isAdmin && (
               <Link href="/admin">
-                <Button variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-50">
+                <Button variant="ghost" size="sm" className="text-amber-600 hover:text-amber-700 hover:bg-amber-50">
                   <Shield className="w-4 h-4 mr-2" />
                   Admin
                 </Button>
               </Link>
             )}
             <Link href="/prayer-request">
-              <Button className="bg-yellow-600 hover:bg-yellow-700 text-white font-medium">
+              <Button size="sm" className="bg-yellow-600 hover:bg-yellow-700 text-white">
                 <Heart className="w-4 h-4 mr-2" />
                 Prayer Request
               </Button>
             </Link>
-            <div className="hidden md:flex">
-              <AuthButton />
-            </div>
+            <AuthButton />
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
+          <div className="flex items-center lg:hidden gap-2">
+            {/* Show AuthButton on mobile header too for easy access, or keep in menu? Keeping in menu for cleaner header */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
-                <Button variant="ghost" size="sm" className="p-2">
-                  <Menu className="h-6 w-6 text-gray-700" />
+                <Button variant="ghost" size="icon" className="text-gray-700">
+                  <Menu className="h-6 w-6" />
                   <span className="sr-only">Open menu</span>
                 </Button>
               </SheetTrigger>
-              <SheetContent side="right" className="w-[300px] sm:w-[350px]">
-                <div className="flex flex-col h-full">
-                  {/* Mobile Header */}
-                  <div className="flex items-center justify-between pb-6 border-b border-gray-200">
-                    <div className="flex items-center space-x-3">
-                      <Image
-                        src="/images/logo.png"
-                        alt="JCPGIM Logo"
-                        width={40}
-                        height={30}
-                        className="object-contain"
-                      />
-                      <div>
-                        <h2 className="text-sm font-bold text-gray-900">JCPGIM</h2>
-                        <p className="text-xs text-yellow-600">Impossible is Possible</p>
-                      </div>
+              <SheetContent side="right" className="w-[300px] sm:w-[350px] overflow-y-auto">
+                <SheetHeader className="text-left border-b pb-4 mb-4">
+                  <SheetTitle className="flex items-center gap-2">
+                    <div className="relative w-8 h-8">
+                      <Image src="/images/logo.png" alt="Logo" fill className="object-contain" />
                     </div>
-                  </div>
+                    <span className="font-bold text-sm">JCPGIM</span>
+                  </SheetTitle>
+                </SheetHeader>
 
-                  {/* Mobile Navigation Links */}
-                  <nav className="flex flex-col space-y-1 py-6 flex-1">
-                    {navigationItems.map((item) => (
-                      <Link
-                        key={item.href}
-                        href={item.href}
-                        onClick={handleLinkClick}
-                        className={`flex items-center px-4 py-3 rounded-lg font-medium transition-colors ${
-                          isActive(item.href)
-                            ? "bg-yellow-50 text-yellow-600 border-l-4 border-yellow-600"
-                            : "text-gray-700 hover:bg-gray-50 hover:text-yellow-600"
+                <nav className="flex flex-col space-y-2">
+                  {navigationItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      onClick={handleLinkClick}
+                      className={`px-4 py-3 rounded-md text-sm font-medium transition-colors ${isActive(item.href)
+                          ? "bg-yellow-50 text-yellow-700"
+                          : "text-gray-700 hover:bg-gray-50 hover:text-yellow-600"
                         }`}
-                      >
-                        {item.label}
-                      </Link>
-                    ))}
-                  </nav>
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </nav>
 
-                  {/* Mobile CTA Section */}
-                  <div className="border-t border-gray-200 pt-6 space-y-4">
-                    {isAdmin && (
-                      <Link href="/admin" onClick={handleLinkClick}>
-                        <Button variant="outline" className="w-full border-amber-600 text-amber-600 hover:bg-amber-50">
-                          <Shield className="w-4 h-4 mr-2" />
-                          Admin Dashboard
-                        </Button>
-                      </Link>
-                    )}
-                    <Link href="/prayer-request" onClick={handleLinkClick}>
-                      <Button className="w-full bg-yellow-600 hover:bg-yellow-700 text-white font-medium">
-                        <Heart className="w-4 h-4 mr-2" />
-                        Submit Prayer Request
+                <div className="mt-6 pt-6 border-t border-gray-100 space-y-4">
+                  {isAdmin && (
+                    <Link href="/admin" onClick={handleLinkClick}>
+                      <Button variant="outline" className="w-full justify-start text-amber-600 border-amber-200 hover:bg-amber-50">
+                        <Shield className="w-4 h-4 mr-2" />
+                        Admin Dashboard
                       </Button>
                     </Link>
+                  )}
 
-                    {/* Mobile Auth Button */}
-                    <div className="flex justify-center">
-                      <AuthButton />
-                    </div>
+                  <Link href="/prayer-request" onClick={handleLinkClick}>
+                    <Button className="w-full justify-start bg-yellow-600 hover:bg-yellow-700 text-white">
+                      <Heart className="w-4 h-4 mr-2" />
+                      Prayer Request
+                    </Button>
+                  </Link>
 
-                    {/* Contact Info */}
-                    <div className="text-center text-sm text-gray-600 space-y-2">
-                      <p className="font-medium text-gray-900">Daily Online Service</p>
-                      <p>5:00 AM - 6:00 AM</p>
-                      <p className="text-yellow-600 font-medium">Google Meet: https://meet.google.com/mdw-fezs-aho</p>
-                    </div>
+                  <div className="pt-4">
+                    <AuthButton />
                   </div>
                 </div>
               </SheetContent>
