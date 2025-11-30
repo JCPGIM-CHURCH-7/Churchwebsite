@@ -208,7 +208,7 @@ export default function HomePage() {
           </div>
         </section>
 
-       {/* YouTube Live Embed Section */}
+  {/* YouTube Live Embed Section */}
 <section className="py-12 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div className="text-center mb-6">
@@ -217,8 +217,8 @@ export default function HomePage() {
     </div>
     <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg">
       <iframe
-        src="https://www.youtube.com/embed/PXtXYOgWyWM?autoplay=0"
-        title="Sunday Service Live | 16-11-2025 | Pastor K. Ravi Kumar"
+        src="https://www.youtube.com/embed/kw9VWIUQhKo?autoplay=0"
+        title="Sunday Service Live"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
@@ -227,7 +227,7 @@ export default function HomePage() {
     </div>
     <div className="text-center mt-4">
       <a
-        href="https://www.youtube.com/live/PXtXYOgWyWM?si=8SbXVxSzontrr_sd"
+        href="https://youtube.com/live/kw9VWIUQhKo?feature=share"
         target="_blank"
         rel="noopener noreferrer"
       >
