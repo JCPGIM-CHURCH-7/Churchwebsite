@@ -227,7 +227,7 @@ export default function HomePage() {
     </div>
     <div className="text-center mt-4">
       <a
-        href="https://youtube.com/live/kw9VWIUQhKo?feature=share"
+        href="https://youtube.com/live/IjriS_pdPTU?feature=share"
         target="_blank"
         rel="noopener noreferrer"
       >
