@@ -110,7 +110,14 @@ export default function DailyGracePage() {
     src: "https://www.youtube.com/embed/VJWWLPx9cEI", 
     isYouTube: true,
     thumbnail: "https://img.youtube.com/vi/VJWWLPx9cEI/maxresdefault.jpg"
+  },
+  {
+    title: "Sunday Service 30-11-2025 | Live | Pastor K. Ravi Kumar",
+    src: "https://www.youtube.com/embed/kw9VWIUQhKo",
+    isYouTube: true,
+    thumbnail: "https://img.youtube.com/vi/kw9VWIUQhKo/maxresdefault.jpg"
   }
+
 ];
   function openPlayer(item: VideoItem) {
     setCurrent(item);
