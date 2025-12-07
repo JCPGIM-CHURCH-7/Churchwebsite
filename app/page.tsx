@@ -217,7 +217,7 @@ export default function HomePage() {
     </div>
     <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg">
       <iframe
-        src="https://www.youtube.com/embed/kw9VWIUQhKo?autoplay=0"
+        src="https://www.youtube.com/embed/IjriS_pdPTU?autoplay=0"
         title="Sunday Service Live"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -236,7 +236,6 @@ export default function HomePage() {
     </div>
   </div>
 </section>
-
         {/* Online Service Banner */}
         <section className="bg-red-600 text-white py-6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
