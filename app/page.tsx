@@ -217,7 +217,7 @@ export default function HomePage() {
     </div>
     <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg">
       <iframe
-        src="https://www.youtube.com/embed/IjriS_pdPTU?autoplay=0"
+        src="https://www.youtube.com/embed/PDr8Y6_So_Q?autoplay=0"
         title="Sunday Service Live"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -227,7 +227,7 @@ export default function HomePage() {
     </div>
     <div className="text-center mt-4">
       <a
-        href="https://youtube.com/live/IjriS_pdPTU?feature=share"
+        href="https://www.youtube.com/live/PDr8Y6_So_Q?si=S6BwQrWt7Gr7j9Km"
         target="_blank"
         rel="noopener noreferrer"
       >
