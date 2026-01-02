@@ -75,6 +75,7 @@ export default function DailyGracePage() {
   const telugu = buildDays("Telugu", 54);
   const english = buildDays("English", 54);
  const youtubeLives: VideoItem[] = [
+[
   { 
     title: "Sunday Service 12-10-2025 | Pastor K. Ravi Kumar", 
     src: "https://www.youtube.com/embed/yVhKuyAdi_Q", 
@@ -116,7 +117,62 @@ export default function DailyGracePage() {
     src: "https://www.youtube.com/embed/kw9VWIUQhKo",
     isYouTube: true,
     thumbnail: "https://img.youtube.com/vi/kw9VWIUQhKo/maxresdefault.jpg"
+  },
+  {
+    title: "GLORIOUS SUNDAY SERVICE | 07-12-2025 | #live",
+    src: "https://www.youtube.com/embed/PDr8Y6_So_Q",
+    isYouTube: true,
+    thumbnail: "https://img.youtube.com/vi/PDr8Y6_So_Q/maxresdefault.jpg"
+  },
+  {
+    title: "SUNDAY SERVICE | 14-12-2025 | #live",
+    src: "https://www.youtube.com/embed/C_ZEDst1LB0",
+    isYouTube: true,
+    thumbnail: "https://img.youtube.com/vi/C_ZEDst1LB0/maxresdefault.jpg"
+  },
+  {
+    title: "CANDLE LIGHT SERVICE | 21-12-2025 | #live",
+    src: "https://www.youtube.com/embed/jG1O2yHBKbw",
+    isYouTube: true,
+    thumbnail: "https://img.youtube.com/vi/jG1O2yHBKbw/maxresdefault.jpg"
+  },
+  {
+    title: "YOUTH SEMI CHRISTMAS | 21-12-2025 | #live",
+    src: "https://www.youtube.com/embed/74m65SgBRz0",
+    isYouTube: true,
+    thumbnail: "https://img.youtube.com/vi/74m65SgBRz0/maxresdefault.jpg"
+  },
+  {
+    title: "CHRISTMAS WORSHIP SERVICE | 25-12-2025 | #live",
+    src: "https://www.youtube.com/embed/Fbtimdmzaf0",
+    isYouTube: true,
+    thumbnail: "https://img.youtube.com/vi/Fbtimdmzaf0/maxresdefault.jpg"
+  },
+  {
+    title: "PRAISE & WORSHIP SERVICE | 28-12-2025 | #live (Morning)",
+    src: "https://www.youtube.com/embed/5gucWw-d_nA",
+    isYouTube: true,
+    thumbnail: "https://img.youtube.com/vi/5gucWw-d_nA/maxresdefault.jpg"
+  },
+  {
+    title: "PRAISE & WORSHIP SERVICE | 28-12-2025 | #live (Evening)",
+    src: "https://www.youtube.com/embed/t_VirkLYgHQ",
+    isYouTube: true,
+    thumbnail: "https://img.youtube.com/vi/t_VirkLYgHQ/maxresdefault.jpg"
+  },
+  {
+    title: "CROSS OVER SERVICE | 31-12-2025 | #live",
+    src: "https://www.youtube.com/embed/7NyPOxY9zwA",
+    isYouTube: true,
+    thumbnail: "https://img.youtube.com/vi/7NyPOxY9zwA/maxresdefault.jpg"
+  },
+  {
+    title: "NEW YEAR SERVICE | 01-01-2026 | #live",
+    src: "https://www.youtube.com/embed/QanFnzbUQUM",
+    isYouTube: true,
+    thumbnail: "https://img.youtube.com/vi/QanFnzbUQUM/maxresdefault.jpg"
   }
+]
 
 ];
   function openPlayer(item: VideoItem) {
