@@ -45,22 +45,24 @@ type VideoItem = {
 };
 
 // Curated Sunday Videos (Hardcoded for Bottom Carousel)
+// Curated Sunday Videos (Hardcoded for Bottom Carousel)
 const SUNDAY_VIDEOS = [
-  { title: "Sunday Service 12-10-2025", src: "https://www.youtube.com/embed/yVhKuyAdi_Q", date: "2025-10-12" },
-  { title: "Sunday Service 19-10-2025", src: "https://www.youtube.com/embed/gT-Cpnw1AZ0", date: "2025-10-19" },
-  { title: "Sunday Service 26-10-2025", src: "https://www.youtube.com/embed/rYce42cNPro", date: "2025-10-26" },
-  { title: "Sunday Service 09-11-2025", src: "https://www.youtube.com/embed/ap8Ux72GkDk", date: "2025-11-09" },
-  { title: "Sunday Service 16-11-2025", src: "https://www.youtube.com/embed/PXtXYOgWyWM", date: "2025-11-16" },
-  { title: "Sunday Service 23-11-2025", src: "https://www.youtube.com/embed/VJWWLPx9cEI", date: "2025-11-23" },
-  { title: "Sunday Service 30-11-2025", src: "https://www.youtube.com/embed/kw9VWIUQhKo", date: "2025-11-30" },
-  { title: "GLORIOUS SUNDAY SERVICE 07-12", src: "https://www.youtube.com/embed/PDr8Y6_So_Q", date: "2025-12-07" },
-  { title: "SUNDAY SERVICE 14-12", src: "https://www.youtube.com/embed/C_ZEDst1LB0", date: "2025-12-14" },
-  { title: "CANDLE LIGHT SERVICE 21-12", src: "https://www.youtube.com/embed/jG1O2yHBKbw", date: "2025-12-21" },
-  { title: "CHRISTMAS SERVICE 25-12", src: "https://www.youtube.com/embed/Fbtimdmzaf0", date: "2025-12-25" },
-  { title: "WORSHIP SERVICE 28-12 (AM)", src: "https://www.youtube.com/embed/5gucWw-d_nA", date: "2025-12-28" },
-  { title: "WORSHIP SERVICE 28-12 (PM)", src: "https://www.youtube.com/embed/t_VirkLYgHQ", date: "2025-12-28" },
-  { title: "CROSS OVER SERVICE 31-12", src: "https://www.youtube.com/embed/7NyPOxY9zwA", date: "2025-12-31" },
-  { title: "NEW YEAR SERVICE 01-01", src: "https://www.youtube.com/embed/QanFnzbUQUM", date: "2026-01-01" },
+  { title: "Sunday Service 12-10-2025 | Pastor K. Ravi Kumar", src: "https://www.youtube.com/embed/yVhKuyAdi_Q", thumbnail: "https://img.youtube.com/vi/yVhKuyAdi_Q/maxresdefault.jpg" },
+  { title: "Sunday Service 19-10-2025 | Pastor K. Ravi Kumar", src: "https://www.youtube.com/embed/gT-Cpnw1AZ0", thumbnail: "https://img.youtube.com/vi/gT-Cpnw1AZ0/maxresdefault.jpg" },
+  { title: "Sunday Service 26-10-2025 | Pastor K. Ravi Kumar", src: "https://www.youtube.com/embed/rYce42cNPro", thumbnail: "https://img.youtube.com/vi/rYce42cNPro/maxresdefault.jpg" },
+  { title: "Sunday Service 09-11-2025 | Live | Pastor K. Ravi Kumar", src: "https://www.youtube.com/embed/ap8Ux72GkDk", thumbnail: "https://img.youtube.com/vi/ap8Ux72GkDk/maxresdefault.jpg" },
+  { title: "Sunday Service 16-11-2025 | Pastor K. Ravi Kumar", src: "https://www.youtube.com/embed/PXtXYOgWyWM", thumbnail: "https://img.youtube.com/vi/PXtXYOgWyWM/maxresdefault.jpg" },
+  { title: "Sunday Service 23-11-2025 | Pastor K. Ravi Kumar", src: "https://www.youtube.com/embed/VJWWLPx9cEI", thumbnail: "https://img.youtube.com/vi/VJWWLPx9cEI/maxresdefault.jpg" },
+  { title: "Sunday Service 30-11-2025 | Live | Pastor K. Ravi Kumar", src: "https://www.youtube.com/embed/kw9VWIUQhKo", thumbnail: "https://img.youtube.com/vi/kw9VWIUQhKo/maxresdefault.jpg" },
+  { title: "GLORIOUS SUNDAY SERVICE | 07-12-2025 | #live", src: "https://www.youtube.com/embed/PDr8Y6_So_Q", thumbnail: "https://img.youtube.com/vi/PDr8Y6_So_Q/maxresdefault.jpg" },
+  { title: "SUNDAY SERVICE | 14-12-2025 | #live", src: "https://www.youtube.com/embed/C_ZEDst1LB0", thumbnail: "https://img.youtube.com/vi/C_ZEDst1LB0/maxresdefault.jpg" },
+  { title: "CANDLE LIGHT SERVICE | 21-12-2025 | #live", src: "https://www.youtube.com/embed/jG1O2yHBKbw", thumbnail: "https://img.youtube.com/vi/jG1O2yHBKbw/maxresdefault.jpg" },
+  { title: "YOUTH SEMI CHRISTMAS | 21-12-2025 | #live", src: "https://www.youtube.com/embed/74m65SgBRz0", thumbnail: "https://img.youtube.com/vi/74m65SgBRz0/maxresdefault.jpg" },
+  { title: "CHRISTMAS WORSHIP SERVICE | 25-12-2025 | #live", src: "https://www.youtube.com/embed/Fbtimdmzaf0", thumbnail: "https://img.youtube.com/vi/Fbtimdmzaf0/maxresdefault.jpg" },
+  { title: "PRAISE & WORSHIP SERVICE | 28-12-2025 | #live (Morning)", src: "https://www.youtube.com/embed/5gucWw-d_nA", thumbnail: "https://img.youtube.com/vi/5gucWw-d_nA/maxresdefault.jpg" },
+  { title: "PRAISE & WORSHIP SERVICE | 28-12-2025 | #live (Evening)", src: "https://www.youtube.com/embed/t_VirkLYgHQ", thumbnail: "https://img.youtube.com/vi/t_VirkLYgHQ/maxresdefault.jpg" },
+  { title: "CROSS OVER SERVICE | 31-12-2025 | #live", src: "https://www.youtube.com/embed/7NyPOxY9zwA", thumbnail: "https://img.youtube.com/vi/7NyPOxY9zwA/maxresdefault.jpg" },
+  { title: "NEW YEAR SERVICE | 01-01-2026 | #live", src: "https://www.youtube.com/embed/QanFnzbUQUM", thumbnail: "https://img.youtube.com/vi/QanFnzbUQUM/maxresdefault.jpg" }
 ];
 
 export default function DailyGracePage() {
@@ -276,7 +278,7 @@ export default function DailyGracePage() {
         {/* === SECTION 4: SUNDAY SERVICES (16 Videos) === */}
         <section className="bg-white border-t border-gray-100 py-12">
           <div className="container mx-auto px-4">
-            <h3 className="text-center text-lg font-bold text-gray-400 uppercase tracking-widest mb-10">Sunday Services & Events</h3>
+            <h3 className="text-center text-lg font-bold text-gray-400 uppercase tracking-widest mb-10">Sunday & Special Services (Oct 2025 – Jan 2026)</h3>
 
             <div className="relative group">
               <button onClick={() => scroll(sundayScrollRef, 'left')} className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md border border-gray-100 p-2 rounded-full text-gray-500 hidden md:block hover:text-blue-600">
@@ -295,17 +297,17 @@ export default function DailyGracePage() {
                     onClick={() => setActiveVideo({
                       id: `Event-${idx}`,
                       title: vid.title,
-                      date: vid.date,
+                      date: "Sunday Service", // Generic date label
                       theme: "Special Event",
                       src: vid.src,
-                      thumbnail: `https://img.youtube.com/vi/${vid.src.split('/').pop()}/maxresdefault.jpg`,
+                      thumbnail: vid.thumbnail,
                       language: 'english',
                       type: 'video'
                     })}
                   >
                     <div className="relative aspect-video rounded-xl overflow-hidden mb-3">
                       <img
-                        src={`https://img.youtube.com/vi/${vid.src.split('/').pop()}/maxresdefault.jpg`}
+                        src={vid.thumbnail}
                         alt={vid.title}
                         className="w-full h-full object-cover transition-transform group-hover/card:scale-105"
                       />
@@ -315,8 +317,7 @@ export default function DailyGracePage() {
                         </div>
                       </div>
                     </div>
-                    <h4 className="font-bold text-gray-900 leading-tight group-hover/card:text-blue-600 transition-colors">{vid.title}</h4>
-                    <p className="text-xs text-gray-500 mt-1">{vid.date}</p>
+                    <h4 className="font-bold text-gray-900 leading-tight group-hover/card:text-blue-600 transition-colors line-clamp-2">{vid.title}</h4>
                   </div>
                 ))}
               </div>
