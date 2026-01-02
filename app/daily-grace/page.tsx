@@ -1,327 +1,213 @@
-// @ts-nocheck
 "use client";
-import React, { useState, useEffect } from "react";
-import Link from "next/link";
-import Image from "next/image";
+
+import React, { useState, useEffect, useMemo } from "react";
 import ProtectedRoute from "@/components/ProtectedRoute";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { DailyVideoCard } from "@/components/DailyVideoCard";
+import { DailyGraceModal } from "@/components/DailyGraceModal";
+import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { Calendar } from "@/components/ui/calendar"; // Assuming this exists or using react-day-picker
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Search, Calendar as CalendarIcon, X } from "lucide-react";
+import { format, isSameDay, parseISO } from "date-fns";
+import { cn } from "@/lib/utils";
 
-const DAILY_MESSAGES_BASE = "/images/Daily messages";
-
-type VideoItem = { title: string; src: string; isYouTube?: boolean; thumbnail?: string; date?: string; wa_path?: string };
-
-function buildDays(prefix: string, count: number): VideoItem[] {
-  const days = Array.from({ length: count }, (_, i) => i + 1).map((day) => ({
-    title: `${prefix} Day ${day}`,
-    src: `${DAILY_MESSAGES_BASE}/${prefix} Day ${day}.mp4`,
-  }));
-  // Override Day 1 for Telugu and English with specific paths
-  if (prefix === "Telugu") {
-    days[0] = { title: "Telugu Day 1", src: "/images/Daily messages/Telugu Day1.mp4" };
-  } else if (prefix === "English") {
-    days[0] = { title: "English Day 1", src: "/images/Daily messages/English Day1.mp4" };
-  }
-  return days;
-}
-
-function SectionCarousel({ title, items, onOpen }: { title: string; items: VideoItem[]; onOpen: (item: VideoItem) => void }) {
-  return (
-    <section className="py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{title}</h2>
-          <p className="text-gray-600">Day 1 to Day 124</p>
-        </div>
-        <Carousel className="w-full max-w-7xl mx-auto">
-          <CarouselContent>
-            {items.map((item, index) => (
-              <CarouselItem key={item.src + index} className="basis-full sm:basis-1/2 lg:basis-1/3">
-                <Card className="hover:shadow-lg transition-shadow overflow-hidden">
-                  <button type="button" onClick={() => onOpen(item)} className="w-full text-left">
-                    <CardContent className="p-0">
-                      <div className="relative w-full aspect-video">
-                        <Image src="/placeholder.jpg" alt={item.title} fill className="object-cover" />
-                        <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                          <span className="text-white font-semibold text-sm md:text-base">{item.title}</span>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </button>
-                  {item.wa_path && (
-                    <div className="p-2 bg-green-50 text-center">
-                      <a href={item.wa_path} download className="text-sm text-green-700 font-semibold hover:underline">
-                        Download for WhatsApp Status
-                      </a>
-                    </div>
-                  )}
-                </Card>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-      </div>
-    </section>
-  );
-}
+// Define Video Type
+type VideoItem = {
+  id: string;
+  title: string;
+  date: string; // YYYY-MM-DD
+  theme: string;
+  src: string;
+  type: string;
+};
 
 export default function DailyGracePage() {
-  const [open, setOpen] = useState(false);
-  const [current, setCurrent] = useState<VideoItem | null>(null);
+  const [videos, setVideos] = useState<VideoItem[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const [teluguItems, setTeluguItems] = useState<VideoItem[]>([]);
-  const [englishItems, setEnglishItems] = useState<VideoItem[]>([]);
+  // State for Filters
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
 
+  // State for Modal
+  const [activeVideo, setActiveVideo] = useState<VideoItem | null>(null);
+
+  // Load Data
   useEffect(() => {
-    // Initial static build
-    const staticTelugu = buildDays("Telugu", 124);
-    const staticEnglish = buildDays("English", 124);
-
-    setTeluguItems(staticTelugu);
-    setEnglishItems(staticEnglish);
-
-    // Fetch dynamic videos
-    fetch('/data/daily_videos.json')
-      .then(res => {
-        if (res.ok) return res.json();
-        return [];
-      })
-      .then((data: any[]) => {
-        if (data && data.length > 0) {
-          // Map dynamic data to VideoItems
-          const dynamicItems: VideoItem[] = data.map(d => ({
-            title: d.title,
-            src: d.wa_video_path, // Use the processed path for viewing too, or original if available
-            wa_path: d.wa_video_path,
-            date: d.date
-          }));
-
-          // Prepend to English for now (assuming Daily Grace is English/General)
-          // Or create a new section "Latest Daily Grace"
-          setEnglishItems(prev => [...dynamicItems, ...prev]);
-        }
-      })
-      .catch(err => console.log("No dynamic videos found or error fetching", err));
-
+    async function fetchData() {
+      try {
+        const res = await fetch("/data/daily_videos_full.json");
+        if (!res.ok) throw new Error("Failed to fetch");
+        const data = await res.json();
+        setVideos(data);
+      } catch (err) {
+        console.error("Error loading daily grace data:", err);
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchData();
   }, []);
 
-  const youtubeLives: VideoItem[] = [
-    {
-      title: "Sunday Service 12-10-2025 | Pastor K. Ravi Kumar",
-      src: "https://www.youtube.com/embed/yVhKuyAdi_Q",
-      isYouTube: true,
-      thumbnail: "https://img.youtube.com/vi/yVhKuyAdi_Q/maxresdefault.jpg"
-    },
-    {
-      title: "Sunday Service 19-10-2025 | Pastor K. Ravi Kumar",
-      src: "https://www.youtube.com/embed/gT-Cpnw1AZ0",
-      isYouTube: true,
-      thumbnail: "https://img.youtube.com/vi/gT-Cpnw1AZ0/maxresdefault.jpg"
-    },
-    {
-      title: "Sunday Service 26-10-2025 | Pastor K. Ravi Kumar",
-      src: "https://www.youtube.com/embed/rYce42cNPro",
-      isYouTube: true,
-      thumbnail: "https://img.youtube.com/vi/rYce42cNPro/maxresdefault.jpg"
-    },
-    {
-      title: "Sunday Service 09-11-2025 | Live | Pastor K. Ravi Kumar",
-      src: "https://www.youtube.com/embed/ap8Ux72GkDk",
-      isYouTube: true,
-      thumbnail: "https://img.youtube.com/vi/ap8Ux72GkDk/maxresdefault.jpg"
-    },
-    {
-      title: "Sunday Service 16-11-2025 | Pastor K. Ravi Kumar",
-      src: "https://www.youtube.com/embed/PXtXYOgWyWM",
-      isYouTube: true,
-      thumbnail: "https://img.youtube.com/vi/PXtXYOgWyWM/maxresdefault.jpg"
-    },
-    {
-      title: "Sunday Service 23-11-2025 | Pastor K. Ravi Kumar",
-      src: "https://www.youtube.com/embed/VJWWLPx9cEI",
-      isYouTube: true,
-      thumbnail: "https://img.youtube.com/vi/VJWWLPx9cEI/maxresdefault.jpg"
-    },
-    {
-      title: "Sunday Service 30-11-2025 | Live | Pastor K. Ravi Kumar",
-      src: "https://www.youtube.com/embed/kw9VWIUQhKo",
-      isYouTube: true,
-      thumbnail: "https://img.youtube.com/vi/kw9VWIUQhKo/maxresdefault.jpg"
-    },
-    {
-      title: "GLORIOUS SUNDAY SERVICE | 07-12-2025 | #live",
-      src: "https://www.youtube.com/embed/PDr8Y6_So_Q",
-      isYouTube: true,
-      thumbnail: "https://img.youtube.com/vi/PDr8Y6_So_Q/maxresdefault.jpg"
-    },
-    {
-      title: "SUNDAY SERVICE | 14-12-2025 | #live",
-      src: "https://www.youtube.com/embed/C_ZEDst1LB0",
-      isYouTube: true,
-      thumbnail: "https://img.youtube.com/vi/C_ZEDst1LB0/maxresdefault.jpg"
-    },
-    {
-      title: "CANDLE LIGHT SERVICE | 21-12-2025 | #live",
-      src: "https://www.youtube.com/embed/jG1O2yHBKbw",
-      isYouTube: true,
-      thumbnail: "https://img.youtube.com/vi/jG1O2yHBKbw/maxresdefault.jpg"
-    },
-    {
-      title: "YOUTH SEMI CHRISTMAS | 21-12-2025 | #live",
-      src: "https://www.youtube.com/embed/74m65SgBRz0",
-      isYouTube: true,
-      thumbnail: "https://img.youtube.com/vi/74m65SgBRz0/maxresdefault.jpg"
-    },
-    {
-      title: "CHRISTMAS WORSHIP SERVICE | 25-12-2025 | #live",
-      src: "https://www.youtube.com/embed/Fbtimdmzaf0",
-      isYouTube: true,
-      thumbnail: "https://img.youtube.com/vi/Fbtimdmzaf0/maxresdefault.jpg"
-    },
-    {
-      title: "PRAISE & WORSHIP SERVICE | 28-12-2025 | #live (Morning)",
-      src: "https://www.youtube.com/embed/5gucWw-d_nA",
-      isYouTube: true,
-      thumbnail: "https://img.youtube.com/vi/5gucWw-d_nA/maxresdefault.jpg"
-    },
-    {
-      title: "PRAISE & WORSHIP SERVICE | 28-12-2025 | #live (Evening)",
-      src: "https://www.youtube.com/embed/t_VirkLYgHQ",
-      isYouTube: true,
-      thumbnail: "https://img.youtube.com/vi/t_VirkLYgHQ/maxresdefault.jpg"
-    },
-    {
-      title: "CROSS OVER SERVICE | 31-12-2025 | #live",
-      src: "https://www.youtube.com/embed/7NyPOxY9zwA",
-      isYouTube: true,
-      thumbnail: "https://img.youtube.com/vi/7NyPOxY9zwA/maxresdefault.jpg"
-    },
-    {
-      title: "NEW YEAR SERVICE | 01-01-2026 | #live",
-      src: "https://www.youtube.com/embed/QanFnzbUQUM",
-      isYouTube: true,
-      thumbnail: "https://img.youtube.com/vi/QanFnzbUQUM/maxresdefault.jpg"
-    }
-  ];
+  // "Today's Grace" Logic
+  const todayVideo = useMemo(() => {
+    const todayStr = format(new Date(), "yyyy-MM-dd");
+    // Find video for today
+    const found = videos.find(v => v.date === todayStr);
+    // Fallback to the latest video if today's is missing
+    return found || videos[0]; // Assumes videos are sorted desc
+  }, [videos]);
 
-  function openPlayer(item: VideoItem) {
-    setCurrent(item);
-    setOpen(true);
-  }
+  // Filter Logic
+  const filteredVideos = useMemo(() => {
+    return videos.filter(video => {
+      // 1. Search Filter
+      const matchesSearch =
+        video.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        video.theme.toLowerCase().includes(searchQuery.toLowerCase());
+
+      // 2. Date Filter
+      const matchesDate = selectedDate
+        ? isSameDay(parseISO(video.date), selectedDate)
+        : true;
+
+      // Exclude "Today's Video" from the main grid to avoid duplication (optional, but good for UX)
+      // const isToday = todayVideo && video.id === todayVideo.id;
+      // return matchesSearch && matchesDate && !isToday;
+      return matchesSearch && matchesDate;
+    });
+  }, [videos, searchQuery, selectedDate]);
 
   return (
     <ProtectedRoute>
-      <div className="min-h-screen bg-white">
-        {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-yellow-400 via-yellow-500 to-orange-500 text-white py-16 md:py-20">
-          <div className="absolute inset-0 bg-black opacity-20"></div>
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Daily Grace</h1>
-            <p className="text-lg md:text-xl opacity-90">Daily Manna videos in Telugu and English</p>
-          </div>
-        </section>
+      <div className="min-h-screen bg-black text-white selection:bg-yellow-500/30">
 
-        {/* Telugu Carousel */}
-        <SectionCarousel title="Telugu Daily Manna" items={teluguItems} onOpen={openPlayer} />
-
-        {/* English Carousel */}
-        <SectionCarousel title="English Daily Manna" items={englishItems} onOpen={openPlayer} />
-
-        {/* Weekly YouTube Lives */}
-        <section className="py-12 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Weekly YouTube Live</h2>
-              <p className="text-gray-600">Latest live streams</p>
+        {/* === HERO SECTION (Today's Grace) === */}
+        {todayVideo && !selectedDate && !searchQuery && (
+          <section className="relative h-[60vh] w-full overflow-hidden">
+            {/* Background with blur */}
+            <div className="absolute inset-0 z-0">
+              <video
+                src={todayVideo.src}
+                className="h-full w-full object-cover opacity-60 blur-sm"
+                autoPlay
+                muted
+                loop
+                playsInline
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
             </div>
-            <Carousel className="w-full max-w-7xl mx-auto">
-              <CarouselContent>
-                {youtubeLives.map((item) => (
-                  <CarouselItem key={item.src} className="basis-full sm:basis-1/2 lg:basis-1/3">
-                    <Card className="hover:shadow-lg transition-shadow overflow-hidden">
-                      <a href={item.src.replace("/embed/", "/watch?v=")} target="_blank" rel="noopener noreferrer">
-                        <CardContent className="p-0">
-                          <div className="relative w-full aspect-video">
-                            <Image
-                              src={item.thumbnail || "/placeholder.jpg"}
-                              alt={item.title}
-                              fill
-                              className="object-cover"
-                            />
-                            <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                              <span className="text-white font-semibold text-sm md:text-base">{item.title}</span>
-                            </div>
-                          </div>
-                          <div className="p-3 text-sm text-gray-600">YouTube Live</div>
-                        </CardContent>
-                      </a>
-                    </Card>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
-          </div>
-        </section>
 
-        {/* CTA Section */}
-        <section className="py-16 bg-gradient-to-r from-yellow-600 to-orange-600 text-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Be Blessed Daily</h2>
-            <p className="text-xl mb-8">Stay connected with the Word every day</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/prayer-request">
-                <Button size="lg" className="bg-white text-yellow-600 hover:bg-gray-100 font-semibold">
-                  Request Prayer
-                </Button>
-              </Link>
-              <Link href="/contact">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-white text-white hover:bg-white hover:text-yellow-600 font-semibold bg-transparent"
-                >
-                  Contact Us
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Player Dialog UI */}
-        <Dialog open={open} onOpenChange={setOpen}>
-          <DialogContent className="max-w-3xl">
-            <DialogHeader>
-              <DialogTitle>{current?.title}</DialogTitle>
-            </DialogHeader>
-            <div className="w-full">
-              <div className="relative w-full aspect-video bg-black">
-                {current?.isYouTube ? (
-                  <iframe
-                    src={current.src}
-                    title={current.title}
-                    className="w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                ) : (
-                  <video src={current?.src} controls className="w-full h-full" preload="metadata" />
-                )}
+            <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
+              <div className="mb-4 inline-flex items-center rounded-full bg-yellow-500/20 px-4 py-1.5 backdrop-blur-md">
+                <span className="text-sm font-semibold text-yellow-500">Today's Grace • {format(parseISO(todayVideo.date), "MMMM d, yyyy")}</span>
               </div>
+              <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">
+                {todayVideo.title}
+              </h1>
+              <p className="mb-8 max-w-2xl text-lg text-gray-300 md:text-xl">
+                Theme: <span className="text-white">{todayVideo.theme}</span>
+              </p>
+              <Button
+                size="lg"
+                className="rounded-full bg-white px-8 text-black hover:bg-gray-200"
+                onClick={() => setActiveVideo(todayVideo)}
+              >
+                Watch Now
+              </Button>
             </div>
-          </DialogContent>
-        </Dialog>
+          </section>
+        )}
+
+        {/* === MAIN CONTENT === */}
+        <section className="container mx-auto px-4 py-12 md:px-6">
+
+          {/* Controls Bar */}
+          <div className="sticky top-0 z-30 mb-8 flex flex-col gap-4 rounded-xl bg-gray-900/80 p-4 backdrop-blur-md md:flex-row md:items-center md:justify-between">
+            <h2 className="text-2xl font-bold text-white">Archive</h2>
+
+            <div className="flex flex-1 flex-col gap-3 md:max-w-md md:flex-row">
+              {/* Search */}
+              <div className="relative flex-1">
+                <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
+                <Input
+                  placeholder="Search by title or theme..."
+                  className="border-gray-700 bg-gray-800 pl-9 text-white placeholder:text-gray-500 focus-visible:ring-yellow-500"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                />
+              </div>
+
+              {/* Date Picker */}
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant={"outline"}
+                    className={cn(
+                      "w-full md:w-[240px] border-gray-700 bg-gray-800 text-left font-normal text-white hover:bg-gray-700 hover:text-white",
+                      !selectedDate && "text-gray-400"
+                    )}
+                  >
+                    <CalendarIcon className="mr-2 h-4 w-4" />
+                    {selectedDate ? format(selectedDate, "PPP") : <span>Pick a date</span>}
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-auto p-0 bg-gray-900 border-gray-800" align="start">
+                  <Calendar
+                    mode="single"
+                    selected={selectedDate}
+                    onSelect={setSelectedDate}
+                    initialFocus
+                    className="text-white"
+                  />
+                </PopoverContent>
+              </Popover>
+
+              {/* Clear Filters */}
+              {(searchQuery || selectedDate) && (
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => { setSearchQuery(""); setSelectedDate(undefined); }}
+                  className="text-gray-400 hover:text-white"
+                >
+                  <X className="h-4 w-4" />
+                </Button>
+              )}
+            </div>
+          </div>
+
+          {/* Video Grid */}
+          {loading ? (
+            <div className="flex h-40 items-center justify-center text-gray-500">Loading Manna...</div>
+          ) : filteredVideos.length === 0 ? (
+            <div className="flex h-60 flex-col items-center justify-center text-gray-500">
+              <p className="text-lg">No messages found.</p>
+              <Button variant="link" className="text-yellow-500" onClick={() => { setSearchQuery(""); setSelectedDate(undefined); }}>
+                Clear Filters
+              </Button>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {filteredVideos.map((video) => (
+                <DailyVideoCard
+                  key={video.id}
+                  video={video}
+                  onClick={() => setActiveVideo(video)}
+                />
+              ))}
+            </div>
+          )}
+        </section>
+
+        {/* Modal Player */}
+        <DailyGraceModal
+          video={activeVideo}
+          isOpen={!!activeVideo}
+          onClose={() => setActiveVideo(null)}
+        />
+
       </div>
     </ProtectedRoute>
   );
