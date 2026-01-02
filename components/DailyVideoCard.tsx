@@ -9,7 +9,8 @@ interface DailyVideoCardProps {
         date: string;
         theme: string;
         thumbnail?: string;
-        type?: string;
+        language?: 'english' | 'telugu';
+        type?: 'image' | 'video';
     };
     onClick: () => void;
 }
