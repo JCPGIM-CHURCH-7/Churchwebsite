@@ -24,7 +24,7 @@ function buildDays(prefix: string, count: number): VideoItem[] {
     title: `${prefix} Day ${day}`,
     src: `${DAILY_MESSAGES_BASE}/${prefix} Day ${day}.mp4`,
   }));
-  // Override Day 1 for Telugu and English with specific paths
+  // Override Day 1 for Telugu and English with specific paths (as in original code)
   if (prefix === "Telugu") {
     days[0] = { title: "Telugu Day 1", src: "/images/Daily messages/Telugu Day1.mp4" };
   } else if (prefix === "English") {
@@ -39,7 +39,7 @@ function SectionCarousel({ title, items, onOpen }: { title: string; items: Video
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{title}</h2>
-          <p className="text-gray-600">Day 1 to Day 54</p>
+          <p className="text-gray-600">Day 1 to Day 124</p>
         </div>
         <Carousel className="w-full max-w-7xl mx-auto">
           <CarouselContent>
@@ -72,8 +72,8 @@ export default function DailyGracePage() {
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState<VideoItem | null>(null);
 
-  const telugu = buildDays("Telugu", 54);
-  const english = buildDays("English", 54);
+  const telugu = buildDays("Telugu", 124);
+  const english = buildDays("English", 124);
 
   const youtubeLives: VideoItem[] = [
     { 
