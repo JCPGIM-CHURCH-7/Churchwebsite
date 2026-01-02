@@ -42,13 +42,25 @@ export function DailyGraceModal({ video, isOpen, onClose, onNext, onPrev, onLang
                         )}
 
                         {video.type === 'video' ? (
-                            <iframe
-                                src={video.src.includes('?') ? `${video.src}&autoplay=1` : `${video.src}?autoplay=1`}
-                                title={video.title}
-                                className="w-full h-full absolute inset-0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            />
+                            video.src.includes('youtube') || video.src.includes('youtu.be') ? (
+                                <iframe
+                                    src={video.src.includes('?') ? `${video.src}&autoplay=1` : `${video.src}?autoplay=1`}
+                                    title={video.title}
+                                    className="w-full h-full absolute inset-0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowFullScreen
+                                />
+                            ) : (
+                                <video
+                                    src={video.src}
+                                    controls
+                                    autoPlay
+                                    className="w-full h-full absolute inset-0 bg-black"
+                                    poster={video.thumbnail}
+                                >
+                                    Your browser does not support the video tag.
+                                </video>
+                            )
                         ) : (
                             <div className="w-full h-full flex items-center justify-center bg-gray-900">
                                 <img
