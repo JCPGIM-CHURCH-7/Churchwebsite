@@ -1,6 +1,6 @@
 // @ts-nocheck
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import ProtectedRoute from "@/components/ProtectedRoute";
@@ -17,14 +17,14 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 
 const DAILY_MESSAGES_BASE = "/images/Daily messages";
 
-type VideoItem = { title: string; src: string; isYouTube?: boolean; thumbnail?: string };
+type VideoItem = { title: string; src: string; isYouTube?: boolean; thumbnail?: string; date?: string; wa_path?: string };
 
 function buildDays(prefix: string, count: number): VideoItem[] {
   const days = Array.from({ length: count }, (_, i) => i + 1).map((day) => ({
     title: `${prefix} Day ${day}`,
     src: `${DAILY_MESSAGES_BASE}/${prefix} Day ${day}.mp4`,
   }));
-  // Override Day 1 for Telugu and English with specific paths (as in original code)
+  // Override Day 1 for Telugu and English with specific paths
   if (prefix === "Telugu") {
     days[0] = { title: "Telugu Day 1", src: "/images/Daily messages/Telugu Day1.mp4" };
   } else if (prefix === "English") {
@@ -43,8 +43,8 @@ function SectionCarousel({ title, items, onOpen }: { title: string; items: Video
         </div>
         <Carousel className="w-full max-w-7xl mx-auto">
           <CarouselContent>
-            {items.map((item) => (
-              <CarouselItem key={item.src} className="basis-full sm:basis-1/2 lg:basis-1/3">
+            {items.map((item, index) => (
+              <CarouselItem key={item.src + index} className="basis-full sm:basis-1/2 lg:basis-1/3">
                 <Card className="hover:shadow-lg transition-shadow overflow-hidden">
                   <button type="button" onClick={() => onOpen(item)} className="w-full text-left">
                     <CardContent className="p-0">
@@ -56,6 +56,13 @@ function SectionCarousel({ title, items, onOpen }: { title: string; items: Video
                       </div>
                     </CardContent>
                   </button>
+                  {item.wa_path && (
+                    <div className="p-2 bg-green-50 text-center">
+                      <a href={item.wa_path} download className="text-sm text-green-700 font-semibold hover:underline">
+                        Download for WhatsApp Status
+                      </a>
+                    </div>
+                  )}
                 </Card>
               </CarouselItem>
             ))}
@@ -72,43 +79,76 @@ export default function DailyGracePage() {
   const [open, setOpen] = useState(false);
   const [current, setCurrent] = useState<VideoItem | null>(null);
 
-  const telugu = buildDays("Telugu", 124);
-  const english = buildDays("English", 124);
+  const [teluguItems, setTeluguItems] = useState<VideoItem[]>([]);
+  const [englishItems, setEnglishItems] = useState<VideoItem[]>([]);
+
+  useEffect(() => {
+    // Initial static build
+    const staticTelugu = buildDays("Telugu", 124);
+    const staticEnglish = buildDays("English", 124);
+
+    setTeluguItems(staticTelugu);
+    setEnglishItems(staticEnglish);
+
+    // Fetch dynamic videos
+    fetch('/data/daily_videos.json')
+      .then(res => {
+        if (res.ok) return res.json();
+        return [];
+      })
+      .then((data: any[]) => {
+        if (data && data.length > 0) {
+          // Map dynamic data to VideoItems
+          const dynamicItems: VideoItem[] = data.map(d => ({
+            title: d.title,
+            src: d.wa_video_path, // Use the processed path for viewing too, or original if available
+            wa_path: d.wa_video_path,
+            date: d.date
+          }));
+
+          // Prepend to English for now (assuming Daily Grace is English/General)
+          // Or create a new section "Latest Daily Grace"
+          setEnglishItems(prev => [...dynamicItems, ...prev]);
+        }
+      })
+      .catch(err => console.log("No dynamic videos found or error fetching", err));
+
+  }, []);
 
   const youtubeLives: VideoItem[] = [
-    { 
-      title: "Sunday Service 12-10-2025 | Pastor K. Ravi Kumar", 
-      src: "https://www.youtube.com/embed/yVhKuyAdi_Q", 
+    {
+      title: "Sunday Service 12-10-2025 | Pastor K. Ravi Kumar",
+      src: "https://www.youtube.com/embed/yVhKuyAdi_Q",
       isYouTube: true,
       thumbnail: "https://img.youtube.com/vi/yVhKuyAdi_Q/maxresdefault.jpg"
     },
-    { 
-      title: "Sunday Service 19-10-2025 | Pastor K. Ravi Kumar", 
-      src: "https://www.youtube.com/embed/gT-Cpnw1AZ0", 
+    {
+      title: "Sunday Service 19-10-2025 | Pastor K. Ravi Kumar",
+      src: "https://www.youtube.com/embed/gT-Cpnw1AZ0",
       isYouTube: true,
       thumbnail: "https://img.youtube.com/vi/gT-Cpnw1AZ0/maxresdefault.jpg"
     },
-    { 
-      title: "Sunday Service 26-10-2025 | Pastor K. Ravi Kumar", 
-      src: "https://www.youtube.com/embed/rYce42cNPro", 
+    {
+      title: "Sunday Service 26-10-2025 | Pastor K. Ravi Kumar",
+      src: "https://www.youtube.com/embed/rYce42cNPro",
       isYouTube: true,
       thumbnail: "https://img.youtube.com/vi/rYce42cNPro/maxresdefault.jpg"
     },
-    { 
-      title: "Sunday Service 09-11-2025 | Live | Pastor K. Ravi Kumar", 
-      src: "https://www.youtube.com/embed/ap8Ux72GkDk", 
+    {
+      title: "Sunday Service 09-11-2025 | Live | Pastor K. Ravi Kumar",
+      src: "https://www.youtube.com/embed/ap8Ux72GkDk",
       isYouTube: true,
       thumbnail: "https://img.youtube.com/vi/ap8Ux72GkDk/maxresdefault.jpg"
     },
-    { 
-      title: "Sunday Service 16-11-2025 | Pastor K. Ravi Kumar", 
-      src: "https://www.youtube.com/embed/PXtXYOgWyWM", 
+    {
+      title: "Sunday Service 16-11-2025 | Pastor K. Ravi Kumar",
+      src: "https://www.youtube.com/embed/PXtXYOgWyWM",
       isYouTube: true,
       thumbnail: "https://img.youtube.com/vi/PXtXYOgWyWM/maxresdefault.jpg"
     },
-    { 
-      title: "Sunday Service 23-11-2025 | Pastor K. Ravi Kumar", 
-      src: "https://www.youtube.com/embed/VJWWLPx9cEI", 
+    {
+      title: "Sunday Service 23-11-2025 | Pastor K. Ravi Kumar",
+      src: "https://www.youtube.com/embed/VJWWLPx9cEI",
       isYouTube: true,
       thumbnail: "https://img.youtube.com/vi/VJWWLPx9cEI/maxresdefault.jpg"
     },
@@ -192,10 +232,10 @@ export default function DailyGracePage() {
         </section>
 
         {/* Telugu Carousel */}
-        <SectionCarousel title="Telugu Daily Manna" items={telugu} onOpen={openPlayer} />
+        <SectionCarousel title="Telugu Daily Manna" items={teluguItems} onOpen={openPlayer} />
 
         {/* English Carousel */}
-        <SectionCarousel title="English Daily Manna" items={english} onOpen={openPlayer} />
+        <SectionCarousel title="English Daily Manna" items={englishItems} onOpen={openPlayer} />
 
         {/* Weekly YouTube Lives */}
         <section className="py-12 bg-gray-50">
@@ -212,11 +252,11 @@ export default function DailyGracePage() {
                       <a href={item.src.replace("/embed/", "/watch?v=")} target="_blank" rel="noopener noreferrer">
                         <CardContent className="p-0">
                           <div className="relative w-full aspect-video">
-                            <Image 
-                              src={item.thumbnail || "/placeholder.jpg"} 
-                              alt={item.title} 
-                              fill 
-                              className="object-cover" 
+                            <Image
+                              src={item.thumbnail || "/placeholder.jpg"}
+                              alt={item.title}
+                              fill
+                              className="object-cover"
                             />
                             <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
                               <span className="text-white font-semibold text-sm md:text-base">{item.title}</span>
