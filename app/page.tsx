@@ -59,10 +59,14 @@ function WatchLiveButton() {
           setLiveVideoId(data.items[0].id.videoId)
         } else {
           console.log("No active live stream found.")
+          // Fallback to the most recent known service when no live stream
+          setLiveVideoId("QanFnzbUQUM")
         }
-      } catch (error) {
-        console.error("Error fetching live stream:", error)
-        setError("Failed to fetch live stream. Please try again later.")
+      } catch (err) {
+        console.error("Error fetching live stream:", err)
+        setError("Failed to fetch live stream. Falling back to latest service.")
+        // On error (e.g., API key issue or network), fallback to the provided link
+        setLiveVideoId("QanFnzbUQUM")
       }
     }
 
