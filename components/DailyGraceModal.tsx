@@ -11,6 +11,7 @@ interface DailyGraceModalProps {
         date: string;
         theme: string;
         language: 'english' | 'telugu';
+        type: 'image' | 'video';
     } | null;
     isOpen: boolean;
     onClose: () => void;
@@ -27,8 +28,8 @@ export function DailyGraceModal({ video, isOpen, onClose, onNext, onPrev, onLang
             <DialogContent className="max-w-6xl bg-white border-gray-100 p-0 overflow-hidden sm:rounded-2xl shadow-2xl">
                 <div className="relative flex flex-col md:flex-row h-[90vh] md:h-[700px]">
 
-                    {/* Video Player Column (YouTube Embed) */}
-                    <div className="flex-[2] bg-black relative flex items-center justify-center group">
+                    {/* Video Player / Image Column */}
+                    <div className="flex-[2] bg-black relative flex items-center justify-center group overflow-hidden">
 
                         {/* Navigation Overlay (Previous) */}
                         {onPrev && (
@@ -40,13 +41,23 @@ export function DailyGraceModal({ video, isOpen, onClose, onNext, onPrev, onLang
                             </button>
                         )}
 
-                        <iframe
-                            src={video.src.includes('?') ? `${video.src}&autoplay=1` : `${video.src}?autoplay=1`}
-                            title={video.title}
-                            className="w-full h-full absolute inset-0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                            allowFullScreen
-                        />
+                        {video.type === 'video' ? (
+                            <iframe
+                                src={video.src.includes('?') ? `${video.src}&autoplay=1` : `${video.src}?autoplay=1`}
+                                title={video.title}
+                                className="w-full h-full absolute inset-0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            />
+                        ) : (
+                            <div className="w-full h-full flex items-center justify-center bg-gray-900">
+                                <img
+                                    src={video.src}
+                                    alt={video.title}
+                                    className="max-h-full max-w-full object-contain"
+                                />
+                            </div>
+                        )}
 
                         {/* Navigation Overlay (Next) */}
                         {onNext && (

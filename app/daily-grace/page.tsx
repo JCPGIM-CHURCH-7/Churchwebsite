@@ -7,7 +7,6 @@ import { DailyGraceModal } from "@/components/DailyGraceModal";
 import { LanguageToggle } from "@/components/LanguageToggle";
 import { MannaReelCard } from "@/components/MannaReelCard";
 import { MannaHighlight } from "@/components/MannaHighlight";
-import { SourceChannelLink } from "@/components/SourceChannelLink";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
@@ -27,10 +26,11 @@ type BilingualDay = {
 
 type VideoSource = {
   dayId: string;
-  videoId: string;
+  videoId?: string;
   title: string;
   src: string;
   thumbnail: string;
+  type: 'image' | 'video';
 };
 
 type VideoItem = {
@@ -41,19 +41,27 @@ type VideoItem = {
   src: string;
   thumbnail: string;
   language: 'english' | 'telugu';
+  type: 'image' | 'video';
 };
 
-// Official Sources Data
-const SOURCE_CHANNELS = [
-  { name: "Our Daily Manna", description: "Official Global Devotionals", url: "https://www.youtube.com/c/ourdailymanna", lang: "English", color: "blue" },
-  { name: "Manna TV Int'l", description: "Faith & Grace Teachings", url: "https://www.youtube.com/c/mannatvinternational/videos", lang: "English", color: "blue" },
-  { name: "Daily Grace Co.", description: "Bible Study Resources", url: "https://thedailygraceco.com/", lang: "English", color: "blue" },
-  { name: "Joseph Prince", description: "Grace Revolution", url: "https://www.youtube.com/@JosephPrinceOnline", lang: "English", color: "blue" },
-  { name: "Enosh Kumar", description: "Paraloka Manna (Telugu)", url: "https://www.youtube.com/@enoshkumar", lang: "Telugu", color: "amber" },
-  { name: "Daily Manna Ch.", description: "Telugu Daily Devotionals", url: "https://www.youtube.com/@Dailymanna-007", lang: "Telugu", color: "amber" },
-  { name: "Rajkumar Jeremy", description: "Telugu Christian Messages", url: "https://www.youtube.com/@RajkumarJeremy", lang: "Telugu", color: "amber" },
-] as const;
-
+// Curated Sunday Videos (Hardcoded for Bottom Carousel)
+const SUNDAY_VIDEOS = [
+  { title: "Sunday Service 12-10-2025", src: "https://www.youtube.com/embed/yVhKuyAdi_Q", date: "2025-10-12" },
+  { title: "Sunday Service 19-10-2025", src: "https://www.youtube.com/embed/gT-Cpnw1AZ0", date: "2025-10-19" },
+  { title: "Sunday Service 26-10-2025", src: "https://www.youtube.com/embed/rYce42cNPro", date: "2025-10-26" },
+  { title: "Sunday Service 09-11-2025", src: "https://www.youtube.com/embed/ap8Ux72GkDk", date: "2025-11-09" },
+  { title: "Sunday Service 16-11-2025", src: "https://www.youtube.com/embed/PXtXYOgWyWM", date: "2025-11-16" },
+  { title: "Sunday Service 23-11-2025", src: "https://www.youtube.com/embed/VJWWLPx9cEI", date: "2025-11-23" },
+  { title: "Sunday Service 30-11-2025", src: "https://www.youtube.com/embed/kw9VWIUQhKo", date: "2025-11-30" },
+  { title: "GLORIOUS SUNDAY SERVICE 07-12", src: "https://www.youtube.com/embed/PDr8Y6_So_Q", date: "2025-12-07" },
+  { title: "SUNDAY SERVICE 14-12", src: "https://www.youtube.com/embed/C_ZEDst1LB0", date: "2025-12-14" },
+  { title: "CANDLE LIGHT SERVICE 21-12", src: "https://www.youtube.com/embed/jG1O2yHBKbw", date: "2025-12-21" },
+  { title: "CHRISTMAS SERVICE 25-12", src: "https://www.youtube.com/embed/Fbtimdmzaf0", date: "2025-12-25" },
+  { title: "WORSHIP SERVICE 28-12 (AM)", src: "https://www.youtube.com/embed/5gucWw-d_nA", date: "2025-12-28" },
+  { title: "WORSHIP SERVICE 28-12 (PM)", src: "https://www.youtube.com/embed/t_VirkLYgHQ", date: "2025-12-28" },
+  { title: "CROSS OVER SERVICE 31-12", src: "https://www.youtube.com/embed/7NyPOxY9zwA", date: "2025-12-31" },
+  { title: "NEW YEAR SERVICE 01-01", src: "https://www.youtube.com/embed/QanFnzbUQUM", date: "2026-01-01" },
+];
 
 export default function DailyGracePage() {
   const [bilingualData, setBilingualData] = useState<BilingualDay[]>([]);
@@ -66,7 +74,7 @@ export default function DailyGracePage() {
   const [activeVideo, setActiveVideo] = useState<VideoItem | null>(null);
 
   const reelsScrollRef = useRef<HTMLDivElement>(null);
-  const sourcesScrollRef = useRef<HTMLDivElement>(null);
+  const sundayScrollRef = useRef<HTMLDivElement>(null);
 
   // Load Data
   useEffect(() => {
@@ -75,7 +83,6 @@ export default function DailyGracePage() {
         const res = await fetch("/data/daily_manna_bilingual.json");
         if (!res.ok) throw new Error("Failed to fetch bilingual data");
         const data = await res.json();
-        // Ensure sorted by DayNumber descending (newest first)
         setBilingualData(data.sort((a: any, b: any) => b.dayNumber - a.dayNumber));
       } catch (err) {
         console.error("Error loading daily grace data:", err);
@@ -94,7 +101,8 @@ export default function DailyGracePage() {
     theme: day.theme,
     src: day[lang].src,
     thumbnail: day[lang].thumbnail,
-    language: lang
+    language: lang,
+    type: day[lang].type
   });
 
   // Archive Filter Logic
@@ -112,11 +120,11 @@ export default function DailyGracePage() {
     });
   }, [bilingualData, language, searchQuery, selectedDate]);
 
-  // Today's Hero Video (First item in list, preferred lang)
+  // Today's Hero Video
   const todaysVideo = useMemo(() => {
     if (bilingualData.length === 0) return null;
-    const latestDay = bilingualData[0]; // Day 124
-    const prefLang = language === 'telugu' ? 'telugu' : 'english'; // Default to English if 'both'
+    const latestDay = bilingualData[0];
+    const prefLang = language === 'telugu' ? 'telugu' : 'english';
     return flattenVideo(latestDay, prefLang);
   }, [bilingualData, language]);
 
@@ -132,8 +140,6 @@ export default function DailyGracePage() {
   const getCurrentDayIndex = () => {
     if (!activeVideo) return -1;
     return bilingualData.findIndex(day =>
-      day.english.videoId === activeVideo.id ||
-      day.telugu.videoId === activeVideo.id ||
       day.english.dayId === activeVideo.id ||
       day.telugu.dayId === activeVideo.id
     );
@@ -142,7 +148,7 @@ export default function DailyGracePage() {
   const handleNext = () => {
     const idx = getCurrentDayIndex();
     if (idx !== -1 && idx > 0) {
-      const nextDay = bilingualData[idx - 1]; // Newer day
+      const nextDay = bilingualData[idx - 1]; // Newer
       const lang = activeVideo?.language || 'english';
       setActiveVideo(flattenVideo(nextDay, lang));
     }
@@ -151,7 +157,7 @@ export default function DailyGracePage() {
   const handlePrev = () => {
     const idx = getCurrentDayIndex();
     if (idx !== -1 && idx < bilingualData.length - 1) {
-      const prevDay = bilingualData[idx + 1]; // Older day
+      const prevDay = bilingualData[idx + 1]; // Older
       const lang = activeVideo?.language || 'english';
       setActiveVideo(flattenVideo(prevDay, lang));
     }
@@ -171,19 +177,18 @@ export default function DailyGracePage() {
     <ProtectedRoute>
       <div className="min-h-screen bg-slate-50 text-gray-900 font-sans selection:bg-amber-100 selection:text-amber-900 pb-20">
 
-        {/* === SECTION 1: HEADER & REELS HERO === */}
+        {/* === SECTION 1: HERO REELS === */}
         <section className="relative w-full bg-white pt-6 pb-12 border-b border-gray-100 shadow-sm z-10">
           <div className="container mx-auto px-4 mb-6 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex flex-col">
+            <div>
               <h1 className="text-3xl font-serif font-bold text-gray-900 tracking-tight">Daily Grace</h1>
               <p className="text-gray-500 text-sm mt-1 uppercase tracking-widest font-semibold">124 Days of Glory</p>
             </div>
             <LanguageToggle value={language} onChange={setLanguage} />
           </div>
 
-          {/* Reels Carousel */}
           <div className="relative group container mx-auto px-0 md:px-4">
-            <button onClick={() => scroll(reelsScrollRef, 'left')} className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 p-3 rounded-full shadow-lg border border-gray-100 text-gray-700 opacity-0 group-hover:opacity-100 transition-opacity disabled:opacity-0 hidden md:block hover:bg-white hover:text-blue-600">
+            <button onClick={() => scroll(reelsScrollRef, 'left')} className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 p-3 rounded-full shadow-lg border border-gray-100 text-gray-700 opacity-0 group-hover:opacity-100 transition-opacity disabled:opacity-0 hidden md:block hover:text-blue-600">
               <ChevronLeft className="w-6 h-6" />
             </button>
 
@@ -208,7 +213,7 @@ export default function DailyGracePage() {
               ))}
             </div>
 
-            <button onClick={() => scroll(reelsScrollRef, 'right')} className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 p-3 rounded-full shadow-lg border border-gray-100 text-gray-700 opacity-0 group-hover:opacity-100 transition-opacity hidden md:block hover:bg-white hover:text-blue-600">
+            <button onClick={() => scroll(reelsScrollRef, 'right')} className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 p-3 rounded-full shadow-lg border border-gray-100 text-gray-700 opacity-0 group-hover:opacity-100 transition-opacity hidden md:block hover:text-blue-600">
               <ChevronRight className="w-6 h-6" />
             </button>
           </div>
@@ -218,35 +223,31 @@ export default function DailyGracePage() {
         <section className="container mx-auto px-4 py-12 md:py-16">
           <div className="flex items-center gap-4 mb-8">
             <div className="h-px flex-1 bg-gray-200"></div>
-            <h2 className="text-gray-400 font-medium text-sm uppercase tracking-widest">Latest Message</h2>
+            <h2 className="text-gray-400 font-medium text-sm uppercase tracking-widest">Today's Manna</h2>
             <div className="h-px flex-1 bg-gray-200"></div>
           </div>
-
           {todaysVideo && (
             <MannaHighlight video={todaysVideo} onClick={() => setActiveVideo(todaysVideo)} />
           )}
         </section>
 
-        {/* === SECTION 3: ARCHIVE GRID === */}
+        {/* === SECTION 3: ARCHIVE === */}
         <section className="container mx-auto px-4 pb-16">
           <div className="sticky top-4 z-30 mb-8 flex flex-col gap-4 rounded-2xl bg-white/90 p-4 shadow-xl shadow-gray-200/50 backdrop-blur-xl border border-white/50 md:flex-row md:items-center md:justify-between ring-1 ring-black/5">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700">
-                <CalendarIcon className="w-5 h-5 block" />
+                <CalendarIcon className="w-5 h-5" />
               </div>
               <h2 className="text-xl font-bold text-gray-900">Archive</h2>
             </div>
 
             <div className="flex flex-1 flex-col gap-3 md:max-w-xl md:flex-row">
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" />
-                <Input
-                  placeholder="Search titles or themes..."
-                  className="border-gray-200 bg-gray-50 pl-10 h-10 rounded-xl focus:bg-white transition-colors"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                />
-              </div>
+              <Input
+                placeholder="Search..."
+                className="border-gray-200 bg-gray-50 pl-4 h-10 rounded-xl"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
               <Popover>
                 <PopoverTrigger asChild>
                   <Button variant="outline" className={cn("w-full md:w-[150px] h-10 rounded-xl justify-start text-left font-normal border-gray-200 bg-gray-50", !selectedDate && "text-muted-foreground")}>
@@ -261,51 +262,66 @@ export default function DailyGracePage() {
             </div>
           </div>
 
-          {loading ? (
-            <div className="flex h-40 items-center justify-center">
-              <div className="animate-pulse flex flex-col items-center">
-                <div className="h-4 w-4 bg-amber-400 rounded-full mb-2"></div>
-                <div className="text-gray-400 text-sm">Loading Grace...</div>
-              </div>
-            </div>
-          ) : (
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-              {archiveVideos.map((video) => (
-                <DailyVideoCard
-                  key={video.id + video.language}
-                  video={{ ...video, theme: `${video.theme} • ${video.language === 'english' ? 'ENG' : 'TEL'}` }}
-                  onClick={() => setActiveVideo(video)}
-                />
-              ))}
-            </div>
-          )}
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {archiveVideos.map((video) => (
+              <DailyVideoCard
+                key={video.id + video.language}
+                video={{ ...video, title: `Day ${video.id.replace(/\D/g, '')}: ${video.theme}`, theme: `${video.language === 'english' ? 'ENG' : 'TEL'}` }}
+                onClick={() => setActiveVideo(video)}
+              />
+            ))}
+          </div>
         </section>
 
-        {/* === SECTION 4: SOURCES FOOTER === */}
+        {/* === SECTION 4: SUNDAY SERVICES (16 Videos) === */}
         <section className="bg-white border-t border-gray-100 py-12">
           <div className="container mx-auto px-4">
-            <h3 className="text-center text-lg font-bold text-gray-400 uppercase tracking-widest mb-10">Official Sources & Channels</h3>
+            <h3 className="text-center text-lg font-bold text-gray-400 uppercase tracking-widest mb-10">Sunday Services & Events</h3>
 
             <div className="relative group">
-              {/* Footer Left Arrow */}
-              <button onClick={() => scroll(sourcesScrollRef, 'left')} className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md border border-gray-100 p-2 rounded-full text-gray-500 hover:text-blue-600 hidden md:block hover:scale-110 transition-transform">
+              <button onClick={() => scroll(sundayScrollRef, 'left')} className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md border border-gray-100 p-2 rounded-full text-gray-500 hidden md:block hover:text-blue-600">
                 <ChevronLeft className="w-5 h-5" />
               </button>
 
               <div
-                ref={sourcesScrollRef}
-                className="flex overflow-x-auto gap-6 pb-6 px-12 scrollbar-hide snap-x snap-mandatory"
+                ref={sundayScrollRef}
+                className="flex overflow-x-auto gap-6 pb-6 px-4 md:px-12 scrollbar-hide snap-x snap-mandatory"
                 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               >
-                {SOURCE_CHANNELS.map((channel, idx) => (
-                  <div key={idx} className="snap-center">
-                    <SourceChannelLink channel={channel} />
+                {SUNDAY_VIDEOS.map((vid, idx) => (
+                  <div
+                    key={idx}
+                    className="snap-center flex-shrink-0 w-[300px] cursor-pointer group/card"
+                    onClick={() => setActiveVideo({
+                      id: `Event-${idx}`,
+                      title: vid.title,
+                      date: vid.date,
+                      theme: "Special Event",
+                      src: vid.src,
+                      thumbnail: `https://img.youtube.com/vi/${vid.src.split('/').pop()}/maxresdefault.jpg`,
+                      language: 'english',
+                      type: 'video'
+                    })}
+                  >
+                    <div className="relative aspect-video rounded-xl overflow-hidden mb-3">
+                      <img
+                        src={`https://img.youtube.com/vi/${vid.src.split('/').pop()}/maxresdefault.jpg`}
+                        alt={vid.title}
+                        className="w-full h-full object-cover transition-transform group-hover/card:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-black/20 flex items-center justify-center group-hover/card:bg-black/10 transition-colors">
+                        <div className="h-10 w-10 rounded-full bg-white/90 flex items-center justify-center shadow-lg">
+                          <Play className="h-4 w-4 text-gray-900 fill-gray-900 ml-0.5" />
+                        </div>
+                      </div>
+                    </div>
+                    <h4 className="font-bold text-gray-900 leading-tight group-hover/card:text-blue-600 transition-colors">{vid.title}</h4>
+                    <p className="text-xs text-gray-500 mt-1">{vid.date}</p>
                   </div>
                 ))}
               </div>
 
-              {/* Footer Right Arrow */}
-              <button onClick={() => scroll(sourcesScrollRef, 'right')} className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md border border-gray-100 p-2 rounded-full text-gray-500 hover:text-blue-600 hidden md:block hover:scale-110 transition-transform">
+              <button onClick={() => scroll(sundayScrollRef, 'right')} className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white shadow-md border border-gray-100 p-2 rounded-full text-gray-500 hidden md:block hover:text-blue-600">
                 <ChevronRight className="w-5 h-5" />
               </button>
             </div>
