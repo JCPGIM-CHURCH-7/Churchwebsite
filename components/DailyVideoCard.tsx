@@ -23,56 +23,58 @@ export function DailyVideoCard({ video, onClick }: DailyVideoCardProps) {
 
     return (
         <div
-            className="group relative h-[400px] w-full cursor-pointer overflow-hidden rounded-xl bg-gray-900 shadow-xl transition-all hover:scale-[1.02] hover:shadow-2xl"
+            className="group relative h-[400px] w-full cursor-pointer overflow-hidden rounded-xl bg-white shadow-md transition-all hover:scale-[1.02] hover:shadow-xl border border-gray-100"
             onClick={onClick}
         >
             {/* Thumbnail / Placeholder Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900">
-                {/* If we had real thumbnails, Next.js Image would go here */}
-                {/* <Image src={video.thumbnail} fill className="object-cover opacity-80 transition-opacity group-hover:opacity-100" /> */}
-
-                {/* Fallback abstract pattern */}
-                <div className="h-full w-full opacity-30 mix-blend-overlay"
-                    style={{ backgroundImage: 'url("/grid-pattern.svg")', backgroundSize: 'cover' }}></div>
+            <div className="absolute inset-0 bg-gray-100">
+                {/* Real Thumbnail */}
+                {video.thumbnail && !video.thumbnail.includes("placeholder") ? (
+                    <img src={video.thumbnail} alt={video.title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                ) : (
+                    <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-blue-50 to-amber-50">
+                        <span className="text-gray-300 font-serif italic text-4xl opacity-20">Grace</span>
+                    </div>
+                )}
             </div>
 
-            {/* Overlays */}
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/90" />
+            {/* Overlays - Light Theme Gradient */}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/90" />
 
             {/* Theme Badge */}
-            <div className="absolute top-3 right-3 rounded-full bg-white/20 px-3 py-1 text-xs font-medium text-white backdrop-blur-md">
+            <div className="absolute top-3 right-3 rounded-full bg-white/80 px-3 py-1 text-xs font-semibold text-gray-700 backdrop-blur-md shadow-sm border border-white">
                 {video.theme}
             </div>
 
-            {/* Center Play Button (Hidden by default, shows on hover or always visible but subtle) */}
+            {/* Center Play Button (YouTube Style) */}
             <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
-                    <Play className="h-8 w-8 fill-white text-white" />
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-red-600 text-white shadow-lg transform transition-transform group-hover:scale-110">
+                    <Play className="h-6 w-6 ml-1 fill-white" />
                 </div>
             </div>
 
             {/* Bottom Metadata */}
-            <div className="absolute bottom-0 w-full p-4 text-white">
-                <div className="mb-2 flex items-center gap-2">
-                    <div className="flex h-10 w-10 flex-col items-center justify-center rounded-lg bg-white/10 backdrop-blur-md font-bold leading-none">
-                        <span className="text-sm">{month}</span>
-                        <span className="text-lg">{day}</span>
+            <div className="absolute bottom-0 w-full p-4 text-gray-800">
+                <div className="mb-2 flex items-center gap-3">
+                    <div className="flex h-12 w-12 flex-col items-center justify-center rounded-lg bg-amber-100 text-amber-800 font-bold shadow-sm border border-amber-200">
+                        <span className="text-xs uppercase">{month}</span>
+                        <span className="text-lg leading-none">{day}</span>
                     </div>
-                    <div>
-                        <h3 className="line-clamp-2 text-lg font-bold leading-tight text-white group-hover:text-yellow-400 transition-colors">
+                    <div className="flex-1">
+                        <h3 className="line-clamp-2 text-base font-bold leading-tight text-gray-900 group-hover:text-blue-600 transition-colors">
                             {video.title}
                         </h3>
-                        <p className="text-xs text-gray-300">{year}</p>
+                        <p className="text-xs text-gray-500 font-medium mt-1">{year} • Daily Manna</p>
                     </div>
                 </div>
 
                 {/* Footer Stats / Actions */}
-                <div className="flex items-center justify-between border-t border-white/10 pt-2 text-xs text-gray-400">
-                    <span className="flex items-center gap-1">
-                        <Play className="h-3 w-3" /> Watch
+                <div className="flex items-center justify-between border-t border-gray-100 pt-2 text-xs text-gray-500 font-medium">
+                    <span className="flex items-center gap-1 text-red-500">
+                        <Play className="h-3 w-3 fill-current" /> Watch Video
                     </span>
                     <span className="flex items-center gap-1">
-                        Daily Manna
+                        <Heart className="h-3 w-3" /> Like
                     </span>
                 </div>
             </div>
