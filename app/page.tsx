@@ -212,34 +212,34 @@ export default function HomePage() {
           </div>
         </section>
 
-  {/* YouTube Live Embed Section */}
-<section className="py-12 bg-white">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center mb-6">
-      <h2 className="text-2xl font-bold text-gray-900">Live Stream</h2>
-      <p className="text-sm text-gray-600">Join our live broadcast below or open it on YouTube</p>
-    </div>
-    <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg">
-      <iframe
-        src="https://www.youtube.com/embed/QanFnzbUQUM?autoplay=0"
-        title="Sunday Service Live"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        className="w-full h-full"
-      />
-    </div>
-    <div className="text-center mt-4">
-      <a
-        href="https://www.youtube.com/live/QanFnzbUQUM?si=mhBWS-caFp7TLlzz"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Button className="mt-2">Open on YouTube</Button>
-      </a>
-    </div>
-  </div>
-</section>
+        {/* YouTube Live Embed Section */}
+        <section className="py-12 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-6">
+              <h2 className="text-2xl font-bold text-gray-900">Live Stream</h2>
+              <p className="text-sm text-gray-600">Join our live broadcast below or open it on YouTube</p>
+            </div>
+            <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.youtube.com/embed/47XTHrkc8Yc?autoplay=0"
+                title="Sunday Service Live"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+            <div className="text-center mt-4">
+              <a
+                href="https://www.youtube.com/live/47XTHrkc8Yc?si=ukESfnHJ_3-LXyKz"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="mt-2">Open on YouTube</Button>
+              </a>
+            </div>
+          </div>
+        </section>
         {/* Online Service Banner */}
         <section className="bg-red-600 text-white py-6">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -488,9 +488,9 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-  </section>
+        </section>
 
-  {/* Contact Info */}
+        {/* Contact Info */}
         <section className="py-12 bg-gray-900 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-3 gap-8 text-center">
@@ -517,7 +517,7 @@ export default function HomePage() {
           </div>
         </section>
 
-  {/* Footer removed — global Footer is rendered in app/layout.tsx to avoid duplicates */}
+        {/* Footer removed — global Footer is rendered in app/layout.tsx to avoid duplicates */}
       </div>
     </ProtectedRoute>
   )
