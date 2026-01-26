@@ -11,7 +11,7 @@ const LocalVideoPlayer: React.FC<LocalVideoPlayerProps> = ({ videoPath, title })
     <div className="p-1">
       <Card>
         <CardContent className="flex flex-col aspect-video items-center justify-center p-0 overflow-hidden rounded-lg">
-          <video controls className="w-full h-full">
+          <video controls autoPlay muted playsInline className="w-full h-full">
             <source src={encodeURI(videoPath)} type="video/mp4" />
             Your browser does not support the video tag.
           </video>

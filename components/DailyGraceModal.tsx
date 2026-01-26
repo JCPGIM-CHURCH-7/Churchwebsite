@@ -26,8 +26,8 @@ export function DailyGraceModal({ video, isOpen, onClose, onNext, onPrev, onLang
 
     return (
         <Dialog open={isOpen} onOpenChange={onClose}>
-            <DialogContent className="max-w-6xl bg-white border-gray-100 p-0 overflow-hidden sm:rounded-2xl shadow-2xl">
-                <div className="relative flex flex-col md:flex-row h-[90vh] md:h-[700px]">
+            <DialogContent className="max-w-6xl bg-white border-0 p-0 overflow-hidden sm:rounded-2xl shadow-2xl h-[100dvh] sm:h-[700px]">
+                <div className="relative flex flex-col md:flex-row h-full">
 
                     {/* Video Player / Image Column */}
                     <div className="flex-[2] bg-black relative flex items-center justify-center group overflow-hidden">
@@ -45,7 +45,7 @@ export function DailyGraceModal({ video, isOpen, onClose, onNext, onPrev, onLang
                         {video.type === 'video' ? (
                             video.src.includes('youtube') || video.src.includes('youtu.be') ? (
                                 <iframe
-                                    src={video.src.includes('?') ? `${encodeURI(video.src)}&autoplay=1` : `${encodeURI(video.src)}?autoplay=1`}
+                                    src={video.src.includes('?') ? `${encodeURI(video.src)}&autoplay=1&mute=1&playsinline=1` : `${encodeURI(video.src)}?autoplay=1&mute=1&playsinline=1`}
                                     title={video.title}
                                     className="w-full h-full absolute inset-0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -56,7 +56,9 @@ export function DailyGraceModal({ video, isOpen, onClose, onNext, onPrev, onLang
                                     src={encodeURI(video.src)}
                                     controls
                                     autoPlay
-                                    className="w-full h-full absolute inset-0 bg-black"
+                                    muted
+                                    playsInline
+                                    className="w-full h-full absolute inset-0 bg-black object-contain sm:object-cover"
                                     poster={encodeURI(video.thumbnail)}
                                 >
                                     Your browser does not support the video tag.
@@ -84,10 +86,8 @@ export function DailyGraceModal({ video, isOpen, onClose, onNext, onPrev, onLang
 
                     </div>
 
-                    {/* Sidebar Info Column */}
-                    <div className="w-full md:w-[400px] bg-white border-l border-gray-100 p-6 md:p-8 flex flex-col text-gray-800 overflow-y-auto relative">
-
-
+                    {/* Sidebar Info Column - Hidden on Mobile */}
+                    <div className="hidden md:flex w-[400px] bg-white border-l border-gray-100 p-8 flex-col text-gray-800 overflow-y-auto relative">
                         {/* Header */}
                         <div className="mt-2 mb-6">
                             <div className="flex items-center justify-between mb-3">
@@ -113,16 +113,6 @@ export function DailyGraceModal({ video, isOpen, onClose, onNext, onPrev, onLang
 
                         {/* Actions */}
                         <div className="flex flex-col gap-3 mt-auto">
-                            {/* Mobile Nav (Visible only on small screens) */}
-                            <div className="flex md:hidden gap-2 mb-2">
-                                {onPrev && (
-                                    <Button variant="outline" className="flex-1" onClick={onPrev}><ChevronLeft className="w-4 h-4 mr-1" /> Prev Day</Button>
-                                )}
-                                {onNext && (
-                                    <Button variant="outline" className="flex-1" onClick={onNext}>Next Day <ChevronRight className="w-4 h-4 ml-1" /></Button>
-                                )}
-                            </div>
-
                             {onLanguageToggle && (
                                 <Button
                                     variant="secondary"
@@ -137,8 +127,58 @@ export function DailyGraceModal({ video, isOpen, onClose, onNext, onPrev, onLang
                                 <MessageCircle className="h-5 w-5" /> Share Message
                             </Button>
                         </div>
-
                     </div>
+
+                    {/* Mobile Overlay Content */}
+                    <div className="md:hidden absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white z-20 pointer-events-none">
+                        <div className="inline-block px-2 py-0.5 rounded bg-amber-500 text-white text-[10px] font-bold uppercase mb-2">
+                            {video.theme}
+                        </div>
+                        <h2 className="text-xl font-bold mb-1">{video.title}</h2>
+                        <p className="text-xs opacity-80 mb-4">{video.date} • {video.language}</p>
+
+                        <div className="flex gap-2 pointer-events-auto">
+                            {onLanguageToggle && (
+                                <Button
+                                    size="sm"
+                                    variant="secondary"
+                                    onClick={onLanguageToggle}
+                                    className="bg-white/20 backdrop-blur-md text-white border-0 hover:bg-white/30"
+                                >
+                                    <RefreshCw className="w-4 h-4 mr-1" /> {video.language === 'english' ? 'TEL' : 'ENG'}
+                                </Button>
+                            )}
+                            <Button
+                                size="sm"
+                                className="bg-green-600 hover:bg-green-700 text-white border-0 flex-1"
+                            >
+                                <Share2 className="w-4 h-4 mr-1" /> Share
+                            </Button>
+                        </div>
+                    </div>
+
+                    {/* Mobile Navigation Buttons */}
+                    <div className="md:hidden absolute right-4 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-20">
+                        {onPrev && (
+                            <button onClick={onPrev} className="p-3 rounded-full bg-black/40 text-white backdrop-blur-sm border border-white/20">
+                                <ChevronLeft className="w-6 h-6 rotate-90" />
+                            </button>
+                        )}
+                        {onNext && (
+                            <button onClick={onNext} className="p-3 rounded-full bg-black/40 text-white backdrop-blur-sm border border-white/20">
+                                <ChevronRight className="w-6 h-6 rotate-90" />
+                            </button>
+                        )}
+                    </div>
+
+                    {/* Close Button Mobile */}
+                    <button
+                        onClick={onClose}
+                        className="md:hidden absolute top-4 right-4 z-30 p-2 rounded-full bg-black/40 text-white backdrop-blur-sm"
+                    >
+                        <X className="w-6 h-6" />
+                    </button>
+
                 </div>
             </DialogContent>
         </Dialog>
