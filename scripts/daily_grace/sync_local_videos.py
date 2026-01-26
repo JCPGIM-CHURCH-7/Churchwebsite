@@ -6,7 +6,7 @@ from moviepy import VideoFileClip
 
 # Paths
 JSON_PATH = "public/data/daily_manna_bilingual.json"
-MEDIA_DIR = "public/images/Daily messages"
+MEDIA_DIR = "public/images/daily-grace-videos"
 START_DATE = datetime(2025, 9, 1) # Day 1
 THEMES = ["Faith", "Grace", "Hope", "Love", "Peace", "Redemption", "Strength", "Wisdom", "Prayer", "Joy"]
 
@@ -61,8 +61,8 @@ def sync():
                 jpg_filename = f"{os.path.splitext(mp4_filename)[0]}.jpg"
                 jpg_path = os.path.join(MEDIA_DIR, jpg_filename)
                 
-                entry[lang]['src'] = f"/images/Daily messages/{mp4_filename}"
-                entry[lang]['thumbnail'] = f"/images/Daily messages/{jpg_filename}"
+                entry[lang]['src'] = f"/images/daily-grace-videos/{mp4_filename}"
+                entry[lang]['thumbnail'] = f"/images/daily-grace-videos/{jpg_filename}"
                 entry[lang]['type'] = "video"
                 updates_count += 1
                 
@@ -100,8 +100,8 @@ def sync():
                     jpg_filename = f"{os.path.splitext(mp4_filename)[0]}.jpg"
                     jpg_path = os.path.join(MEDIA_DIR, jpg_filename)
                     
-                    new_entry[lang]['src'] = f"/images/Daily messages/{mp4_filename}"
-                    new_entry[lang]['thumbnail'] = f"/images/Daily messages/{jpg_filename}"
+                    new_entry[lang]['src'] = f"/images/daily-grace-videos/{mp4_filename}"
+                    new_entry[lang]['thumbnail'] = f"/images/daily-grace-videos/{jpg_filename}"
                     new_entry[lang]['type'] = "video"
                     
                     if not os.path.exists(jpg_path):

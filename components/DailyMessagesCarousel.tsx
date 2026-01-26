@@ -35,7 +35,7 @@ const DailyMessagesCarousel = () => {
                   </Badge>
                 )}
                 <LocalVideoPlayer
-                  videoPath={`/images/Daily messages/${video.file}`}
+                  videoPath={`/images/daily-grace-videos/${video.file.toLowerCase().replace(/\s+/g, '-').replace(/-+/g, '-')}`}
                   title={video.file.replace('.mp4', '')}
                 />
               </div>

@@ -6,16 +6,16 @@
     "english": {
       "dayId": "EnglishDay001",
       "title": "English Day 1",
-      "thumbnail": "/images/Daily messages/English Day1.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-1.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day1.mp4"
+      "src": "/images/daily-grace-videos/english-day-1.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay001",
       "title": "Telugu Day 1",
-      "thumbnail": "/images/Daily messages/Telugu Day1.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-1.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day1.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-1.mp4"
     }
   },
   {
@@ -25,16 +25,16 @@
     "english": {
       "dayId": "EnglishDay002",
       "title": "English Day 2",
-      "thumbnail": "/images/Daily messages/English Day 2.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-2.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 2.mp4"
+      "src": "/images/daily-grace-videos/english-day-2.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay002",
       "title": "Telugu Day 2",
-      "thumbnail": "/images/Daily messages/Telugu Day 2.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-2.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 2.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-2.mp4"
     }
   },
   {
@@ -44,16 +44,16 @@
     "english": {
       "dayId": "EnglishDay003",
       "title": "English Day 3",
-      "thumbnail": "/images/Daily messages/English  Day 3.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-3.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English  Day 3.mp4"
+      "src": "/images/daily-grace-videos/english-day-3.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay003",
       "title": "Telugu Day 3",
-      "thumbnail": "/images/Daily messages/Telugu Day 3.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-3.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 3.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-3.mp4"
     }
   },
   {
@@ -63,16 +63,16 @@
     "english": {
       "dayId": "EnglishDay004",
       "title": "English Day 4",
-      "thumbnail": "/images/Daily messages/English Day 4.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-4.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 4.mp4"
+      "src": "/images/daily-grace-videos/english-day-4.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay004",
       "title": "Telugu Day 4",
-      "thumbnail": "/images/Daily messages/Telugu Day 4.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-4.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 4.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-4.mp4"
     }
   },
   {
@@ -82,16 +82,16 @@
     "english": {
       "dayId": "EnglishDay005",
       "title": "English Day 5",
-      "thumbnail": "/images/Daily messages/English Day 5.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-5.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 5.mp4"
+      "src": "/images/daily-grace-videos/english-day-5.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay005",
       "title": "Telugu Day 5",
-      "thumbnail": "/images/Daily messages/Telugu Day 5.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-5.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 5.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-5.mp4"
     }
   },
   {
@@ -101,16 +101,16 @@
     "english": {
       "dayId": "EnglishDay006",
       "title": "English Day 6",
-      "thumbnail": "/images/Daily messages/English Day 6.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-6.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 6.mp4"
+      "src": "/images/daily-grace-videos/english-day-6.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay006",
       "title": "Telugu Day 6",
-      "thumbnail": "/images/Daily messages/Telugu Day 6.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-6.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 6.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-6.mp4"
     }
   },
   {
@@ -120,16 +120,16 @@
     "english": {
       "dayId": "EnglishDay007",
       "title": "English Day 7",
-      "thumbnail": "/images/Daily messages/English Day 7.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-7.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 7.mp4"
+      "src": "/images/daily-grace-videos/english-day-7.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay007",
       "title": "Telugu Day 7",
-      "thumbnail": "/images/Daily messages/Telugu Day 7.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-7.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 7.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-7.mp4"
     }
   },
   {
@@ -139,16 +139,16 @@
     "english": {
       "dayId": "EnglishDay008",
       "title": "English Day 8",
-      "thumbnail": "/images/Daily messages/English Day 8.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-8.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 8.mp4"
+      "src": "/images/daily-grace-videos/english-day-8.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay008",
       "title": "Telugu Day 8",
-      "thumbnail": "/images/Daily messages/Telugu Day 8.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-8.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 8.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-8.mp4"
     }
   },
   {
@@ -158,16 +158,16 @@
     "english": {
       "dayId": "EnglishDay009",
       "title": "English Day 9",
-      "thumbnail": "/images/Daily messages/English Day 9.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-9.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 9.mp4"
+      "src": "/images/daily-grace-videos/english-day-9.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay009",
       "title": "Telugu Day 9",
-      "thumbnail": "/images/Daily messages/Telugu Day 9.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-9.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 9.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-9.mp4"
     }
   },
   {
@@ -177,16 +177,16 @@
     "english": {
       "dayId": "EnglishDay010",
       "title": "English Day 10",
-      "thumbnail": "/images/Daily messages/English Day 10.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-10.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 10.mp4"
+      "src": "/images/daily-grace-videos/english-day-10.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay010",
       "title": "Telugu Day 10",
-      "thumbnail": "/images/Daily messages/Telugu Day 10.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-10.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 10.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-10.mp4"
     }
   },
   {
@@ -196,16 +196,16 @@
     "english": {
       "dayId": "EnglishDay011",
       "title": "English Day 11",
-      "thumbnail": "/images/Daily messages/English Day 11.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-11.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 11.mp4"
+      "src": "/images/daily-grace-videos/english-day-11.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay011",
       "title": "Telugu Day 11",
-      "thumbnail": "/images/Daily messages/Telugu Day 11.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-11.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 11.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-11.mp4"
     }
   },
   {
@@ -215,16 +215,16 @@
     "english": {
       "dayId": "EnglishDay012",
       "title": "English Day 12",
-      "thumbnail": "/images/Daily messages/English Day 12.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-12.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 12.mp4"
+      "src": "/images/daily-grace-videos/english-day-12.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay012",
       "title": "Telugu Day 12",
-      "thumbnail": "/images/Daily messages/Telugu Day 12.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-12.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 12.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-12.mp4"
     }
   },
   {
@@ -234,16 +234,16 @@
     "english": {
       "dayId": "EnglishDay013",
       "title": "English Day 13",
-      "thumbnail": "/images/Daily messages/English Day 13.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-13.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 13.mp4"
+      "src": "/images/daily-grace-videos/english-day-13.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay013",
       "title": "Telugu Day 13",
-      "thumbnail": "/images/Daily messages/Telugu Day 13.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-13.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 13.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-13.mp4"
     }
   },
   {
@@ -253,16 +253,16 @@
     "english": {
       "dayId": "EnglishDay014",
       "title": "English Day 14",
-      "thumbnail": "/images/Daily messages/English Day 14.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-14.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 14.mp4"
+      "src": "/images/daily-grace-videos/english-day-14.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay014",
       "title": "Telugu Day 14",
-      "thumbnail": "/images/Daily messages/Telugu Day 14.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-14.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 14.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-14.mp4"
     }
   },
   {
@@ -272,16 +272,16 @@
     "english": {
       "dayId": "EnglishDay015",
       "title": "English Day 15",
-      "thumbnail": "/images/Daily messages/English Day 15.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-15.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 15.mp4"
+      "src": "/images/daily-grace-videos/english-day-15.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay015",
       "title": "Telugu Day 15",
-      "thumbnail": "/images/Daily messages/Telugu Day 15.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-15.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 15.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-15.mp4"
     }
   },
   {
@@ -291,16 +291,16 @@
     "english": {
       "dayId": "EnglishDay016",
       "title": "English Day 16",
-      "thumbnail": "/images/Daily messages/English Day 16.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-16.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 16.mp4"
+      "src": "/images/daily-grace-videos/english-day-16.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay016",
       "title": "Telugu Day 16",
-      "thumbnail": "/images/Daily messages/Telugu Day 16.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-16.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 16.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-16.mp4"
     }
   },
   {
@@ -310,16 +310,16 @@
     "english": {
       "dayId": "EnglishDay017",
       "title": "English Day 17",
-      "thumbnail": "/images/Daily messages/English Day 17.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-17.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 17.mp4"
+      "src": "/images/daily-grace-videos/english-day-17.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay017",
       "title": "Telugu Day 17",
-      "thumbnail": "/images/Daily messages/Telugu Day 17.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-17.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 17.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-17.mp4"
     }
   },
   {
@@ -329,16 +329,16 @@
     "english": {
       "dayId": "EnglishDay018",
       "title": "English Day 18",
-      "thumbnail": "/images/Daily messages/English Day 18.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-18.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 18.mp4"
+      "src": "/images/daily-grace-videos/english-day-18.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay018",
       "title": "Telugu Day 18",
-      "thumbnail": "/images/Daily messages/Telugu Day 18.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-18.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 18.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-18.mp4"
     }
   },
   {
@@ -348,16 +348,16 @@
     "english": {
       "dayId": "EnglishDay019",
       "title": "English Day 19",
-      "thumbnail": "/images/Daily messages/English Day 19.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-19.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 19.mp4"
+      "src": "/images/daily-grace-videos/english-day-19.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay019",
       "title": "Telugu Day 19",
-      "thumbnail": "/images/Daily messages/Telugu Day 19.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-19.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 19.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-19.mp4"
     }
   },
   {
@@ -367,16 +367,16 @@
     "english": {
       "dayId": "EnglishDay020",
       "title": "English Day 20",
-      "thumbnail": "/images/Daily messages/English Day 20.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-20.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 20.mp4"
+      "src": "/images/daily-grace-videos/english-day-20.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay020",
       "title": "Telugu Day 20",
-      "thumbnail": "/images/Daily messages/Telugu Day 20.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-20.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 20.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-20.mp4"
     }
   },
   {
@@ -386,16 +386,16 @@
     "english": {
       "dayId": "EnglishDay021",
       "title": "English Day 21",
-      "thumbnail": "/images/Daily messages/English Day 21.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-21.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 21.mp4"
+      "src": "/images/daily-grace-videos/english-day-21.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay021",
       "title": "Telugu Day 21",
-      "thumbnail": "/images/Daily messages/Telugu Day 21.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-21.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 21.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-21.mp4"
     }
   },
   {
@@ -405,16 +405,16 @@
     "english": {
       "dayId": "EnglishDay022",
       "title": "English Day 22",
-      "thumbnail": "/images/Daily messages/English Day 22.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-22.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 22.mp4"
+      "src": "/images/daily-grace-videos/english-day-22.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay022",
       "title": "Telugu Day 22",
-      "thumbnail": "/images/Daily messages/Telugu Day 22.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-22.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 22.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-22.mp4"
     }
   },
   {
@@ -424,16 +424,16 @@
     "english": {
       "dayId": "EnglishDay023",
       "title": "English Day 23",
-      "thumbnail": "/images/Daily messages/English Day 23.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-23.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 23.mp4"
+      "src": "/images/daily-grace-videos/english-day-23.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay023",
       "title": "Telugu Day 23",
-      "thumbnail": "/images/Daily messages/Telugu Day 23.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-23.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 23.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-23.mp4"
     }
   },
   {
@@ -443,16 +443,16 @@
     "english": {
       "dayId": "EnglishDay024",
       "title": "English Day 24",
-      "thumbnail": "/images/Daily messages/English Day 24.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-24.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 24.mp4"
+      "src": "/images/daily-grace-videos/english-day-24.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay024",
       "title": "Telugu Day 24",
-      "thumbnail": "/images/Daily messages/Telugu Day 24.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-24.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 24.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-24.mp4"
     }
   },
   {
@@ -462,16 +462,16 @@
     "english": {
       "dayId": "EnglishDay025",
       "title": "English Day 25",
-      "thumbnail": "/images/Daily messages/English Day 25.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-25.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 25.mp4"
+      "src": "/images/daily-grace-videos/english-day-25.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay025",
       "title": "Telugu Day 25",
-      "thumbnail": "/images/Daily messages/Telugu Day 25.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-25.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 25.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-25.mp4"
     }
   },
   {
@@ -481,16 +481,16 @@
     "english": {
       "dayId": "EnglishDay026",
       "title": "English Day 26",
-      "thumbnail": "/images/Daily messages/English Day 26.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-26.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 26.mp4"
+      "src": "/images/daily-grace-videos/english-day-26.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay026",
       "title": "Telugu Day 26",
-      "thumbnail": "/images/Daily messages/Telugu Day 26.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-26.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 26.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-26.mp4"
     }
   },
   {
@@ -500,16 +500,16 @@
     "english": {
       "dayId": "EnglishDay027",
       "title": "English Day 27",
-      "thumbnail": "/images/Daily messages/English Day 27.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-27.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 27.mp4"
+      "src": "/images/daily-grace-videos/english-day-27.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay027",
       "title": "Telugu Day 27",
-      "thumbnail": "/images/Daily messages/Telugu Day 27.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-27.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 27.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-27.mp4"
     }
   },
   {
@@ -519,16 +519,16 @@
     "english": {
       "dayId": "EnglishDay028",
       "title": "English Day 28",
-      "thumbnail": "/images/Daily messages/English Day 28.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-28.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 28.mp4"
+      "src": "/images/daily-grace-videos/english-day-28.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay028",
       "title": "Telugu Day 28",
-      "thumbnail": "/images/Daily messages/Telugu Day 28.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-28.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 28.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-28.mp4"
     }
   },
   {
@@ -538,16 +538,16 @@
     "english": {
       "dayId": "EnglishDay029",
       "title": "English Day 29",
-      "thumbnail": "/images/Daily messages/English Day 29.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-29.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 29.mp4"
+      "src": "/images/daily-grace-videos/english-day-29.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay029",
       "title": "Telugu Day 29",
-      "thumbnail": "/images/Daily messages/Telugu Day 29.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-29.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 29.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-29.mp4"
     }
   },
   {
@@ -557,16 +557,16 @@
     "english": {
       "dayId": "EnglishDay030",
       "title": "English Day 30",
-      "thumbnail": "/images/Daily messages/English Day 30.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-30.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 30.mp4"
+      "src": "/images/daily-grace-videos/english-day-30.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay030",
       "title": "Telugu Day 30",
-      "thumbnail": "/images/Daily messages/Telugu Day 30.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-30.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 30.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-30.mp4"
     }
   },
   {
@@ -576,16 +576,16 @@
     "english": {
       "dayId": "EnglishDay031",
       "title": "English Day 31",
-      "thumbnail": "/images/Daily messages/English Day 31.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-31.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 31.mp4"
+      "src": "/images/daily-grace-videos/english-day-31.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay031",
       "title": "Telugu Day 31",
-      "thumbnail": "/images/Daily messages/Telugu Day 31.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-31.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 31.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-31.mp4"
     }
   },
   {
@@ -595,16 +595,16 @@
     "english": {
       "dayId": "EnglishDay032",
       "title": "English Day 32",
-      "thumbnail": "/images/Daily messages/English Day 32.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-32.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 32.mp4"
+      "src": "/images/daily-grace-videos/english-day-32.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay032",
       "title": "Telugu Day 32",
-      "thumbnail": "/images/Daily messages/Telugu Day 32.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-32.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 32.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-32.mp4"
     }
   },
   {
@@ -614,16 +614,16 @@
     "english": {
       "dayId": "EnglishDay033",
       "title": "English Day 33",
-      "thumbnail": "/images/Daily messages/English Day 33.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-33.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 33.mp4"
+      "src": "/images/daily-grace-videos/english-day-33.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay033",
       "title": "Telugu Day 33",
-      "thumbnail": "/images/Daily messages/Telugu Day 33.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-33.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 33.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-33.mp4"
     }
   },
   {
@@ -633,16 +633,16 @@
     "english": {
       "dayId": "EnglishDay034",
       "title": "English Day 34",
-      "thumbnail": "/images/Daily messages/English Day 34.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-34.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 34.mp4"
+      "src": "/images/daily-grace-videos/english-day-34.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay034",
       "title": "Telugu Day 34",
-      "thumbnail": "/images/Daily messages/Telugu Day 34.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-34.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 34.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-34.mp4"
     }
   },
   {
@@ -652,16 +652,16 @@
     "english": {
       "dayId": "EnglishDay035",
       "title": "English Day 35",
-      "thumbnail": "/images/Daily messages/English Day 35.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-35.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 35.mp4"
+      "src": "/images/daily-grace-videos/english-day-35.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay035",
       "title": "Telugu Day 35",
-      "thumbnail": "/images/Daily messages/Telugu Day 35.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-35.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 35.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-35.mp4"
     }
   },
   {
@@ -671,16 +671,16 @@
     "english": {
       "dayId": "EnglishDay036",
       "title": "English Day 36",
-      "thumbnail": "/images/Daily messages/English Day 36.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-36.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 36.mp4"
+      "src": "/images/daily-grace-videos/english-day-36.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay036",
       "title": "Telugu Day 36",
-      "thumbnail": "/images/Daily messages/Telugu Day 36.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-36.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 36.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-36.mp4"
     }
   },
   {
@@ -690,16 +690,16 @@
     "english": {
       "dayId": "EnglishDay037",
       "title": "English Day 37",
-      "thumbnail": "/images/Daily messages/English Day 37.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-37.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 37.mp4"
+      "src": "/images/daily-grace-videos/english-day-37.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay037",
       "title": "Telugu Day 37",
-      "thumbnail": "/images/Daily messages/Telugu Day 37.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-37.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 37.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-37.mp4"
     }
   },
   {
@@ -709,16 +709,16 @@
     "english": {
       "dayId": "EnglishDay038",
       "title": "English Day 38",
-      "thumbnail": "/images/Daily messages/English Day 38.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-38.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 38.mp4"
+      "src": "/images/daily-grace-videos/english-day-38.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay038",
       "title": "Telugu Day 38",
-      "thumbnail": "/images/Daily messages/Telugu Day 38.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-38.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 38.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-38.mp4"
     }
   },
   {
@@ -728,16 +728,16 @@
     "english": {
       "dayId": "EnglishDay039",
       "title": "English Day 39",
-      "thumbnail": "/images/Daily messages/English Day 39.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-39.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 39.mp4"
+      "src": "/images/daily-grace-videos/english-day-39.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay039",
       "title": "Telugu Day 39",
-      "thumbnail": "/images/Daily messages/Telugu Day 39.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-39.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 39.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-39.mp4"
     }
   },
   {
@@ -747,16 +747,16 @@
     "english": {
       "dayId": "EnglishDay040",
       "title": "English Day 40",
-      "thumbnail": "/images/Daily messages/English Day 40.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-40.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 40.mp4"
+      "src": "/images/daily-grace-videos/english-day-40.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay040",
       "title": "Telugu Day 40",
-      "thumbnail": "/images/Daily messages/Telugu Day 40.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-40.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 40.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-40.mp4"
     }
   },
   {
@@ -766,16 +766,16 @@
     "english": {
       "dayId": "EnglishDay041",
       "title": "English Day 41",
-      "thumbnail": "/images/Daily messages/English Day 41.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-41.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 41.mp4"
+      "src": "/images/daily-grace-videos/english-day-41.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay041",
       "title": "Telugu Day 41",
-      "thumbnail": "/images/Daily messages/Telugu Day 41.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-41.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 41.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-41.mp4"
     }
   },
   {
@@ -785,16 +785,16 @@
     "english": {
       "dayId": "EnglishDay042",
       "title": "English Day 42",
-      "thumbnail": "/images/Daily messages/English Day 42.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-42.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 42.mp4"
+      "src": "/images/daily-grace-videos/english-day-42.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay042",
       "title": "Telugu Day 42",
-      "thumbnail": "/images/Daily messages/Telugu Day 42.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-42.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 42.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-42.mp4"
     }
   },
   {
@@ -804,16 +804,16 @@
     "english": {
       "dayId": "EnglishDay043",
       "title": "English Day 43",
-      "thumbnail": "/images/Daily messages/English Day 43.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-43.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 43.mp4"
+      "src": "/images/daily-grace-videos/english-day-43.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay043",
       "title": "Telugu Day 43",
-      "thumbnail": "/images/Daily messages/Telugu Day 43.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-43.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 43.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-43.mp4"
     }
   },
   {
@@ -823,16 +823,16 @@
     "english": {
       "dayId": "EnglishDay044",
       "title": "English Day 44",
-      "thumbnail": "/images/Daily messages/English Day 44.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-44.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 44.mp4"
+      "src": "/images/daily-grace-videos/english-day-44.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay044",
       "title": "Telugu Day 44",
-      "thumbnail": "/images/Daily messages/Telugu Day 44.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-44.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 44.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-44.mp4"
     }
   },
   {
@@ -842,16 +842,16 @@
     "english": {
       "dayId": "EnglishDay045",
       "title": "English Day 45",
-      "thumbnail": "/images/Daily messages/English Day 45.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-45.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 45.mp4"
+      "src": "/images/daily-grace-videos/english-day-45.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay045",
       "title": "Telugu Day 45",
-      "thumbnail": "/images/Daily messages/Telugu Day 45.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-45.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 45.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-45.mp4"
     }
   },
   {
@@ -861,16 +861,16 @@
     "english": {
       "dayId": "EnglishDay046",
       "title": "English Day 46",
-      "thumbnail": "/images/Daily messages/English Day 46.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-46.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 46.mp4"
+      "src": "/images/daily-grace-videos/english-day-46.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay046",
       "title": "Telugu Day 46",
-      "thumbnail": "/images/Daily messages/Telugu Day 46.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-46.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 46.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-46.mp4"
     }
   },
   {
@@ -880,16 +880,16 @@
     "english": {
       "dayId": "EnglishDay047",
       "title": "English Day 47",
-      "thumbnail": "/images/Daily messages/English Day 47.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-47.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 47.mp4"
+      "src": "/images/daily-grace-videos/english-day-47.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay047",
       "title": "Telugu Day 47",
-      "thumbnail": "/images/Daily messages/Telugu Day 47.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-47.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 47.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-47.mp4"
     }
   },
   {
@@ -899,16 +899,16 @@
     "english": {
       "dayId": "EnglishDay048",
       "title": "English Day 48",
-      "thumbnail": "/images/Daily messages/English Day 48.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-48.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 48.mp4"
+      "src": "/images/daily-grace-videos/english-day-48.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay048",
       "title": "Telugu Day 48",
-      "thumbnail": "/images/Daily messages/Telugu Day 48.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-48.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 48.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-48.mp4"
     }
   },
   {
@@ -918,16 +918,16 @@
     "english": {
       "dayId": "EnglishDay049",
       "title": "English Day 49",
-      "thumbnail": "/images/Daily messages/English Day 49.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-49.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 49.mp4"
+      "src": "/images/daily-grace-videos/english-day-49.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay049",
       "title": "Telugu Day 49",
-      "thumbnail": "/images/Daily messages/Telugu Day 49.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-49.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 49.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-49.mp4"
     }
   },
   {
@@ -937,16 +937,16 @@
     "english": {
       "dayId": "EnglishDay050",
       "title": "English Day 50",
-      "thumbnail": "/images/Daily messages/English Day 50.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-50.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 50.mp4"
+      "src": "/images/daily-grace-videos/english-day-50.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay050",
       "title": "Telugu Day 50",
-      "thumbnail": "/images/Daily messages/Telugu Day 50.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-50.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 50.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-50.mp4"
     }
   },
   {
@@ -956,16 +956,16 @@
     "english": {
       "dayId": "EnglishDay051",
       "title": "English Day 51",
-      "thumbnail": "/images/Daily messages/English Day 51.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-51.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 51.mp4"
+      "src": "/images/daily-grace-videos/english-day-51.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay051",
       "title": "Telugu Day 51",
-      "thumbnail": "/images/Daily messages/Telugu Day 51.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-51.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 51.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-51.mp4"
     }
   },
   {
@@ -975,16 +975,16 @@
     "english": {
       "dayId": "EnglishDay052",
       "title": "English Day 52",
-      "thumbnail": "/images/Daily messages/English Day 52.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-52.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 52.mp4"
+      "src": "/images/daily-grace-videos/english-day-52.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay052",
       "title": "Telugu Day 52",
-      "thumbnail": "/images/Daily messages/Telugu Day 52.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-52.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 52.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-52.mp4"
     }
   },
   {
@@ -994,16 +994,16 @@
     "english": {
       "dayId": "EnglishDay053",
       "title": "English Day 53",
-      "thumbnail": "/images/Daily messages/English Day 53.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-53.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 53.mp4"
+      "src": "/images/daily-grace-videos/english-day-53.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay053",
       "title": "Telugu Day 53",
-      "thumbnail": "/images/Daily messages/Telugu Day 53.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-53.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 53.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-53.mp4"
     }
   },
   {
@@ -1013,16 +1013,16 @@
     "english": {
       "dayId": "EnglishDay054",
       "title": "English Day 54",
-      "thumbnail": "/images/Daily messages/English Day 54.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-54.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 54.mp4"
+      "src": "/images/daily-grace-videos/english-day-54.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay054",
       "title": "Telugu Day 54",
-      "thumbnail": "/images/Daily messages/Telugu Day 54.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-54.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 54.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-54.mp4"
     }
   },
   {
@@ -1032,16 +1032,16 @@
     "english": {
       "dayId": "EnglishDay055",
       "title": "English Day 55",
-      "thumbnail": "/images/Daily messages/English Day 55.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-55.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 55.mp4"
+      "src": "/images/daily-grace-videos/english-day-55.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay055",
       "title": "Telugu Day 55",
-      "thumbnail": "/images/Daily messages/Telugu Day 55.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-55.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 55.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-55.mp4"
     }
   },
   {
@@ -1051,16 +1051,16 @@
     "english": {
       "dayId": "EnglishDay056",
       "title": "English Day 56",
-      "thumbnail": "/images/Daily messages/English Day 56.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-56.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 56.mp4"
+      "src": "/images/daily-grace-videos/english-day-56.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay056",
       "title": "Telugu Day 56",
-      "thumbnail": "/images/Daily messages/Telugu Day 56.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-56.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 56.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-56.mp4"
     }
   },
   {
@@ -1070,16 +1070,16 @@
     "english": {
       "dayId": "EnglishDay057",
       "title": "English Day 57",
-      "thumbnail": "/images/Daily messages/English Day 57.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-57.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 57.mp4"
+      "src": "/images/daily-grace-videos/english-day-57.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay057",
       "title": "Telugu Day 57",
-      "thumbnail": "/images/Daily messages/Telugu Day 57.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-57.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 57.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-57.mp4"
     }
   },
   {
@@ -1089,16 +1089,16 @@
     "english": {
       "dayId": "EnglishDay058",
       "title": "English Day 58",
-      "thumbnail": "/images/Daily messages/English Day 58.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-58.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 58.mp4"
+      "src": "/images/daily-grace-videos/english-day-58.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay058",
       "title": "Telugu Day 58",
-      "thumbnail": "/images/Daily messages/Telugu Day 58.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-58.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 58.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-58.mp4"
     }
   },
   {
@@ -1108,16 +1108,16 @@
     "english": {
       "dayId": "EnglishDay059",
       "title": "English Day 59",
-      "thumbnail": "/images/Daily messages/English Day 59.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-59.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 59.mp4"
+      "src": "/images/daily-grace-videos/english-day-59.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay059",
       "title": "Telugu Day 59",
-      "thumbnail": "/images/Daily messages/Telugu Day 59.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-59.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 59.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-59.mp4"
     }
   },
   {
@@ -1127,16 +1127,16 @@
     "english": {
       "dayId": "EnglishDay060",
       "title": "English Day 60",
-      "thumbnail": "/images/Daily messages/English Day 60.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-60.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 60.mp4"
+      "src": "/images/daily-grace-videos/english-day-60.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay060",
       "title": "Telugu Day 60",
-      "thumbnail": "/images/Daily messages/Telugu Day 60.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-60.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 60.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-60.mp4"
     }
   },
   {
@@ -1146,16 +1146,16 @@
     "english": {
       "dayId": "EnglishDay061",
       "title": "English Day 61",
-      "thumbnail": "/images/Daily messages/English Day 61.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-61.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 61.mp4"
+      "src": "/images/daily-grace-videos/english-day-61.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay061",
       "title": "Telugu Day 61",
-      "thumbnail": "/images/Daily messages/Telugu Day 61.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-61.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 61.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-61.mp4"
     }
   },
   {
@@ -1165,16 +1165,16 @@
     "english": {
       "dayId": "EnglishDay062",
       "title": "English Day 62",
-      "thumbnail": "/images/Daily messages/English Day 62.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-62.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 62.mp4"
+      "src": "/images/daily-grace-videos/english-day-62.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay062",
       "title": "Telugu Day 62",
-      "thumbnail": "/images/Daily messages/Telugu Day 62.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-62.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 62.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-62.mp4"
     }
   },
   {
@@ -1184,16 +1184,16 @@
     "english": {
       "dayId": "EnglishDay063",
       "title": "English Day 63",
-      "thumbnail": "/images/Daily messages/English Day 63.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-63.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 63.mp4"
+      "src": "/images/daily-grace-videos/english-day-63.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay063",
       "title": "Telugu Day 63",
-      "thumbnail": "/images/Daily messages/Telugu Day 63.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-63.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 63.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-63.mp4"
     }
   },
   {
@@ -1203,16 +1203,16 @@
     "english": {
       "dayId": "EnglishDay064",
       "title": "English Day 64",
-      "thumbnail": "/images/Daily messages/English Day 64.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-64.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 64.mp4"
+      "src": "/images/daily-grace-videos/english-day-64.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay064",
       "title": "Telugu Day 64",
-      "thumbnail": "/images/Daily messages/Telugu Day 64.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-64.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 64.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-64.mp4"
     }
   },
   {
@@ -1222,16 +1222,16 @@
     "english": {
       "dayId": "EnglishDay065",
       "title": "English Day 65",
-      "thumbnail": "/images/Daily messages/English Day 65.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-65.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 65.mp4"
+      "src": "/images/daily-grace-videos/english-day-65.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay065",
       "title": "Telugu Day 65",
-      "thumbnail": "/images/Daily messages/Telugu Day 65.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-65.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 65.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-65.mp4"
     }
   },
   {
@@ -1241,16 +1241,16 @@
     "english": {
       "dayId": "EnglishDay066",
       "title": "English Day 66",
-      "thumbnail": "/images/Daily messages/English Day 66.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-66.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 66.mp4"
+      "src": "/images/daily-grace-videos/english-day-66.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay066",
       "title": "Telugu Day 66",
-      "thumbnail": "/images/Daily messages/Telugu Day 66.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-66.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 66.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-66.mp4"
     }
   },
   {
@@ -1260,16 +1260,16 @@
     "english": {
       "dayId": "EnglishDay067",
       "title": "English Day 67",
-      "thumbnail": "/images/Daily messages/English Day 67.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-67.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 67.mp4"
+      "src": "/images/daily-grace-videos/english-day-67.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay067",
       "title": "Telugu Day 67",
-      "thumbnail": "/images/Daily messages/Telugu Day 67.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-67.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 67.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-67.mp4"
     }
   },
   {
@@ -1279,16 +1279,16 @@
     "english": {
       "dayId": "EnglishDay068",
       "title": "English Day 68",
-      "thumbnail": "/images/Daily messages/English Day 68.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-68.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 68.mp4"
+      "src": "/images/daily-grace-videos/english-day-68.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay068",
       "title": "Telugu Day 68",
-      "thumbnail": "/images/Daily messages/Telugu Day 68.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-68.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 68.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-68.mp4"
     }
   },
   {
@@ -1298,16 +1298,16 @@
     "english": {
       "dayId": "EnglishDay069",
       "title": "English Day 69",
-      "thumbnail": "/images/Daily messages/English Day 69.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-69.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 69.mp4"
+      "src": "/images/daily-grace-videos/english-day-69.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay069",
       "title": "Telugu Day 69",
-      "thumbnail": "/images/Daily messages/Telugu Day 69.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-69.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 69.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-69.mp4"
     }
   },
   {
@@ -1317,16 +1317,16 @@
     "english": {
       "dayId": "EnglishDay070",
       "title": "English Day 70",
-      "thumbnail": "/images/Daily messages/English Day 70.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-70.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 70.mp4"
+      "src": "/images/daily-grace-videos/english-day-70.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay070",
       "title": "Telugu Day 70",
-      "thumbnail": "/images/Daily messages/Telugu Day 70.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-70.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 70.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-70.mp4"
     }
   },
   {
@@ -1336,16 +1336,16 @@
     "english": {
       "dayId": "EnglishDay071",
       "title": "English Day 71",
-      "thumbnail": "/images/Daily messages/English Day 71.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-71.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 71.mp4"
+      "src": "/images/daily-grace-videos/english-day-71.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay071",
       "title": "Telugu Day 71",
-      "thumbnail": "/images/Daily messages/Telugu Day 71.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-71.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 71.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-71.mp4"
     }
   },
   {
@@ -1355,16 +1355,16 @@
     "english": {
       "dayId": "EnglishDay072",
       "title": "English Day 72",
-      "thumbnail": "/images/Daily messages/English Day 72.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-72.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 72.mp4"
+      "src": "/images/daily-grace-videos/english-day-72.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay072",
       "title": "Telugu Day 72",
-      "thumbnail": "/images/Daily messages/Telugu Day 72.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-72.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 72.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-72.mp4"
     }
   },
   {
@@ -1374,16 +1374,16 @@
     "english": {
       "dayId": "EnglishDay073",
       "title": "English Day 73",
-      "thumbnail": "/images/Daily messages/English Day 73.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-73.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 73.mp4"
+      "src": "/images/daily-grace-videos/english-day-73.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay073",
       "title": "Telugu Day 73",
-      "thumbnail": "/images/Daily messages/Telugu Day 73.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-73.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 73.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-73.mp4"
     }
   },
   {
@@ -1393,16 +1393,16 @@
     "english": {
       "dayId": "EnglishDay074",
       "title": "English Day 74",
-      "thumbnail": "/images/Daily messages/English Day 74.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-74.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 74.mp4"
+      "src": "/images/daily-grace-videos/english-day-74.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay074",
       "title": "Telugu Day 74",
-      "thumbnail": "/images/Daily messages/Telugu Day 74.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-74.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 74.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-74.mp4"
     }
   },
   {
@@ -1412,16 +1412,16 @@
     "english": {
       "dayId": "EnglishDay075",
       "title": "English Day 75",
-      "thumbnail": "/images/Daily messages/English Day 75.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-75.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 75.mp4"
+      "src": "/images/daily-grace-videos/english-day-75.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay075",
       "title": "Telugu Day 75",
-      "thumbnail": "/images/Daily messages/Telugu Day 75.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-75.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 75.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-75.mp4"
     }
   },
   {
@@ -1431,16 +1431,16 @@
     "english": {
       "dayId": "EnglishDay076",
       "title": "English Day 76",
-      "thumbnail": "/images/Daily messages/English Day 76.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-76.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 76.mp4"
+      "src": "/images/daily-grace-videos/english-day-76.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay076",
       "title": "Telugu Day 76",
-      "thumbnail": "/images/Daily messages/Telugu Day 76.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-76.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 76.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-76.mp4"
     }
   },
   {
@@ -1450,16 +1450,16 @@
     "english": {
       "dayId": "EnglishDay077",
       "title": "English Day 77",
-      "thumbnail": "/images/Daily messages/English Day 77.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-77.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 77.mp4"
+      "src": "/images/daily-grace-videos/english-day-77.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay077",
       "title": "Telugu Day 77",
-      "thumbnail": "/images/Daily messages/Telugu Day 77.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-77.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 77.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-77.mp4"
     }
   },
   {
@@ -1469,16 +1469,16 @@
     "english": {
       "dayId": "EnglishDay078",
       "title": "English Day 78",
-      "thumbnail": "/images/Daily messages/English Day 78.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-78.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 78.mp4"
+      "src": "/images/daily-grace-videos/english-day-78.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay078",
       "title": "Telugu Day 78",
-      "thumbnail": "/images/Daily messages/Telugu Day 78.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-78.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 78.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-78.mp4"
     }
   },
   {
@@ -1488,16 +1488,16 @@
     "english": {
       "dayId": "EnglishDay079",
       "title": "English Day 79",
-      "thumbnail": "/images/Daily messages/English Day 79.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-79.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 79.mp4"
+      "src": "/images/daily-grace-videos/english-day-79.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay079",
       "title": "Telugu Day 79",
-      "thumbnail": "/images/Daily messages/Telugu Day 79.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-79.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 79.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-79.mp4"
     }
   },
   {
@@ -1507,16 +1507,16 @@
     "english": {
       "dayId": "EnglishDay080",
       "title": "English Day 80",
-      "thumbnail": "/images/Daily messages/English Day 80.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-80.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 80.mp4"
+      "src": "/images/daily-grace-videos/english-day-80.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay080",
       "title": "Telugu Day 80",
-      "thumbnail": "/images/Daily messages/Telugu Day 80.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-80.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 80.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-80.mp4"
     }
   },
   {
@@ -1526,16 +1526,16 @@
     "english": {
       "dayId": "EnglishDay081",
       "title": "English Day 81",
-      "thumbnail": "/images/Daily messages/English Day 81.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-81.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 81.mp4"
+      "src": "/images/daily-grace-videos/english-day-81.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay081",
       "title": "Telugu Day 81",
-      "thumbnail": "/images/Daily messages/Telugu Day 81.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-81.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 81.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-81.mp4"
     }
   },
   {
@@ -1545,16 +1545,16 @@
     "english": {
       "dayId": "EnglishDay082",
       "title": "English Day 82",
-      "thumbnail": "/images/Daily messages/English Day 82.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-82.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 82.mp4"
+      "src": "/images/daily-grace-videos/english-day-82.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay082",
       "title": "Telugu Day 82",
-      "thumbnail": "/images/Daily messages/Telugu Day 82.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-82.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 82.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-82.mp4"
     }
   },
   {
@@ -1564,16 +1564,16 @@
     "english": {
       "dayId": "EnglishDay083",
       "title": "English Day 83",
-      "thumbnail": "/images/Daily messages/English Day 83.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-83.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 83.mp4"
+      "src": "/images/daily-grace-videos/english-day-83.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay083",
       "title": "Telugu Day 83",
-      "thumbnail": "/images/Daily messages/Telugu Day 83.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-83.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 83.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-83.mp4"
     }
   },
   {
@@ -1583,16 +1583,16 @@
     "english": {
       "dayId": "EnglishDay084",
       "title": "English Day 84",
-      "thumbnail": "/images/Daily messages/English Day 84.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-84.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 84.mp4"
+      "src": "/images/daily-grace-videos/english-day-84.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay084",
       "title": "Telugu Day 84",
-      "thumbnail": "/images/Daily messages/Telugu Day 84.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-84.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 84.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-84.mp4"
     }
   },
   {
@@ -1602,16 +1602,16 @@
     "english": {
       "dayId": "EnglishDay085",
       "title": "English Day 85",
-      "thumbnail": "/images/Daily messages/English Day 85.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-85.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 85.mp4"
+      "src": "/images/daily-grace-videos/english-day-85.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay085",
       "title": "Telugu Day 85",
-      "thumbnail": "/images/Daily messages/Telugu Day 85.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-85.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 85.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-85.mp4"
     }
   },
   {
@@ -1621,16 +1621,16 @@
     "english": {
       "dayId": "EnglishDay086",
       "title": "English Day 86",
-      "thumbnail": "/images/Daily messages/English Day 86.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-86.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 86.mp4"
+      "src": "/images/daily-grace-videos/english-day-86.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay086",
       "title": "Telugu Day 86",
-      "thumbnail": "/images/Daily messages/Telugu Day 86.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-86.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 86.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-86.mp4"
     }
   },
   {
@@ -1640,16 +1640,16 @@
     "english": {
       "dayId": "EnglishDay087",
       "title": "English Day 87",
-      "thumbnail": "/images/Daily messages/English Day 87.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-87.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 87.mp4"
+      "src": "/images/daily-grace-videos/english-day-87.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay087",
       "title": "Telugu Day 87",
-      "thumbnail": "/images/Daily messages/Telugu Day 87.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-87.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 87.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-87.mp4"
     }
   },
   {
@@ -1659,16 +1659,16 @@
     "english": {
       "dayId": "EnglishDay088",
       "title": "English Day 88",
-      "thumbnail": "/images/Daily messages/English Day 88.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-88.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 88.mp4"
+      "src": "/images/daily-grace-videos/english-day-88.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay088",
       "title": "Telugu Day 88",
-      "thumbnail": "/images/Daily messages/Telugu Day 88.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-88.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 88.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-88.mp4"
     }
   },
   {
@@ -1678,16 +1678,16 @@
     "english": {
       "dayId": "EnglishDay089",
       "title": "English Day 89",
-      "thumbnail": "/images/Daily messages/English Day 89.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-89.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 89.mp4"
+      "src": "/images/daily-grace-videos/english-day-89.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay089",
       "title": "Telugu Day 89",
-      "thumbnail": "/images/Daily messages/Telugu Day 89.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-89.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 89.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-89.mp4"
     }
   },
   {
@@ -1697,16 +1697,16 @@
     "english": {
       "dayId": "EnglishDay090",
       "title": "English Day 90",
-      "thumbnail": "/images/Daily messages/English Day 90.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-90.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 90.mp4"
+      "src": "/images/daily-grace-videos/english-day-90.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay090",
       "title": "Telugu Day 90",
-      "thumbnail": "/images/Daily messages/Telugu Day 90.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-90.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 90.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-90.mp4"
     }
   },
   {
@@ -1716,16 +1716,16 @@
     "english": {
       "dayId": "EnglishDay091",
       "title": "English Day 91",
-      "thumbnail": "/images/Daily messages/English Day 91.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-91.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 91.mp4"
+      "src": "/images/daily-grace-videos/english-day-91.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay091",
       "title": "Telugu Day 91",
-      "thumbnail": "/images/Daily messages/Telugu Day 91.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-91.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 91.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-91.mp4"
     }
   },
   {
@@ -1735,16 +1735,16 @@
     "english": {
       "dayId": "EnglishDay092",
       "title": "English Day 92",
-      "thumbnail": "/images/Daily messages/English Day 92.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-92.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 92.mp4"
+      "src": "/images/daily-grace-videos/english-day-92.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay092",
       "title": "Telugu Day 92",
-      "thumbnail": "/images/Daily messages/Telugu Day 92.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-92.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 92.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-92.mp4"
     }
   },
   {
@@ -1754,16 +1754,16 @@
     "english": {
       "dayId": "EnglishDay093",
       "title": "English Day 93",
-      "thumbnail": "/images/Daily messages/English Day 93.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-93.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 93.mp4"
+      "src": "/images/daily-grace-videos/english-day-93.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay093",
       "title": "Telugu Day 93",
-      "thumbnail": "/images/Daily messages/Telugu Day 93.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-93.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 93.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-93.mp4"
     }
   },
   {
@@ -1773,16 +1773,16 @@
     "english": {
       "dayId": "EnglishDay094",
       "title": "English Day 94",
-      "thumbnail": "/images/Daily messages/English Day 94.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-94.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 94.mp4"
+      "src": "/images/daily-grace-videos/english-day-94.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay094",
       "title": "Telugu Day 94",
-      "thumbnail": "/images/Daily messages/Telugu Day 94.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-94.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 94.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-94.mp4"
     }
   },
   {
@@ -1792,16 +1792,16 @@
     "english": {
       "dayId": "EnglishDay095",
       "title": "English Day 95",
-      "thumbnail": "/images/Daily messages/English Day 95.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-95.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 95.mp4"
+      "src": "/images/daily-grace-videos/english-day-95.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay095",
       "title": "Telugu Day 95",
-      "thumbnail": "/images/Daily messages/Telugu Day 95.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-95.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 95.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-95.mp4"
     }
   },
   {
@@ -1811,16 +1811,16 @@
     "english": {
       "dayId": "EnglishDay096",
       "title": "English Day 96",
-      "thumbnail": "/images/Daily messages/English Day 96.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-96.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 96.mp4"
+      "src": "/images/daily-grace-videos/english-day-96.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay096",
       "title": "Telugu Day 96",
-      "thumbnail": "/images/Daily messages/Telugu Day 96.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-96.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 96.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-96.mp4"
     }
   },
   {
@@ -1830,16 +1830,16 @@
     "english": {
       "dayId": "EnglishDay097",
       "title": "English Day 97",
-      "thumbnail": "/images/Daily messages/English Day 97.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-97.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 97.mp4"
+      "src": "/images/daily-grace-videos/english-day-97.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay097",
       "title": "Telugu Day 97",
-      "thumbnail": "/images/Daily messages/Telugu Day 97.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-97.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 97.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-97.mp4"
     }
   },
   {
@@ -1849,16 +1849,16 @@
     "english": {
       "dayId": "EnglishDay098",
       "title": "English Day 98",
-      "thumbnail": "/images/Daily messages/English Day 98.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-98.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 98.mp4"
+      "src": "/images/daily-grace-videos/english-day-98.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay098",
       "title": "Telugu Day 98",
-      "thumbnail": "/images/Daily messages/Telugu Day 98.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-98.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 98.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-98.mp4"
     }
   },
   {
@@ -1868,16 +1868,16 @@
     "english": {
       "dayId": "EnglishDay099",
       "title": "English Day 99",
-      "thumbnail": "/images/Daily messages/English Day 99.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-99.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 99.mp4"
+      "src": "/images/daily-grace-videos/english-day-99.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay099",
       "title": "Telugu Day 99",
-      "thumbnail": "/images/Daily messages/Telugu Day 99.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-99.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 99.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-99.mp4"
     }
   },
   {
@@ -1887,16 +1887,16 @@
     "english": {
       "dayId": "EnglishDay100",
       "title": "English Day 100",
-      "thumbnail": "/images/Daily messages/English Day 100.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-100.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 100.mp4"
+      "src": "/images/daily-grace-videos/english-day-100.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay100",
       "title": "Telugu Day 100",
-      "thumbnail": "/images/Daily messages/Telugu Day 100.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-100.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 100.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-100.mp4"
     }
   },
   {
@@ -1906,16 +1906,16 @@
     "english": {
       "dayId": "EnglishDay101",
       "title": "English Day 101",
-      "thumbnail": "/images/Daily messages/English Day 101.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-101.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 101.mp4"
+      "src": "/images/daily-grace-videos/english-day-101.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay101",
       "title": "Telugu Day 101",
-      "thumbnail": "/images/Daily messages/Telugu Day 101.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-101.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 101.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-101.mp4"
     }
   },
   {
@@ -1925,16 +1925,16 @@
     "english": {
       "dayId": "EnglishDay102",
       "title": "English Day 102",
-      "thumbnail": "/images/Daily messages/English Day 102.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-102.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 102.mp4"
+      "src": "/images/daily-grace-videos/english-day-102.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay102",
       "title": "Telugu Day 102",
-      "thumbnail": "/images/Daily messages/Telugu Day 102.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-102.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 102.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-102.mp4"
     }
   },
   {
@@ -1944,16 +1944,16 @@
     "english": {
       "dayId": "EnglishDay103",
       "title": "English Day 103",
-      "thumbnail": "/images/Daily messages/English Day 103.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-103.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 103.mp4"
+      "src": "/images/daily-grace-videos/english-day-103.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay103",
       "title": "Telugu Day 103",
-      "thumbnail": "/images/Daily messages/Telugu Day 103.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-103.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 103.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-103.mp4"
     }
   },
   {
@@ -1963,16 +1963,16 @@
     "english": {
       "dayId": "EnglishDay104",
       "title": "English Day 104",
-      "thumbnail": "/images/Daily messages/English Day 104.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-104.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 104.mp4"
+      "src": "/images/daily-grace-videos/english-day-104.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay104",
       "title": "Telugu Day 104",
-      "thumbnail": "/images/Daily messages/Telugu Day 104.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-104.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 104.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-104.mp4"
     }
   },
   {
@@ -1982,16 +1982,16 @@
     "english": {
       "dayId": "EnglishDay105",
       "title": "English Day 105",
-      "thumbnail": "/images/Daily messages/English Day 105.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-105.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 105.mp4"
+      "src": "/images/daily-grace-videos/english-day-105.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay105",
       "title": "Telugu Day 105",
-      "thumbnail": "/images/Daily messages/Telugu Day 105.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-105.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 105.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-105.mp4"
     }
   },
   {
@@ -2001,16 +2001,16 @@
     "english": {
       "dayId": "EnglishDay106",
       "title": "English Day 106",
-      "thumbnail": "/images/Daily messages/English Day 106.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-106.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 106.mp4"
+      "src": "/images/daily-grace-videos/english-day-106.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay106",
       "title": "Telugu Day 106",
-      "thumbnail": "/images/Daily messages/Telugu Day 106.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-106.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 106.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-106.mp4"
     }
   },
   {
@@ -2020,16 +2020,16 @@
     "english": {
       "dayId": "EnglishDay107",
       "title": "English Day 107",
-      "thumbnail": "/images/Daily messages/English Day 107.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-107.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 107.mp4"
+      "src": "/images/daily-grace-videos/english-day-107.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay107",
       "title": "Telugu Day 107",
-      "thumbnail": "/images/Daily messages/Telugu Day 107.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-107.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 107.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-107.mp4"
     }
   },
   {
@@ -2039,16 +2039,16 @@
     "english": {
       "dayId": "EnglishDay108",
       "title": "English Day 108",
-      "thumbnail": "/images/Daily messages/English Day 108.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-108.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 108.mp4"
+      "src": "/images/daily-grace-videos/english-day-108.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay108",
       "title": "Telugu Day 108",
-      "thumbnail": "/images/Daily messages/Telugu Day 108.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-108.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 108.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-108.mp4"
     }
   },
   {
@@ -2058,16 +2058,16 @@
     "english": {
       "dayId": "EnglishDay109",
       "title": "English Day 109",
-      "thumbnail": "/images/Daily messages/English Day 109.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-109.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 109.mp4"
+      "src": "/images/daily-grace-videos/english-day-109.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay109",
       "title": "Telugu Day 109",
-      "thumbnail": "/images/Daily messages/Telugu Day 109.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-109.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 109.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-109.mp4"
     }
   },
   {
@@ -2077,16 +2077,16 @@
     "english": {
       "dayId": "EnglishDay110",
       "title": "English Day 110",
-      "thumbnail": "/images/Daily messages/English Day 110.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-110.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 110.mp4"
+      "src": "/images/daily-grace-videos/english-day-110.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay110",
       "title": "Telugu Day 110",
-      "thumbnail": "/images/Daily messages/Telugu Day 110.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-110.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 110.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-110.mp4"
     }
   },
   {
@@ -2096,16 +2096,16 @@
     "english": {
       "dayId": "EnglishDay111",
       "title": "English Day 111",
-      "thumbnail": "/images/Daily messages/English Day 111.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-111.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 111.mp4"
+      "src": "/images/daily-grace-videos/english-day-111.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay111",
       "title": "Telugu Day 111",
-      "thumbnail": "/images/Daily messages/Telugu Day 111.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-111.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 111.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-111.mp4"
     }
   },
   {
@@ -2115,16 +2115,16 @@
     "english": {
       "dayId": "EnglishDay112",
       "title": "English Day 112",
-      "thumbnail": "/images/Daily messages/English Day 112.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-112.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 112.mp4"
+      "src": "/images/daily-grace-videos/english-day-112.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay112",
       "title": "Telugu Day 112",
-      "thumbnail": "/images/Daily messages/Telugu Day 112.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-112.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 112.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-112.mp4"
     }
   },
   {
@@ -2134,16 +2134,16 @@
     "english": {
       "dayId": "EnglishDay113",
       "title": "English Day 113",
-      "thumbnail": "/images/Daily messages/English Day 113.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-113.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 113.mp4"
+      "src": "/images/daily-grace-videos/english-day-113.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay113",
       "title": "Telugu Day 113",
-      "thumbnail": "/images/Daily messages/Telugu Day 113.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-113.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 113.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-113.mp4"
     }
   },
   {
@@ -2153,16 +2153,16 @@
     "english": {
       "dayId": "EnglishDay114",
       "title": "English Day 114",
-      "thumbnail": "/images/Daily messages/English Day 114.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-114.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 114.mp4"
+      "src": "/images/daily-grace-videos/english-day-114.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay114",
       "title": "Telugu Day 114",
-      "thumbnail": "/images/Daily messages/Telugu Day 114.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-114.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 114.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-114.mp4"
     }
   },
   {
@@ -2172,16 +2172,16 @@
     "english": {
       "dayId": "EnglishDay115",
       "title": "English Day 115",
-      "thumbnail": "/images/Daily messages/English Day 115.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-115.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 115.mp4"
+      "src": "/images/daily-grace-videos/english-day-115.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay115",
       "title": "Telugu Day 115",
-      "thumbnail": "/images/Daily messages/Telugu Day 115.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-115.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 115.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-115.mp4"
     }
   },
   {
@@ -2191,16 +2191,16 @@
     "english": {
       "dayId": "EnglishDay116",
       "title": "English Day 116",
-      "thumbnail": "/images/Daily messages/English Day 116.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-116.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 116.mp4"
+      "src": "/images/daily-grace-videos/english-day-116.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay116",
       "title": "Telugu Day 116",
-      "thumbnail": "/images/Daily messages/Telugu Day 116.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-116.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 116.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-116.mp4"
     }
   },
   {
@@ -2210,16 +2210,16 @@
     "english": {
       "dayId": "EnglishDay117",
       "title": "English Day 117",
-      "thumbnail": "/images/Daily messages/English Day 117.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-117.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 117.mp4"
+      "src": "/images/daily-grace-videos/english-day-117.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay117",
       "title": "Telugu Day 117",
-      "thumbnail": "/images/Daily messages/Telugu Day 117.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-117.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 117.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-117.mp4"
     }
   },
   {
@@ -2229,16 +2229,16 @@
     "english": {
       "dayId": "EnglishDay118",
       "title": "English Day 118",
-      "thumbnail": "/images/Daily messages/English Day 118.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-118.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 118.mp4"
+      "src": "/images/daily-grace-videos/english-day-118.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay118",
       "title": "Telugu Day 118",
-      "thumbnail": "/images/Daily messages/Telugu Day 118.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-118.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 118.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-118.mp4"
     }
   },
   {
@@ -2248,16 +2248,16 @@
     "english": {
       "dayId": "EnglishDay119",
       "title": "English Day 119",
-      "thumbnail": "/images/Daily messages/English Day 119.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-119.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 119.mp4"
+      "src": "/images/daily-grace-videos/english-day-119.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay119",
       "title": "Telugu Day 119",
-      "thumbnail": "/images/Daily messages/Telugu Day 119.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-119.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 119.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-119.mp4"
     }
   },
   {
@@ -2267,16 +2267,16 @@
     "english": {
       "dayId": "EnglishDay120",
       "title": "English Day 120",
-      "thumbnail": "/images/Daily messages/English Day 120.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-120.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 120.mp4"
+      "src": "/images/daily-grace-videos/english-day-120.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay120",
       "title": "Telugu Day 120",
-      "thumbnail": "/images/Daily messages/Telugu Day 120.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-120.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 120.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-120.mp4"
     }
   },
   {
@@ -2286,16 +2286,16 @@
     "english": {
       "dayId": "EnglishDay121",
       "title": "English Day 121",
-      "thumbnail": "/images/Daily messages/English Day 121.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-121.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 121.mp4"
+      "src": "/images/daily-grace-videos/english-day-121.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay121",
       "title": "Telugu Day 121",
-      "thumbnail": "/images/Daily messages/Telugu Day 121.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-121.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 121.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-121.mp4"
     }
   },
   {
@@ -2305,16 +2305,16 @@
     "english": {
       "dayId": "EnglishDay122",
       "title": "English Day 122",
-      "thumbnail": "/images/Daily messages/English Day 122.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-122.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 122.mp4"
+      "src": "/images/daily-grace-videos/english-day-122.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay122",
       "title": "Telugu Day 122",
-      "thumbnail": "/images/Daily messages/Telugu Day 122.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-122.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 122.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-122.mp4"
     }
   },
   {
@@ -2324,16 +2324,16 @@
     "english": {
       "dayId": "EnglishDay123",
       "title": "English Day 123",
-      "thumbnail": "/images/Daily messages/English Day 123.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-123.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 123.mp4"
+      "src": "/images/daily-grace-videos/english-day-123.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay123",
       "title": "Telugu Day 123",
-      "thumbnail": "/images/Daily messages/Telugu Day 123.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-123.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 123.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-123.mp4"
     }
   },
   {
@@ -2343,16 +2343,16 @@
     "english": {
       "dayId": "EnglishDay124",
       "title": "English Day 124",
-      "thumbnail": "/images/Daily messages/English Day 124.jpg",
+      "thumbnail": "/images/daily-grace-videos/english-day-124.jpg",
       "type": "video",
-      "src": "/images/Daily messages/English Day 124.mp4"
+      "src": "/images/daily-grace-videos/english-day-124.mp4"
     },
     "telugu": {
       "dayId": "TeluguDay124",
       "title": "Telugu Day 124",
-      "thumbnail": "/images/Daily messages/Telugu Day 124.jpg",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-124.jpg",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 124.mp4"
+      "src": "/images/daily-grace-videos/telugu-day-124.mp4"
     }
   },
   {
@@ -2363,15 +2363,15 @@
       "dayId": "EnglishDay125",
       "title": "English Day 125",
       "type": "video",
-      "src": "/images/Daily messages/English Day 125.mp4",
-      "thumbnail": "/images/Daily messages/English Day 125.jpg"
+      "src": "/images/daily-grace-videos/english-day-125.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-125.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay125",
       "title": "Telugu Day 125",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 125.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 125.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-125.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-125.jpg"
     }
   },
   {
@@ -2382,15 +2382,15 @@
       "dayId": "EnglishDay126",
       "title": "English Day 126",
       "type": "video",
-      "src": "/images/Daily messages/English Day 126.mp4",
-      "thumbnail": "/images/Daily messages/English Day 126.jpg"
+      "src": "/images/daily-grace-videos/english-day-126.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-126.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay126",
       "title": "Telugu Day 126",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 126.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 126.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-126.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-126.jpg"
     }
   },
   {
@@ -2401,15 +2401,15 @@
       "dayId": "EnglishDay127",
       "title": "English Day 127",
       "type": "video",
-      "src": "/images/Daily messages/English Day 127.mp4",
-      "thumbnail": "/images/Daily messages/English Day 127.jpg"
+      "src": "/images/daily-grace-videos/english-day-127.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-127.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay127",
       "title": "Telugu Day 127",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 127.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 127.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-127.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-127.jpg"
     }
   },
   {
@@ -2420,15 +2420,15 @@
       "dayId": "EnglishDay128",
       "title": "English Day 128",
       "type": "video",
-      "src": "/images/Daily messages/English Day 128.mp4",
-      "thumbnail": "/images/Daily messages/English Day 128.jpg"
+      "src": "/images/daily-grace-videos/english-day-128.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-128.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay128",
       "title": "Telugu Day 128",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 128.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 128.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-128.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-128.jpg"
     }
   },
   {
@@ -2439,15 +2439,15 @@
       "dayId": "EnglishDay129",
       "title": "English Day 129",
       "type": "video",
-      "src": "/images/Daily messages/English Day 129.mp4",
-      "thumbnail": "/images/Daily messages/English Day 129.jpg"
+      "src": "/images/daily-grace-videos/english-day-129.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-129.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay129",
       "title": "Telugu Day 129",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 129.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 129.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-129.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-129.jpg"
     }
   },
   {
@@ -2458,15 +2458,15 @@
       "dayId": "EnglishDay130",
       "title": "English Day 130",
       "type": "video",
-      "src": "/images/Daily messages/English Day 130.mp4",
-      "thumbnail": "/images/Daily messages/English Day 130.jpg"
+      "src": "/images/daily-grace-videos/english-day-130.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-130.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay130",
       "title": "Telugu Day 130",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 130.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 130.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-130.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-130.jpg"
     }
   },
   {
@@ -2477,15 +2477,15 @@
       "dayId": "EnglishDay131",
       "title": "English Day 131",
       "type": "video",
-      "src": "/images/Daily messages/English Day 131.mp4",
-      "thumbnail": "/images/Daily messages/English Day 131.jpg"
+      "src": "/images/daily-grace-videos/english-day-131.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-131.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay131",
       "title": "Telugu Day 131",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 131.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 131.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-131.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-131.jpg"
     }
   },
   {
@@ -2496,15 +2496,15 @@
       "dayId": "EnglishDay132",
       "title": "English Day 132",
       "type": "video",
-      "src": "/images/Daily messages/English Day 132.mp4",
-      "thumbnail": "/images/Daily messages/English Day 132.jpg"
+      "src": "/images/daily-grace-videos/english-day-132.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-132.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay132",
       "title": "Telugu Day 132",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 132.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 132.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-132.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-132.jpg"
     }
   },
   {
@@ -2515,15 +2515,15 @@
       "dayId": "EnglishDay133",
       "title": "English Day 133",
       "type": "video",
-      "src": "/images/Daily messages/English Day 133.mp4",
-      "thumbnail": "/images/Daily messages/English Day 133.jpg"
+      "src": "/images/daily-grace-videos/english-day-133.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-133.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay133",
       "title": "Telugu Day 133",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 133.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 133.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-133.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-133.jpg"
     }
   },
   {
@@ -2534,15 +2534,15 @@
       "dayId": "EnglishDay134",
       "title": "English Day 134",
       "type": "video",
-      "src": "/images/Daily messages/English Day 134.mp4",
-      "thumbnail": "/images/Daily messages/English Day 134.jpg"
+      "src": "/images/daily-grace-videos/english-day-134.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-134.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay134",
       "title": "Telugu Day 134",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 134.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 134.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-134.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-134.jpg"
     }
   },
   {
@@ -2553,15 +2553,15 @@
       "dayId": "EnglishDay135",
       "title": "English Day 135",
       "type": "video",
-      "src": "/images/Daily messages/English Day 135.mp4",
-      "thumbnail": "/images/Daily messages/English Day 135.jpg"
+      "src": "/images/daily-grace-videos/english-day-135.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-135.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay135",
       "title": "Telugu Day 135",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 135.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 135.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-135.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-135.jpg"
     }
   },
   {
@@ -2572,15 +2572,15 @@
       "dayId": "EnglishDay136",
       "title": "English Day 136",
       "type": "video",
-      "src": "/images/Daily messages/English Day 136.mp4",
-      "thumbnail": "/images/Daily messages/English Day 136.jpg"
+      "src": "/images/daily-grace-videos/english-day-136.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-136.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay136",
       "title": "Telugu Day 136",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 136.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 136.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-136.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-136.jpg"
     }
   },
   {
@@ -2591,15 +2591,15 @@
       "dayId": "EnglishDay137",
       "title": "English Day 137",
       "type": "video",
-      "src": "/images/Daily messages/English Day 137.mp4",
-      "thumbnail": "/images/Daily messages/English Day 137.jpg"
+      "src": "/images/daily-grace-videos/english-day-137.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-137.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay137",
       "title": "Telugu Day 137",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 137.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 137.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-137.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-137.jpg"
     }
   },
   {
@@ -2610,15 +2610,15 @@
       "dayId": "EnglishDay138",
       "title": "English Day 138",
       "type": "video",
-      "src": "/images/Daily messages/English Day 138.mp4",
-      "thumbnail": "/images/Daily messages/English Day 138.jpg"
+      "src": "/images/daily-grace-videos/english-day-138.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-138.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay138",
       "title": "Telugu Day 138",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 138.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 138.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-138.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-138.jpg"
     }
   },
   {
@@ -2629,15 +2629,15 @@
       "dayId": "EnglishDay139",
       "title": "English Day 139",
       "type": "video",
-      "src": "/images/Daily messages/English Day 139.mp4",
-      "thumbnail": "/images/Daily messages/English Day 139.jpg"
+      "src": "/images/daily-grace-videos/english-day-139.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-139.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay139",
       "title": "Telugu Day 139",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 139.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 139.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-139.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-139.jpg"
     }
   },
   {
@@ -2648,15 +2648,15 @@
       "dayId": "EnglishDay140",
       "title": "English Day 140",
       "type": "video",
-      "src": "/images/Daily messages/English Day 140.mp4",
-      "thumbnail": "/images/Daily messages/English Day 140.jpg"
+      "src": "/images/daily-grace-videos/english-day-140.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-140.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay140",
       "title": "Telugu Day 140",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 140.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 140.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-140.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-140.jpg"
     }
   },
   {
@@ -2667,15 +2667,15 @@
       "dayId": "EnglishDay141",
       "title": "English Day 141",
       "type": "video",
-      "src": "/images/Daily messages/English Day 141.mp4",
-      "thumbnail": "/images/Daily messages/English Day 141.jpg"
+      "src": "/images/daily-grace-videos/english-day-141.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-141.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay141",
       "title": "Telugu Day 141",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 141.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 141.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-141.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-141.jpg"
     }
   },
   {
@@ -2686,15 +2686,15 @@
       "dayId": "EnglishDay142",
       "title": "English Day 142",
       "type": "video",
-      "src": "/images/Daily messages/English Day 142.mp4",
-      "thumbnail": "/images/Daily messages/English Day 142.jpg"
+      "src": "/images/daily-grace-videos/english-day-142.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-142.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay142",
       "title": "Telugu Day 142",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 142.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 142.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-142.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-142.jpg"
     }
   },
   {
@@ -2705,15 +2705,15 @@
       "dayId": "EnglishDay143",
       "title": "English Day 143",
       "type": "video",
-      "src": "/images/Daily messages/English Day 143.mp4",
-      "thumbnail": "/images/Daily messages/English Day 143.jpg"
+      "src": "/images/daily-grace-videos/english-day-143.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-143.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay143",
       "title": "Telugu Day 143",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 143.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 143.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-143.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-143.jpg"
     }
   },
   {
@@ -2724,15 +2724,15 @@
       "dayId": "EnglishDay144",
       "title": "English Day 144",
       "type": "video",
-      "src": "/images/Daily messages/English Day 144.mp4",
-      "thumbnail": "/images/Daily messages/English Day 144.jpg"
+      "src": "/images/daily-grace-videos/english-day-144.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-144.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay144",
       "title": "Telugu Day 144",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 144.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 144.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-144.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-144.jpg"
     }
   },
   {
@@ -2743,15 +2743,15 @@
       "dayId": "EnglishDay145",
       "title": "English Day 145",
       "type": "video",
-      "src": "/images/Daily messages/English Day 145.mp4",
-      "thumbnail": "/images/Daily messages/English Day 145.jpg"
+      "src": "/images/daily-grace-videos/english-day-145.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-145.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay145",
       "title": "Telugu Day 145",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 145.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 145.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-145.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-145.jpg"
     }
   },
   {
@@ -2762,15 +2762,15 @@
       "dayId": "EnglishDay146",
       "title": "English Day 146",
       "type": "video",
-      "src": "/images/Daily messages/English Day 146.mp4",
-      "thumbnail": "/images/Daily messages/English Day 146.jpg"
+      "src": "/images/daily-grace-videos/english-day-146.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-146.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay146",
       "title": "Telugu Day 146",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 146.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 146.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-146.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-146.jpg"
     }
   },
   {
@@ -2781,15 +2781,15 @@
       "dayId": "EnglishDay147",
       "title": "English Day 147",
       "type": "video",
-      "src": "/images/Daily messages/English Day 147.mp4",
-      "thumbnail": "/images/Daily messages/English Day 147.jpg"
+      "src": "/images/daily-grace-videos/english-day-147.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-147.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay147",
       "title": "Telugu Day 147",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 147.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 147.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-147.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-147.jpg"
     }
   },
   {
@@ -2800,15 +2800,15 @@
       "dayId": "EnglishDay148",
       "title": "English Day 148",
       "type": "video",
-      "src": "/images/Daily messages/English Day 148.mp4",
-      "thumbnail": "/images/Daily messages/English Day 148.jpg"
+      "src": "/images/daily-grace-videos/english-day-148.mp4",
+      "thumbnail": "/images/daily-grace-videos/english-day-148.jpg"
     },
     "telugu": {
       "dayId": "TeluguDay148",
       "title": "Telugu Day 148",
       "type": "video",
-      "src": "/images/Daily messages/Telugu Day 148.mp4",
-      "thumbnail": "/images/Daily messages/Telugu Day 148.jpg"
+      "src": "/images/daily-grace-videos/telugu-day-148.mp4",
+      "thumbnail": "/images/daily-grace-videos/telugu-day-148.jpg"
     }
   }
 ]
