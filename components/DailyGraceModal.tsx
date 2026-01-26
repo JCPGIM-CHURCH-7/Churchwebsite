@@ -45,7 +45,7 @@ export function DailyGraceModal({ video, isOpen, onClose, onNext, onPrev, onLang
                         {video.type === 'video' ? (
                             video.src.includes('youtube') || video.src.includes('youtu.be') ? (
                                 <iframe
-                                    src={video.src.includes('?') ? `${video.src}&autoplay=1` : `${video.src}?autoplay=1`}
+                                    src={video.src.includes('?') ? `${encodeURI(video.src)}&autoplay=1` : `${encodeURI(video.src)}?autoplay=1`}
                                     title={video.title}
                                     className="w-full h-full absolute inset-0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -53,11 +53,11 @@ export function DailyGraceModal({ video, isOpen, onClose, onNext, onPrev, onLang
                                 />
                             ) : (
                                 <video
-                                    src={video.src}
+                                    src={encodeURI(video.src)}
                                     controls
                                     autoPlay
                                     className="w-full h-full absolute inset-0 bg-black"
-                                    poster={video.thumbnail}
+                                    poster={encodeURI(video.thumbnail)}
                                 >
                                     Your browser does not support the video tag.
                                 </video>
@@ -65,7 +65,7 @@ export function DailyGraceModal({ video, isOpen, onClose, onNext, onPrev, onLang
                         ) : (
                             <div className="w-full h-full flex items-center justify-center bg-gray-900">
                                 <img
-                                    src={video.src}
+                                    src={encodeURI(video.src)}
                                     alt={video.title}
                                     className="max-h-full max-w-full object-contain"
                                 />

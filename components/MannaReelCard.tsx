@@ -22,7 +22,7 @@ export function MannaReelCard({ video, dayNumber, theme, language, onClick }: Ma
         >
             {/* Image Thumbnail */}
             <img
-                src={video.thumbnail}
+                src={encodeURI(video.thumbnail)}
                 alt={video.title}
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                 loading="lazy"

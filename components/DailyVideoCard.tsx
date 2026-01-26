@@ -31,7 +31,7 @@ export function DailyVideoCard({ video, onClick }: DailyVideoCardProps) {
             <div className="absolute inset-0 bg-gray-100">
                 {/* Real Thumbnail */}
                 {video.thumbnail && !video.thumbnail.includes("placeholder") ? (
-                    <img src={video.thumbnail} alt={video.title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <img src={encodeURI(video.thumbnail)} alt={video.title} className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 ) : (
                     <div className="h-full w-full flex items-center justify-center bg-gradient-to-br from-blue-50 to-amber-50">
                         <span className="text-gray-300 font-serif italic text-4xl opacity-20">Grace</span>
