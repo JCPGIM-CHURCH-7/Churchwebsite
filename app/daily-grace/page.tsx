@@ -47,9 +47,6 @@ type VideoItem = {
 // Curated Sunday Videos (Hardcoded for Bottom Carousel)
 // Curated Sunday Videos (Hardcoded for Bottom Carousel)
 const SUNDAY_VIDEOS = [
-  { title: "GLORIOUS SUNDAY SERVICE | 25-01-2026 | #live", src: "https://www.youtube.com/embed/rh7ynbWPtI0", thumbnail: "https://img.youtube.com/vi/rh7ynbWPtI0/maxresdefault.jpg" },
-  { title: "SUNDAY SERVICE | 18-01-2026 | #live", src: "https://www.youtube.com/embed/kOxQEwxqOdo", thumbnail: "https://img.youtube.com/vi/kOxQEwxqOdo/maxresdefault.jpg" },
-  { title: "SUNDAY SERVICE | 11-01-2026 | #live", src: "https://www.youtube.com/embed/J27bQckpPEQ", thumbnail: "https://img.youtube.com/vi/J27bQckpPEQ/maxresdefault.jpg" },
   { title: "Sunday Service 12-10-2025 | Pastor K. Ravi Kumar", src: "https://www.youtube.com/embed/yVhKuyAdi_Q", thumbnail: "https://img.youtube.com/vi/yVhKuyAdi_Q/maxresdefault.jpg" },
   { title: "Sunday Service 19-10-2025 | Pastor K. Ravi Kumar", src: "https://www.youtube.com/embed/gT-Cpnw1AZ0", thumbnail: "https://img.youtube.com/vi/gT-Cpnw1AZ0/maxresdefault.jpg" },
   { title: "Sunday Service 26-10-2025 | Pastor K. Ravi Kumar", src: "https://www.youtube.com/embed/rYce42cNPro", thumbnail: "https://img.youtube.com/vi/rYce42cNPro/maxresdefault.jpg" },
@@ -65,7 +62,11 @@ const SUNDAY_VIDEOS = [
   { title: "PRAISE & WORSHIP SERVICE | 28-12-2025 | #live (Morning)", src: "https://www.youtube.com/embed/5gucWw-d_nA", thumbnail: "https://img.youtube.com/vi/5gucWw-d_nA/maxresdefault.jpg" },
   { title: "PRAISE & WORSHIP SERVICE | 28-12-2025 | #live (Evening)", src: "https://www.youtube.com/embed/t_VirkLYgHQ", thumbnail: "https://img.youtube.com/vi/t_VirkLYgHQ/maxresdefault.jpg" },
   { title: "CROSS OVER SERVICE | 31-12-2025 | #live", src: "https://www.youtube.com/embed/7NyPOxY9zwA", thumbnail: "https://img.youtube.com/vi/7NyPOxY9zwA/maxresdefault.jpg" },
-  { title: "NEW YEAR SERVICE | 01-01-2026 | #live", src: "https://www.youtube.com/embed/QanFnzbUQUM", thumbnail: "https://img.youtube.com/vi/QanFnzbUQUM/maxresdefault.jpg" }
+  { title: "NEW YEAR SERVICE | 01-01-2026 | #live", src: "https://www.youtube.com/embed/QanFnzbUQUM", thumbnail: "https://img.youtube.com/vi/QanFnzbUQUM/maxresdefault.jpg" },
+  { title: "SUNDAY SERVICE | 04-01-2026 | #live", src: "https://www.youtube.com/embed/LWSVUvhuTtc", thumbnail: "https://img.youtube.com/vi/LWSVUvhuTtc/maxresdefault.jpg" },
+  { title: "SUNDAY SERVICE | 11-01-2026 | #live", src: "https://www.youtube.com/embed/kOxQEwxqOdo", thumbnail: "https://img.youtube.com/vi/kOxQEwxqOdo/maxresdefault.jpg" },
+  { title: "SUNDAY SERVICE | 18-01-2026 | #live", src: "https://www.youtube.com/embed/J27bQckpPEQ", thumbnail: "https://img.youtube.com/vi/J27bQckpPEQ/maxresdefault.jpg" },
+  { title: "GLORIOUS SUNDAY SERVICE | 25-01-2026 | #live", src: "https://www.youtube.com/embed/rh7ynbWPtI0", thumbnail: "https://img.youtube.com/vi/rh7ynbWPtI0/maxresdefault.jpg" }
 ];
 
 export default function DailyGracePage() {

@@ -231,7 +231,7 @@ export default function HomePage() {
             </div>
             <div className="text-center mt-4">
               <a
-                href="https://www.youtube.com/live/47XTHrkc8Yc?si=ukESfnHJ_3-LXyKz"
+                href="https://www.youtube.com/live/47XTHrkc8Yc?si=GpFfXagvnt4gzitR"
                 target="_blank"
                 rel="noopener noreferrer"
               >

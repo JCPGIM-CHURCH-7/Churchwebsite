@@ -10,6 +10,7 @@ interface DailyGraceModalProps {
         src: string;
         date: string;
         theme: string;
+        thumbnail: string;
         language: 'english' | 'telugu';
         type: 'image' | 'video';
     } | null;
@@ -81,25 +82,11 @@ export function DailyGraceModal({ video, isOpen, onClose, onNext, onPrev, onLang
                             </button>
                         )}
 
-                        {/* Mobile Close Button (Overlay) */}
-                        <button
-                            onClick={onClose}
-                            className="absolute top-4 right-4 md:hidden rounded-full bg-black/50 p-2 text-white backdrop-blur-sm z-30"
-                        >
-                            <X className="h-6 w-6" />
-                        </button>
                     </div>
 
                     {/* Sidebar Info Column */}
                     <div className="w-full md:w-[400px] bg-white border-l border-gray-100 p-6 md:p-8 flex flex-col text-gray-800 overflow-y-auto relative">
 
-                        {/* Close (Desktop) */}
-                        <button
-                            onClick={onClose}
-                            className="absolute top-4 right-4 hidden md:block text-gray-400 hover:text-gray-900 transition-colors"
-                        >
-                            <X className="w-6 h-6" />
-                        </button>
 
                         {/* Header */}
                         <div className="mt-2 mb-6">
