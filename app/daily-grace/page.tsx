@@ -184,7 +184,7 @@ export default function DailyGracePage() {
           <div className="container mx-auto px-4 mb-6 flex flex-col md:flex-row items-center justify-between gap-4">
             <div>
               <h1 className="text-3xl font-serif font-bold text-gray-900 tracking-tight">Daily Grace</h1>
-              <p className="text-gray-500 text-sm mt-1 uppercase tracking-widest font-semibold">124 Days of Glory</p>
+              <p className="text-gray-500 text-sm mt-1 uppercase tracking-widest font-semibold">148 Days of Glory</p>
             </div>
             <LanguageToggle value={language} onChange={setLanguage} />
           </div>

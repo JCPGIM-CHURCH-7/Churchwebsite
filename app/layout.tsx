@@ -65,11 +65,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.png", sizes: "any" }, // Updated to favicon.png
+      { url: "/favicon.ico", sizes: "any" },
       { url: "/favicon.png", type: "image/png", sizes: "32x32" },
     ],
-    apple: [{ url: "/favicon.png", sizes: "180x180", type: "image/png" }], // Updated to favicon.png
-    shortcut: "/favicon.png", // Updated to favicon.png
+    apple: [{ url: "/favicon.png", sizes: "180x180", type: "image/png" }],
+    shortcut: "/favicon.ico",
   },
   manifest: "/site.webmanifest",
   other: {
