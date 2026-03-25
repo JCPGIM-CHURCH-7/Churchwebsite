@@ -1,37 +1,64 @@
 import { type NextRequest, NextResponse } from "next/server"
+import nodemailer from "nodemailer"
+import { supabase } from "@/lib/supabase"
 
 export async function POST(request: NextRequest) {
-  try {
-    const body = await request.json()
+    try {
+        const body = await request.json()
+        const { name, email, phone, category, urgency, request: prayerRequest, anonymous } = body
 
-    const formData = new FormData()
-    formData.append("access_key", "1b983734-3a1b-4fdb-a919-829a3aeb3698")
-    formData.append("subject", `Prayer Request - ${body.category} (${body.urgency})`)
-    formData.append("from_name", body.anonymous ? "Anonymous" : body.name)
-    formData.append("email", body.email)
-    formData.append("phone", body.phone || "Not provided")
-    formData.append("category", body.category)
-    formData.append("urgency", body.urgency)
-    formData.append("message", body.request)
-    formData.append("anonymous", body.anonymous ? "Yes" : "No")
+        // 1. Save to Supabase
+        const { error: supabaseError } = await supabase.from("prayer_requests").insert([
+            {
+                name: anonymous ? "Anonymous" : name,
+                email,
+                phone: phone || null,
+                subject: `Prayer Request - ${category} (${urgency})`,
+                message: prayerRequest,
+                status: "new",
+            },
+        ])
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    })
+        if (supabaseError) {
+            console.error("Supabase Error:", supabaseError)
+        }
 
-    const result = await response.json()
+        // 2. Send Email via SMTP
+        const transporter = nodemailer.createTransport({
+            host: process.env.SMTP_HOST || "smtp.gmail.com",
+            port: Number(process.env.SMTP_PORT) || 465,
+            secure: true,
+            auth: {
+                user: process.env.SMTP_USER,
+                pass: process.env.SMTP_PASS,
+            },
+        })
 
-    if (result.success) {
-      return NextResponse.json({
-        success: true,
-        message: "Prayer request submitted successfully",
-      })
-    } else {
-      throw new Error(result.message || "Failed to submit prayer request")
+        const mailOptions = {
+            from: process.env.SMTP_USER,
+            to: "jcpgimofficial@gmail.com",
+            subject: `Prayer Request - ${category} (${urgency})`,
+            text: `
+        Name: ${anonymous ? "Anonymous" : name}
+        Email: ${email}
+        Phone: ${phone || "Not provided"}
+        Category: ${category}
+        Urgency: ${urgency}
+        Anonymous: ${anonymous ? "Yes" : "No"}
+
+        Prayer Request:
+        ${prayerRequest}
+      `,
+        }
+
+        await transporter.sendMail(mailOptions)
+
+        return NextResponse.json({
+            success: true,
+            message: "Prayer request submitted successfully",
+        })
+    } catch (error) {
+        console.error("Error processing prayer request:", error)
+        return NextResponse.json({ error: "Failed to submit prayer request" }, { status: 500 })
     }
-  } catch (error) {
-    console.error("Error processing prayer request:", error)
-    return NextResponse.json({ error: "Failed to submit prayer request" }, { status: 500 })
-  }
 }

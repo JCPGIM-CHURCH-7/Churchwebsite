@@ -49,9 +49,13 @@ export default function PrayerRequestPage() {
           request: "",
           anonymous: false,
         })
+      } else {
+        const errorData = await response.json()
+        alert(errorData.error || "Failed to submit prayer request. Please try again.")
       }
     } catch (error) {
       console.error("Error submitting prayer request:", error)
+      alert("An error occurred while submitting your prayer request. Please try again later.")
     } finally {
       setIsSubmitting(false)
     }

@@ -47,9 +47,13 @@ export default function ContactPage() {
           subject: "",
           message: "",
         })
+      } else {
+        const errorData = await response.json()
+        alert(errorData.error || "Failed to send message. Please try again.")
       }
     } catch (error) {
       console.error("Error submitting contact form:", error)
+      alert("An error occurred while sending your message. Please try again later.")
     } finally {
       setIsSubmitting(false)
     }

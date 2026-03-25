@@ -43,7 +43,7 @@ export function useIsMobile() {
 
 function WatchLiveButton() {
   const [liveVideoId, setLiveVideoId] = useState("")
-  const [error, setError] = useState(null)
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
     const fetchLiveVideo = async () => {
@@ -60,13 +60,13 @@ function WatchLiveButton() {
         } else {
           console.log("No active live stream found.")
           // Fallback to the most recent known service when no live stream
-          setLiveVideoId("QanFnzbUQUM")
+          setLiveVideoId("mskh0t0_7Zw")
         }
       } catch (err) {
         console.error("Error fetching live stream:", err)
         setError("Failed to fetch live stream. Falling back to latest service.")
         // On error (e.g., API key issue or network), fallback to the provided link
-        setLiveVideoId("QanFnzbUQUM")
+        setLiveVideoId("mskh0t0_7Zw")
       }
     }
 
@@ -221,7 +221,7 @@ export default function HomePage() {
             </div>
             <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg">
               <iframe
-                src="https://www.youtube.com/embed/47XTHrkc8Yc?autoplay=0"
+                src="https://www.youtube.com/embed/mskh0t0_7Zw?autoplay=0"
                 title="Sunday Service Live"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -231,7 +231,7 @@ export default function HomePage() {
             </div>
             <div className="text-center mt-4">
               <a
-                href="https://www.youtube.com/live/47XTHrkc8Yc?si=GpFfXagvnt4gzitR"
+                href="https://www.youtube.com/live/mskh0t0_7Zw?si=HLSrAgv79jq_Kotx"
                 target="_blank"
                 rel="noopener noreferrer"
               >

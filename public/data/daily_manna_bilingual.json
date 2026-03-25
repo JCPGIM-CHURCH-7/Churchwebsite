@@ -2810,5 +2810,1107 @@
       "src": "/images/daily-grace-videos/telugu-day-148.mp4",
       "thumbnail": "/images/daily-grace-videos/telugu-day-148.jpg"
     }
+  },
+  {
+    "date": "2026-01-27",
+    "dayNumber": 149,
+    "theme": "Hope",
+    "english": {
+      "dayId": "EnglishDay149",
+      "title": "English Day 149",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-149.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay149",
+      "title": "Telugu Day 149",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-149.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-01-28",
+    "dayNumber": 150,
+    "theme": "Love",
+    "english": {
+      "dayId": "EnglishDay150",
+      "title": "English Day 150",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-150.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay150",
+      "title": "Telugu Day 150",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-150.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-01-29",
+    "dayNumber": 151,
+    "theme": "Prayer",
+    "english": {
+      "dayId": "EnglishDay151",
+      "title": "English Day 151",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-151.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay151",
+      "title": "Telugu Day 151",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-151.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-01-30",
+    "dayNumber": 152,
+    "theme": "Wisdom",
+    "english": {
+      "dayId": "EnglishDay152",
+      "title": "English Day 152",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-152.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay152",
+      "title": "Telugu Day 152",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-152.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-01-31",
+    "dayNumber": 153,
+    "theme": "Strength",
+    "english": {
+      "dayId": "EnglishDay153",
+      "title": "English Day 153",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-153.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay153",
+      "title": "Telugu Day 153",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-153.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-01",
+    "dayNumber": 154,
+    "theme": "Faith",
+    "english": {
+      "dayId": "EnglishDay154",
+      "title": "English Day 154",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-154.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay154",
+      "title": "Telugu Day 154",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-154.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-02",
+    "dayNumber": 155,
+    "theme": "Grace",
+    "english": {
+      "dayId": "EnglishDay155",
+      "title": "English Day 155",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-155.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay155",
+      "title": "Telugu Day 155",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-155.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-03",
+    "dayNumber": 156,
+    "theme": "Hope",
+    "english": {
+      "dayId": "EnglishDay156",
+      "title": "English Day 156",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-156.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay156",
+      "title": "Telugu Day 156",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-156.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-04",
+    "dayNumber": 157,
+    "theme": "Love",
+    "english": {
+      "dayId": "EnglishDay157",
+      "title": "English Day 157",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-157.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay157",
+      "title": "Telugu Day 157",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-157.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-05",
+    "dayNumber": 158,
+    "theme": "Prayer",
+    "english": {
+      "dayId": "EnglishDay158",
+      "title": "English Day 158",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-158.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay158",
+      "title": "Telugu Day 158",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-158.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-06",
+    "dayNumber": 159,
+    "theme": "Wisdom",
+    "english": {
+      "dayId": "EnglishDay159",
+      "title": "English Day 159",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-159.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay159",
+      "title": "Telugu Day 159",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-159.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-07",
+    "dayNumber": 160,
+    "theme": "Strength",
+    "english": {
+      "dayId": "EnglishDay160",
+      "title": "English Day 160",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-160.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay160",
+      "title": "Telugu Day 160",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-160.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-08",
+    "dayNumber": 161,
+    "theme": "Faith",
+    "english": {
+      "dayId": "EnglishDay161",
+      "title": "English Day 161",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-161.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay161",
+      "title": "Telugu Day 161",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-161.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-09",
+    "dayNumber": 162,
+    "theme": "Grace",
+    "english": {
+      "dayId": "EnglishDay162",
+      "title": "English Day 162",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-162.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay162",
+      "title": "Telugu Day 162",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-162.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-10",
+    "dayNumber": 163,
+    "theme": "Hope",
+    "english": {
+      "dayId": "EnglishDay163",
+      "title": "English Day 163",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-163.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay163",
+      "title": "Telugu Day 163",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-163.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-11",
+    "dayNumber": 164,
+    "theme": "Love",
+    "english": {
+      "dayId": "EnglishDay164",
+      "title": "English Day 164",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-164.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay164",
+      "title": "Telugu Day 164",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-164.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-12",
+    "dayNumber": 165,
+    "theme": "Prayer",
+    "english": {
+      "dayId": "EnglishDay165",
+      "title": "English Day 165",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-165.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay165",
+      "title": "Telugu Day 165",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-165.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-13",
+    "dayNumber": 166,
+    "theme": "Wisdom",
+    "english": {
+      "dayId": "EnglishDay166",
+      "title": "English Day 166",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-166.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay166",
+      "title": "Telugu Day 166",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-166.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-14",
+    "dayNumber": 167,
+    "theme": "Strength",
+    "english": {
+      "dayId": "EnglishDay167",
+      "title": "English Day 167",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-167.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay167",
+      "title": "Telugu Day 167",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-167.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-15",
+    "dayNumber": 168,
+    "theme": "Faith",
+    "english": {
+      "dayId": "EnglishDay168",
+      "title": "English Day 168",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-168.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay168",
+      "title": "Telugu Day 168",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-168.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-16",
+    "dayNumber": 169,
+    "theme": "Grace",
+    "english": {
+      "dayId": "EnglishDay169",
+      "title": "English Day 169",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-169.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay169",
+      "title": "Telugu Day 169",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-169.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-17",
+    "dayNumber": 170,
+    "theme": "Hope",
+    "english": {
+      "dayId": "EnglishDay170",
+      "title": "English Day 170",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-170.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay170",
+      "title": "Telugu Day 170",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-170.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-18",
+    "dayNumber": 171,
+    "theme": "Love",
+    "english": {
+      "dayId": "EnglishDay171",
+      "title": "English Day 171",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-171.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay171",
+      "title": "Telugu Day 171",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-171.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-19",
+    "dayNumber": 172,
+    "theme": "Prayer",
+    "english": {
+      "dayId": "EnglishDay172",
+      "title": "English Day 172",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-172.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay172",
+      "title": "Telugu Day 172",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-172.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-20",
+    "dayNumber": 173,
+    "theme": "Wisdom",
+    "english": {
+      "dayId": "EnglishDay173",
+      "title": "English Day 173",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-173.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay173",
+      "title": "Telugu Day 173",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-173.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-21",
+    "dayNumber": 174,
+    "theme": "Strength",
+    "english": {
+      "dayId": "EnglishDay174",
+      "title": "English Day 174",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-174.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay174",
+      "title": "Telugu Day 174",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-174.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-22",
+    "dayNumber": 175,
+    "theme": "Faith",
+    "english": {
+      "dayId": "EnglishDay175",
+      "title": "English Day 175",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-175.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay175",
+      "title": "Telugu Day 175",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-175.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-23",
+    "dayNumber": 176,
+    "theme": "Grace",
+    "english": {
+      "dayId": "EnglishDay176",
+      "title": "English Day 176",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-176.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay176",
+      "title": "Telugu Day 176",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-176.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-24",
+    "dayNumber": 177,
+    "theme": "Hope",
+    "english": {
+      "dayId": "EnglishDay177",
+      "title": "English Day 177",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-177.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay177",
+      "title": "Telugu Day 177",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-177.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-25",
+    "dayNumber": 178,
+    "theme": "Love",
+    "english": {
+      "dayId": "EnglishDay178",
+      "title": "English Day 178",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-178.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay178",
+      "title": "Telugu Day 178",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-178.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-26",
+    "dayNumber": 179,
+    "theme": "Prayer",
+    "english": {
+      "dayId": "EnglishDay179",
+      "title": "English Day 179",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-179.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay179",
+      "title": "Telugu Day 179",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-179.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-27",
+    "dayNumber": 180,
+    "theme": "Wisdom",
+    "english": {
+      "dayId": "EnglishDay180",
+      "title": "English Day 180",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-180.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay180",
+      "title": "Telugu Day 180",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-180.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-02-28",
+    "dayNumber": 181,
+    "theme": "Strength",
+    "english": {
+      "dayId": "EnglishDay181",
+      "title": "English Day 181",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-181.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay181",
+      "title": "Telugu Day 181",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-181.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-01",
+    "dayNumber": 182,
+    "theme": "Faith",
+    "english": {
+      "dayId": "EnglishDay182",
+      "title": "English Day 182",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-182.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay182",
+      "title": "Telugu Day 182",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-182.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-02",
+    "dayNumber": 183,
+    "theme": "Grace",
+    "english": {
+      "dayId": "EnglishDay183",
+      "title": "English Day 183",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-183.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay183",
+      "title": "Telugu Day 183",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-183.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-03",
+    "dayNumber": 184,
+    "theme": "Hope",
+    "english": {
+      "dayId": "EnglishDay184",
+      "title": "English Day 184",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-184.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay184",
+      "title": "Telugu Day 184",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-184.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-04",
+    "dayNumber": 185,
+    "theme": "Love",
+    "english": {
+      "dayId": "EnglishDay185",
+      "title": "English Day 185",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-185.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay185",
+      "title": "Telugu Day 185",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-185.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-05",
+    "dayNumber": 186,
+    "theme": "Prayer",
+    "english": {
+      "dayId": "EnglishDay186",
+      "title": "English Day 186",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-186.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay186",
+      "title": "Telugu Day 186",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-186.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-06",
+    "dayNumber": 187,
+    "theme": "Wisdom",
+    "english": {
+      "dayId": "EnglishDay187",
+      "title": "English Day 187",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-187.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay187",
+      "title": "Telugu Day 187",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-187.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-07",
+    "dayNumber": 188,
+    "theme": "Strength",
+    "english": {
+      "dayId": "EnglishDay188",
+      "title": "English Day 188",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-188.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay188",
+      "title": "Telugu Day 188",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-188.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-08",
+    "dayNumber": 189,
+    "theme": "Faith",
+    "english": {
+      "dayId": "EnglishDay189",
+      "title": "English Day 189",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-189.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay189",
+      "title": "Telugu Day 189",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-189.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-09",
+    "dayNumber": 190,
+    "theme": "Grace",
+    "english": {
+      "dayId": "EnglishDay190",
+      "title": "English Day 190",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-190.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay190",
+      "title": "Telugu Day 190",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-190.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-10",
+    "dayNumber": 191,
+    "theme": "Hope",
+    "english": {
+      "dayId": "EnglishDay191",
+      "title": "English Day 191",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-191.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay191",
+      "title": "Telugu Day 191",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-191.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-11",
+    "dayNumber": 192,
+    "theme": "Love",
+    "english": {
+      "dayId": "EnglishDay192",
+      "title": "English Day 192",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-192.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay192",
+      "title": "Telugu Day 192",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-192.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-12",
+    "dayNumber": 193,
+    "theme": "Prayer",
+    "english": {
+      "dayId": "EnglishDay193",
+      "title": "English Day 193",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-193.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay193",
+      "title": "Telugu Day 193",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-193.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-13",
+    "dayNumber": 194,
+    "theme": "Wisdom",
+    "english": {
+      "dayId": "EnglishDay194",
+      "title": "English Day 194",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-194.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay194",
+      "title": "Telugu Day 194",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-194.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-14",
+    "dayNumber": 195,
+    "theme": "Strength",
+    "english": {
+      "dayId": "EnglishDay195",
+      "title": "English Day 195",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-195.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay195",
+      "title": "Telugu Day 195",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-195.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-15",
+    "dayNumber": 196,
+    "theme": "Faith",
+    "english": {
+      "dayId": "EnglishDay196",
+      "title": "English Day 196",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-196.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay196",
+      "title": "Telugu Day 196",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-196.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-16",
+    "dayNumber": 197,
+    "theme": "Grace",
+    "english": {
+      "dayId": "EnglishDay197",
+      "title": "English Day 197",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-197.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay197",
+      "title": "Telugu Day 197",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-197.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-17",
+    "dayNumber": 198,
+    "theme": "Hope",
+    "english": {
+      "dayId": "EnglishDay198",
+      "title": "English Day 198",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-198.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay198",
+      "title": "Telugu Day 198",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-198.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-18",
+    "dayNumber": 199,
+    "theme": "Love",
+    "english": {
+      "dayId": "EnglishDay199",
+      "title": "English Day 199",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-199.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay199",
+      "title": "Telugu Day 199",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-199.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-19",
+    "dayNumber": 200,
+    "theme": "Prayer",
+    "english": {
+      "dayId": "EnglishDay200",
+      "title": "English Day 200",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-200.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay200",
+      "title": "Telugu Day 200",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-200.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-20",
+    "dayNumber": 201,
+    "theme": "Wisdom",
+    "english": {
+      "dayId": "EnglishDay201",
+      "title": "English Day 201",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-201.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay201",
+      "title": "Telugu Day 201",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-201.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-21",
+    "dayNumber": 202,
+    "theme": "Strength",
+    "english": {
+      "dayId": "EnglishDay202",
+      "title": "English Day 202",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-202.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay202",
+      "title": "Telugu Day 202",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-202.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-22",
+    "dayNumber": 203,
+    "theme": "Faith",
+    "english": {
+      "dayId": "EnglishDay203",
+      "title": "English Day 203",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-203.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay203",
+      "title": "Telugu Day 203",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-203.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-23",
+    "dayNumber": 204,
+    "theme": "Grace",
+    "english": {
+      "dayId": "EnglishDay204",
+      "title": "English Day 204",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-204.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay204",
+      "title": "Telugu Day 204",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-204.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-24",
+    "dayNumber": 205,
+    "theme": "Hope",
+    "english": {
+      "dayId": "EnglishDay205",
+      "title": "English Day 205",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-205.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay205",
+      "title": "Telugu Day 205",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-205.mp4",
+      "thumbnail": ""
+    }
+  },
+  {
+    "date": "2026-03-25",
+    "dayNumber": 206,
+    "theme": "Love",
+    "english": {
+      "dayId": "EnglishDay206",
+      "title": "English Day 206",
+      "type": "video",
+      "src": "/images/daily-grace-videos/english-day-206.mp4",
+      "thumbnail": ""
+    },
+    "telugu": {
+      "dayId": "TeluguDay206",
+      "title": "Telugu Day 206",
+      "type": "video",
+      "src": "/images/daily-grace-videos/telugu-day-206.mp4",
+      "thumbnail": ""
+    }
   }
 ]

@@ -1,35 +1,64 @@
 import { type NextRequest, NextResponse } from "next/server"
+import nodemailer from "nodemailer"
+import { supabase } from "@/lib/supabase"
 
 export async function POST(request: NextRequest) {
-  try {
-    const body = await request.json()
+    try {
+        const body = await request.json()
+        const { firstName, lastName, email, phone, subject: inquiryType, message } = body
 
-    const formData = new FormData()
-    formData.append("access_key", "1b983734-3a1b-4fdb-a919-829a3aeb3698")
-    formData.append("subject", `Contact Form - ${body.subject}`)
-    formData.append("from_name", `${body.firstName} ${body.lastName}`)
-    formData.append("email", body.email)
-    formData.append("phone", body.phone || "Not provided")
-    formData.append("inquiry_type", body.subject)
-    formData.append("message", body.message)
+        // 1. Save to Supabase
+        const { error: supabaseError } = await supabase.from("contact_messages").insert([
+            {
+                name: `${firstName} ${lastName}`,
+                email,
+                phone: phone || null,
+                subject: inquiryType,
+                message,
+                status: "new",
+            },
+        ])
 
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    })
+        if (supabaseError) {
+            console.error("Supabase Error:", supabaseError)
+            // We continue even if DB fails, to try and send the email
+        }
 
-    const result = await response.json()
+        // 2. Send Email via SMTP
+        const transporter = nodemailer.createTransport({
+            host: process.env.SMTP_HOST || "smtp.gmail.com",
+            port: Number(process.env.SMTP_PORT) || 465,
+            secure: true,
+            auth: {
+                user: process.env.SMTP_USER,
+                pass: process.env.SMTP_PASS,
+            },
+        })
 
-    if (result.success) {
-      return NextResponse.json({
-        success: true,
-        message: "Contact form submitted successfully",
-      })
-    } else {
-      throw new Error(result.message || "Failed to submit contact form")
+        const mailOptions = {
+            from: process.env.SMTP_USER,
+            to: "jcpgimofficial@gmail.com",
+            subject: `Contact Form - ${inquiryType}`,
+            text: `
+        First Name: ${firstName}
+        Last Name: ${lastName}
+        Email: ${email}
+        Phone: ${phone || "Not provided"}
+        Subject: ${inquiryType}
+
+        Message:
+        ${message}
+      `,
+        }
+
+        await transporter.sendMail(mailOptions)
+
+        return NextResponse.json({
+            success: true,
+            message: "Contact form submitted successfully",
+        })
+    } catch (error) {
+        console.error("Error processing contact form:", error)
+        return NextResponse.json({ error: "Failed to submit contact form" }, { status: 500 })
     }
-  } catch (error) {
-    console.error("Error processing contact form:", error)
-    return NextResponse.json({ error: "Failed to submit contact form" }, { status: 500 })
-  }
 }

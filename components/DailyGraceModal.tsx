@@ -3,6 +3,30 @@ import { X, Share2, Download, MessageCircle, ChevronLeft, ChevronRight, RefreshC
 import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
+const getYouTubeEmbedUrl = (url: string) => {
+    try {
+        const urlObj = new URL(url.startsWith('http') ? url : `https://${url}`);
+        let videoId = '';
+        if (urlObj.hostname.includes('youtube.com') || urlObj.hostname.includes('youtu.be')) {
+            if (urlObj.pathname.startsWith('/live/')) {
+                videoId = urlObj.pathname.split('/')[2];
+            } else if (urlObj.pathname.startsWith('/embed/')) {
+                videoId = urlObj.pathname.split('/')[2];
+            } else if (urlObj.pathname === '/watch') {
+                videoId = urlObj.searchParams.get('v') || '';
+            } else if (urlObj.hostname === 'youtu.be') {
+                videoId = urlObj.pathname.slice(1);
+            }
+            if (videoId) {
+                return `https://www.youtube.com/embed/${videoId}`;
+            }
+        }
+    } catch (e) {
+        // Ignore
+    }
+    return url;
+};
+
 interface DailyGraceModalProps {
     video: {
         id: string;
@@ -45,7 +69,7 @@ export function DailyGraceModal({ video, isOpen, onClose, onNext, onPrev, onLang
                         {video.type === 'video' ? (
                             video.src.includes('youtube') || video.src.includes('youtu.be') ? (
                                 <iframe
-                                    src={video.src.includes('?') ? `${encodeURI(video.src)}&autoplay=1&mute=1&playsinline=1` : `${encodeURI(video.src)}?autoplay=1&mute=1&playsinline=1`}
+                                    src={`${getYouTubeEmbedUrl(video.src)}?autoplay=1&mute=1&playsinline=1`}
                                     title={video.title}
                                     className="w-full h-full absolute inset-0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
