@@ -56,8 +56,8 @@ const SUNDAY_VIDEOS = [
   { title: "Sunday Service 30-11-2025 | Live | Pastor K. Ravi Kumar", src: "https://www.youtube.com/embed/kw9VWIUQhKo", thumbnail: "https://img.youtube.com/vi/kw9VWIUQhKo/hqdefault.jpg" },
   { title: "GLORIOUS SUNDAY SERVICE | 07-12-2025 | #live", src: "https://www.youtube.com/embed/PDr8Y6_So_Q", thumbnail: "https://img.youtube.com/vi/PDr8Y6_So_Q/hqdefault.jpg" },
   { title: "SUNDAY SERVICE | 14-12-2025 | #live", src: "https://www.youtube.com/embed/C_ZEDst1LB0", thumbnail: "https://img.youtube.com/vi/C_ZEDst1LB0/hqdefault.jpg" },
-  { title: "CANDLE LIGHT SERVICE | 21-12-2025 | #live", src: "https://www.youtube.com/embed/jG1O2yHBKbw", thumbnail: "https://img.youtube.com/vi/jG1O2yHBKbw/hqdefault.jpg" },
   { title: "YOUTH SEMI CHRISTMAS | 21-12-2025 | #live", src: "https://www.youtube.com/embed/74m65SgBRz0", thumbnail: "https://img.youtube.com/vi/74m65SgBRz0/hqdefault.jpg" },
+  { title: "CANDLE LIGHT SERVICE | 23-12-2025 | #live", src: "https://www.youtube.com/embed/jG1O2yHBKbw", thumbnail: "https://img.youtube.com/vi/jG1O2yHBKbw/hqdefault.jpg" },
   { title: "CHRISTMAS WORSHIP SERVICE | 25-12-2025 | #live", src: "https://www.youtube.com/embed/Fbtimdmzaf0", thumbnail: "https://img.youtube.com/vi/Fbtimdmzaf0/hqdefault.jpg" },
   { title: "PRAISE & WORSHIP SERVICE | 28-12-2025 | #live (Morning)", src: "https://www.youtube.com/embed/5gucWw-d_nA", thumbnail: "https://img.youtube.com/vi/5gucWw-d_nA/hqdefault.jpg" },
   { title: "PRAISE & WORSHIP SERVICE | 28-12-2025 | #live (Evening)", src: "https://www.youtube.com/embed/t_VirkLYgHQ", thumbnail: "https://img.youtube.com/vi/t_VirkLYgHQ/hqdefault.jpg" },
@@ -68,12 +68,13 @@ const SUNDAY_VIDEOS = [
   { title: "SUNDAY SERVICE | 11-01-2026 | #live", src: "https://www.youtube.com/embed/kOxQEwxqOdo", thumbnail: "https://img.youtube.com/vi/kOxQEwxqOdo/hqdefault.jpg" },
   { title: "SUNDAY SERVICE | 18-01-2026 | #live", src: "https://www.youtube.com/embed/J27bQckpPEQ", thumbnail: "https://img.youtube.com/vi/J27bQckpPEQ/hqdefault.jpg" },
   { title: "SUNDAY SERVICE | 25-01-2026 | #live", src: "https://www.youtube.com/embed/47XTHrkc8Yc", thumbnail: "https://img.youtube.com/vi/47XTHrkc8Yc/hqdefault.jpg" },
-  { title: "PRAISE & WORSHIP SERVICE | 01-02-2026 | #Live", src: "https://www.youtube.com/embed/Ub-YaVGGK5A", thumbnail: "https://img.youtube.com/vi/Ub-YaVGGK5A/hqdefault.jpg" },
-  { title: "SUNDAY SERVICE | 08-02-2026 | #Live", src: "https://www.youtube.com/embed/EcrT2wRSzpc", thumbnail: "https://img.youtube.com/vi/EcrT2wRSzpc/hqdefault.jpg" },
-  { title: "PROPHETIC & DELIVERANCE SERVICE | 08-02-2026 | #Live", src: "https://www.youtube.com/embed/YAgGVFpipsI", thumbnail: "https://img.youtube.com/vi/YAgGVFpipsI/hqdefault.jpg" },
+  { title: "SUNDAY SERVICE | 01-02-2026 | #Live", src: "https://www.youtube.com/embed/QOOufKwMOKA", thumbnail: "https://img.youtube.com/vi/QOOufKwMOKA/hqdefault.jpg" },
   { title: "SUNDAY SERVICE | 08-02-2026 | #Live", src: "https://www.youtube.com/embed/ZB7s8tSn4Y8", thumbnail: "https://img.youtube.com/vi/ZB7s8tSn4Y8/hqdefault.jpg" },
   { title: "MENS SUNDAY SERVICE | 15-02-2026 | #Live", src: "https://www.youtube.com/embed/nurHlBe5G88", thumbnail: "https://img.youtube.com/vi/nurHlBe5G88/hqdefault.jpg" },
-  { title: "SUNDAY SERVICE | 01-03-2026 | #Live", src: "https://www.youtube.com/embed/QOOufKwMOKA", thumbnail: "https://img.youtube.com/vi/QOOufKwMOKA/hqdefault.jpg" },
+  { title: "SUNDAY SERVICE | 22-02-2026 | #Live", src: "https://www.youtube.com/embed/EcrT2wRSzpc", thumbnail: "https://img.youtube.com/vi/EcrT2wRSzpc/hqdefault.jpg" },
+  { title: "PROPHETIC & DELIVERANCE SERVICE | 01-03-2026 | #Live", src: "https://www.youtube.com/embed/YAgGVFpipsI", thumbnail: "https://img.youtube.com/vi/YAgGVFpipsI/hqdefault.jpg" },
+  { title: "PRAISE & WORSHIP SERVICE | 08-03-2026 | #Live", src: "https://www.youtube.com/embed/Ub-YaVGGK5A", thumbnail: "https://img.youtube.com/vi/Ub-YaVGGK5A/hqdefault.jpg" },
+  { title: "SUNDAY WORSHIP SERVICE | 15-03-2026 | #Live", src: "https://www.youtube.com/embed/zTVJv6mx2yM", thumbnail: "https://img.youtube.com/vi/zTVJv6mx2yM/hqdefault.jpg" },
   { title: "SUNDAY SERVICE | 22-03-2026 | #Live", src: "https://www.youtube.com/embed/mskh0t0_7Zw", thumbnail: "https://img.youtube.com/vi/mskh0t0_7Zw/hqdefault.jpg" }
 ];
 

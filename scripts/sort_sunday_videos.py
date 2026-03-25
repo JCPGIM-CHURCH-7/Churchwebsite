@@ -3,7 +3,18 @@ import re
 
 filename = r"e:\Church-website-clone\app\daily-grace\page.tsx"
 
-# Video data with dates for sorting
+# Refined video data based on user input
+# User provided:
+# jG1O2yHBKbw -> 23-12-2025
+# QOOufKwMOKA -> 01-02-2026
+# ZB7s8tSn4Y8 -> 08-02-2026
+# nurHlBe5G88 -> 15-02-2026
+# EcrT2wRSzpc -> 22-02-2026
+# YAgGVFpipsI -> 01-03-2026
+# Ub-YaVGGK5A -> 08-03-2026
+# zTVJv6mx2yM -> 15-03-2026
+# mskh0t0_7Zw -> 22-03-2026
+
 video_data = [
     ("2025-10-12", "Sunday Service 12-10-2025 | Pastor K. Ravi Kumar", "yVhKuyAdi_Q"),
     ("2025-10-19", "Sunday Service 19-10-2025 | Pastor K. Ravi Kumar", "gT-Cpnw1AZ0"),
@@ -14,8 +25,8 @@ video_data = [
     ("2025-11-30", "Sunday Service 30-11-2025 | Live | Pastor K. Ravi Kumar", "kw9VWIUQhKo"),
     ("2025-12-07", "GLORIOUS SUNDAY SERVICE | 07-12-2025 | #live", "PDr8Y6_So_Q"),
     ("2025-12-14", "SUNDAY SERVICE | 14-12-2025 | #live", "C_ZEDst1LB0"),
-    ("2025-12-21", "CANDLE LIGHT SERVICE | 21-12-2025 | #live", "jG1O2yHBKbw"),
     ("2025-12-21", "YOUTH SEMI CHRISTMAS | 21-12-2025 | #live", "74m65SgBRz0"),
+    ("2025-12-23", "CANDLE LIGHT SERVICE | 23-12-2025 | #live", "jG1O2yHBKbw"),
     ("2025-12-25", "CHRISTMAS WORSHIP SERVICE | 25-12-2025 | #live", "Fbtimdmzaf0"),
     ("2025-12-28", "PRAISE & WORSHIP SERVICE | 28-12-2025 | #live (Morning)", "5gucWw-d_nA"),
     ("2025-12-28", "PRAISE & WORSHIP SERVICE | 28-12-2025 | #live (Evening)", "t_VirkLYgHQ"),
@@ -26,12 +37,13 @@ video_data = [
     ("2026-01-11", "SUNDAY SERVICE | 11-01-2026 | #live", "kOxQEwxqOdo"),
     ("2026-01-18", "SUNDAY SERVICE | 18-01-2026 | #live", "J27bQckpPEQ"),
     ("2026-01-25", "SUNDAY SERVICE | 25-01-2026 | #live", "47XTHrkc8Yc"),
-    ("2026-02-01", "PRAISE & WORSHIP SERVICE | 01-02-2026 | #Live", "Ub-YaVGGK5A"),
-    ("2026-02-08", "SUNDAY SERVICE | 08-02-2026 | #Live", "EcrT2wRSzpc"),
-    ("2026-02-08", "PROPHETIC & DELIVERANCE SERVICE | 08-02-2026 | #Live", "YAgGVFpipsI"),
+    ("2026-02-01", "SUNDAY SERVICE | 01-02-2026 | #Live", "QOOufKwMOKA"),
     ("2026-02-08", "SUNDAY SERVICE | 08-02-2026 | #Live", "ZB7s8tSn4Y8"),
     ("2026-02-15", "MENS SUNDAY SERVICE | 15-02-2026 | #Live", "nurHlBe5G88"),
-    ("2026-03-01", "SUNDAY SERVICE | 01-03-2026 | #Live", "QOOufKwMOKA"),
+    ("2026-02-22", "SUNDAY SERVICE | 22-02-2026 | #Live", "EcrT2wRSzpc"),
+    ("2026-03-01", "PROPHETIC & DELIVERANCE SERVICE | 01-03-2026 | #Live", "YAgGVFpipsI"),
+    ("2026-03-08", "PRAISE & WORSHIP SERVICE | 08-03-2026 | #Live", "Ub-YaVGGK5A"),
+    ("2026-03-15", "SUNDAY WORSHIP SERVICE | 15-03-2026 | #Live", "zTVJv6mx2yM"),
     ("2026-03-22", "SUNDAY SERVICE | 22-03-2026 | #Live", "mskh0t0_7Zw"),
 ]
 
