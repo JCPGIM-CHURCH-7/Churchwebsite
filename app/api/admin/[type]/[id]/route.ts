@@ -5,6 +5,8 @@ import ContactMessage from '@/lib/models/ContactMessage';
 import Event from '@/lib/models/Event';
 import Member from '@/lib/models/Member';
 
+export const dynamic = 'force-dynamic';
+
 const models: Record<string, any> = {
   'prayer-requests': PrayerRequest,
   'contact-messages': ContactMessage,
