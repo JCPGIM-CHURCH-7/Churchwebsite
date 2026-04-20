@@ -41,6 +41,9 @@ export async function GET() {
       Member.find().sort({ joinDate: -1 }).limit(100)
     ]);
 
+    // Function to map _id to id for frontend parity
+    const mapId = (doc: any) => ({ ...doc.toObject(), id: doc._id.toString() });
+
     return NextResponse.json({
       success: true,
       stats: {
@@ -50,10 +53,10 @@ export async function GET() {
         contactMessages: newMessages
       },
       data: {
-        prayerRequests: allPrayers,
-        contactMessages: allMessages,
-        events: allEvents,
-        members: allMembers
+        prayerRequests: allPrayers.map(mapId),
+        contactMessages: allMessages.map(mapId),
+        events: allEvents.map(mapId),
+        members: allMembers.map(mapId)
       }
     });
 

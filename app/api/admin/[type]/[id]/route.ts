@@ -1,4 +1,5 @@
 import { type NextRequest, NextResponse } from 'next/server';
+import mongoose from 'mongoose';
 import dbConnect from '@/lib/mongodb';
 import PrayerRequest from '@/lib/models/PrayerRequest';
 import ContactMessage from '@/lib/models/ContactMessage';
@@ -27,6 +28,10 @@ export async function PATCH(
       return NextResponse.json({ error: 'Invalid resource type' }, { status: 400 });
     }
 
+    if (!mongoose.isValidObjectId(id)) {
+      return NextResponse.json({ error: 'Invalid ID format' }, { status: 400 });
+    }
+
     const body = await request.json();
     const updated = await model.findByIdAndUpdate(id, body, { new: true });
 
@@ -52,6 +57,10 @@ export async function DELETE(
 
     if (!model) {
       return NextResponse.json({ error: 'Invalid resource type' }, { status: 400 });
+    }
+
+    if (!mongoose.isValidObjectId(id)) {
+      return NextResponse.json({ error: 'Invalid ID format' }, { status: 400 });
     }
 
     const deleted = await model.findByIdAndDelete(id);
