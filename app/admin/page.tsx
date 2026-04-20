@@ -43,28 +43,18 @@ export default function AdminPage() {
 
   const loadDashboardData = async () => {
     try {
-      const { supabase } = await import('@/lib/supabase');
-      const [prayersRes, messagesRes, eventsRes, membersRes] = await Promise.all([
-        supabase.from('prayer_requests').select('*').order('created_at', { ascending: false }),
-        supabase.from('contact_messages').select('*').order('created_at', { ascending: false }),
-        supabase.from('events').select('*').order('event_date', { ascending: true }),
-        supabase.from('members').select('*').order('created_at', { ascending: false })
-      ]);
+      const response = await fetch('/api/admin/stats');
+      const result = await response.json();
 
-      if (prayersRes.data) setPrayerRequests(prayersRes.data);
-      if (messagesRes.data) setContactMessages(messagesRes.data);
-      if (eventsRes.data) setEvents(eventsRes.data);
-      if (membersRes.data) setMembers(membersRes.data);
-
-      setStats({
-        totalMembers: membersRes.data?.filter(m => m.is_active).length || 0,
-        prayerRequests: prayersRes.data?.filter(p => p.status === 'new').length || 0,
-        upcomingEvents: eventsRes.data?.filter(e => {
-          const eventDate = new Date(e.event_date);
-          return eventDate > new Date() && e.is_active;
-        }).length || 0,
-        contactMessages: messagesRes.data?.filter(m => m.status === 'new').length || 0
-      });
+      if (result.success) {
+        setStats(result.stats);
+        setPrayerRequests(result.data.prayerRequests);
+        setContactMessages(result.data.contactMessages);
+        setEvents(result.data.events);
+        setMembers(result.data.members);
+      } else {
+        console.error('Failed to load dashboard data:', result.error);
+      }
     } catch (error) {
       console.error('Error loading dashboard data:', error);
     } finally {
@@ -73,53 +63,61 @@ export default function AdminPage() {
   };
 
   const updatePrayerStatus = async (id: string, status: 'new' | 'in_progress' | 'completed') => {
-    const { supabase } = await import('@/lib/supabase');
-    const { error } = await supabase
-      .from('prayer_requests')
-      .update({ status, updated_at: new Date().toISOString() })
-      .eq('id', id);
-
-    if (!error) {
-      loadDashboardData();
+    try {
+      const response = await fetch(`/api/admin/prayer-requests/${id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ status })
+      });
+      if (response.ok) {
+        loadDashboardData();
+      }
+    } catch (error) {
+      console.error('Error updating prayer status:', error);
     }
   };
 
   const updateMessageStatus = async (id: string, status: 'new' | 'read' | 'replied') => {
-    const { supabase } = await import('@/lib/supabase');
-    const { error } = await supabase
-      .from('contact_messages')
-      .update({ status, updated_at: new Date().toISOString() })
-      .eq('id', id);
-
-    if (!error) {
-      loadDashboardData();
+    try {
+      const response = await fetch(`/api/admin/contact-messages/${id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ status })
+      });
+      if (response.ok) {
+        loadDashboardData();
+      }
+    } catch (error) {
+      console.error('Error updating message status:', error);
     }
   };
 
   const deletePrayerRequest = async (id: string) => {
     if (confirm('Are you sure you want to delete this prayer request?')) {
-      const { supabase } = await import('@/lib/supabase');
-      const { error } = await supabase
-        .from('prayer_requests')
-        .delete()
-        .eq('id', id);
-
-      if (!error) {
-        loadDashboardData();
+      try {
+        const response = await fetch(`/api/admin/prayer-requests/${id}`, {
+          method: 'DELETE'
+        });
+        if (response.ok) {
+          loadDashboardData();
+        }
+      } catch (error) {
+        console.error('Error deleting prayer request:', error);
       }
     }
   };
 
   const deleteContactMessage = async (id: string) => {
     if (confirm('Are you sure you want to delete this message?')) {
-      const { supabase } = await import('@/lib/supabase');
-      const { error } = await supabase
-        .from('contact_messages')
-        .delete()
-        .eq('id', id);
-
-      if (!error) {
-        loadDashboardData();
+      try {
+        const response = await fetch(`/api/admin/contact-messages/${id}`, {
+          method: 'DELETE'
+        });
+        if (response.ok) {
+          loadDashboardData();
+        }
+      } catch (error) {
+        console.error('Error deleting contact message:', error);
       }
     }
   };
